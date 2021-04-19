@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PROCESS Id="RDK:0001" Name="InsertTreni" SystemProcess="True" Expanded="True">
+	<PROCESSPROPERTY CrUser="ruled [SRV-PLMTEST]" CrDate="2021-04-15T11:55:59" ModUser="nicholas.vittor [LAPT-IT07]" ModDate="2021-04-19T11:04:37" LanguageVersion="2011.1.1.0" />
+	<GROUP Id="RDK:0002" Name="Declarations" SubType="Declarations" Expanded="True">
+		<GROUP Id="RDK:0003" Name="Types" SubType="TypeSet" IncludeDate="0" Expanded="True">
+			<GROUP Id="RDK:56" Name="Editor2DTypes" SubType="TypeSet" IncludeDate="132530223426234312" Expanded="True">
+				<TYPE Id="RDK:120" Name="Editor2DOptionType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:57" Name="PageUnit" Type="string" DesignTimeRemark="mm | in" DesignTimeNotes="mm | in" />
+					<FIELD Id="RDK:58" Name="PageLanguage" Type="string" DesignTimeRemark="Language key as defined in Wizard" DesignTimeNotes="mm | in" />
+					<FIELD Id="RDK:59" Name="PageNumberOfDecimal" Type="integer" />
+					<FIELD Id="RDK:60" Name="PageOrigin" Type="string" DesignTimeRemark="x,y,signX,signY,CB" />
+					<FIELD Id="RDK:61" Name="PageFontSize" Type="integer" DesignTimeRemark="Default to 16" />
+					<FIELD Id="RDK:62" Name="PageFormat" Type="string" DesignTimeRemark="ISO A5 (148.5x210) | ISO A4 (210x297) | ISO A3 (297x420) | ISO A2 (420x594) | ISO A1 (594x840) | A (8.5x11) | B (11x17) | C (17x22) | Arch A (9x12) | Arch B (12x18) | Arch C (18x24) | Legal (11x14) | (8x10) | (30x42) | (WxH)" />
+					<FIELD Id="RDK:63" Name="PageOrientation" Type="string" DesignTimeRemark="Landscape | Portrait" />
+					<FIELD Id="RDK:64" Name="PageGridSize" Type="string" DesignTimeRemark="5mm | 10mm | 25mm | 50mm | .25in | .50in | .75in | 1.0in" />
+					<FIELD Id="RDK:65" Name="PageGridRotation" Type="string" DesignTimeRemark="5 | 10 | 15 | 30 | 45 | 90" />
+					<FIELD Id="RDK:66" Name="PageScaleFactor" Type="string" DesignTimeRemark="1:1 | 1:5 | 1:10 | 1:25 | 1:50 | 1:100 | 1:1000" />
+					<FIELD Id="RDK:67" Name="PageSnapToGrid" Type="boolean" />
+					<FIELD Id="RDK:68" Name="PageSnapToObject" Type="boolean" />
+					<FIELD Id="RDK:69" Name="PageSnapToPolyline" Type="boolean" />
+					<FIELD Id="RDK:70" Name="PageSnapToShapeCenter" Type="boolean" />
+					<FIELD Id="RDK:71" Name="PageQuickPickIgnoreThreshold" Type="string" />
+					<FIELD Id="RDK:72" Name="PageShowGrid" Type="boolean" />
+					<FIELD Id="RDK:73" Name="PageShowRulers" Type="boolean" />
+					<FIELD Id="RDK:74" Name="PageShowActions" Type="boolean" />
+					<FIELD Id="RDK:75" Name="PageShowUndoRedo" Type="boolean" />
+					<FIELD Id="RDK:76" Name="PageShowTextTools" Type="boolean" />
+					<FIELD Id="RDK:77" Name="PageShowDrawTools" Type="boolean" />
+					<FIELD Id="RDK:78" Name="PageShowSmartLineTools" Type="boolean" />
+					<FIELD Id="RDK:79" Name="PageShowSmartCopyTools" Type="boolean" />
+					<FIELD Id="RDK:80" Name="PageShowConnectorTools" Type="boolean" />
+					<FIELD Id="RDK:81" Name="PageShowConnectionPointTools" Type="boolean" />
+					<FIELD Id="RDK:82" Name="PageShowGridPatternTools" Type="boolean" />
+					<FIELD Id="RDK:83" Name="PageShowZIndexTools" Type="boolean" />
+					<FIELD Id="RDK:84" Name="PageShowGroupTools" Type="boolean" />
+					<FIELD Id="RDK:85" Name="PageShowQuoteTools" Type="boolean" />
+					<FIELD Id="RDK:86" Name="PageShowLinkTools" Type="boolean" />
+					<FIELD Id="RDK:87" Name="PageShowCustomOrigin" Type="boolean" />
+					<FIELD Id="RDK:88" Name="PageShowUtils" Type="boolean" />
+					<FIELD Id="RDK:89" Name="PageShowSave" Type="boolean" />
+					<FIELD Id="RDK:90" Name="PageShowHelp" Type="boolean" />
+					<FIELD Id="RDK:91" Name="PageShowHelpPopup" Type="boolean" />
+					<FIELD Id="RDK:92" Name="PageShowPreview3D" Type="boolean" />
+					<FIELD Id="RDK:93" Name="PageShowPreview3DDinamicLights" Type="boolean" />
+					<FIELD Id="RDK:94" Name="PageShowPreview3DGround" Type="boolean" />
+					<FIELD Id="RDK:95" Name="PageShowPreview3DViewStyle" Type="string" DesignTimeRemark="TOP|FRONT|PROPSONLY" />
+					<FIELD Id="RDK:96" Name="PageShowPreview3DEnableFloor" Type="boolean" />
+					<FIELD Id="RDK:97" Name="PageShowPreview3DFloorImage" Type="string" DesignTimeRemark="Please provide relative path to texture image [dimensions must be powers of two (2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, ...)] or CSS code color (#ffffff)" />
+					<FIELD Id="RDK:98" Name="PageShowPreview3DFloorThickness" Type="double" DesignTimeRemark="Positive value to start drawing the floor from z=0 up. Negative value to start drawing the floor from z=0 down." />
+					<FIELD Id="RDK:99" Name="PageShowPreview3DEnableWalls" Type="boolean" />
+					<FIELD Id="RDK:100" Name="PageShowPreview3DWallDimensions" Type="string" />
+					<FIELD Id="RDK:101" Name="PageShowToolsOnToolbar" Type="string" DesignTimeRemark="Comma separated list of tool ids to show on the toolbar: pagedrag,text,selectgroup,poly,connector,smartline,gridpattern,smartcopy,quote,link,customorigin,preview3d,paint,snapshot,custom1,custom2,custom3,togglegrid,toggleshadows,togglewalls" />
+					<FIELD Id="RDK:102" Name="PageShowShapeProperties" Type="boolean" />
+					<FIELD Id="RDK:103" Name="PageShowQuoteUOM" Type="boolean" />
+					<FIELD Id="RDK:104" Name="PageIncludeConnectionPoints" Type="boolean" />
+					<FIELD Id="RDK:105" Name="PageCheckInclusions" Type="boolean" />
+					<FIELD Id="RDK:106" Name="PageCheckCollisions" Type="boolean" />
+					<FIELD Id="RDK:107" Name="PageCheckQuotes" Type="boolean" />
+					<FIELD Id="RDK:108" Name="PageCheckBackgroundCollisions" Type="boolean" />
+					<FIELD Id="RDK:109" Name="PageActiveBackground" Type="boolean" />
+					<FIELD Id="RDK:110" Name="PageZoomFit" Type="boolean" />
+					<FIELD Id="RDK:111" Name="PageZoomPage" Type="boolean" />
+					<FIELD Id="RDK:112" Name="ShapeEvents" Type="string" DesignTimeRemark="INSERTED,PASTED,REMOVED,ROTATED,LINKED,STRETCHED,DOUBLECLICK,REGROUPED" />
+					<FIELD Id="RDK:113" Name="ShapeLibrary" Type="string" />
+					<FIELD Id="RDK:114" Name="ShapeLibraryHideList" Type="string" DesignTimeRemark="Comma separated list of categories and shapes to hide | * to hide all" />
+					<FIELD Id="RDK:115" Name="ShapeLibraryOpenList" Type="string" DesignTimeRemark="Comma separated list of categories and shapes to open | * to hide all" />
+					<FIELD Id="RDK:116" Name="DoBackgroundCheckOnly" Type="boolean" />
+					<FIELD Id="RDK:117" Name="DoAutoSave" Type="boolean" />
+					<FIELD Id="RDK:118" Name="DoExportImage2D" Type="boolean" />
+					<FIELD Id="RDK:119" Name="DoExportImage3D" Type="boolean" />
+				</TYPE>
+				<TYPE Id="RDK:129" Name="Editor2DCategory" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:121" Name="id" Type="string" />
+					<FIELD Id="RDK:122" Name="parentId" Type="string" />
+					<FIELD Id="RDK:123" Name="name" Type="string" />
+					<FIELD Id="RDK:124" Name="description" Type="string" />
+					<FIELD Id="RDK:125" Name="icon" Type="string" />
+					<FIELD Id="RDK:126" Name="hidden" Type="boolean" />
+					<FIELD Id="RDK:127" Name="userFilter" Type="string" />
+					<FIELD Id="RDK:128" Name="styleTags" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:177" Name="Editor2DShapeType" Expanded="True" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:130" Name="source" Type="string" />
+					<FIELD Id="RDK:131" Name="sourceLibrary" Type="string" />
+					<FIELD Id="RDK:132" Name="signature" Type="string" />
+					<FIELD Id="RDK:133" Name="id" Type="string" />
+					<FIELD Id="RDK:134" Name="name" Type="string" />
+					<FIELD Id="RDK:135" Name="family" Type="string" />
+					<FIELD Id="RDK:136" Name="description" Type="string" />
+					<FIELD Id="RDK:137" Name="x" Type="double" />
+					<FIELD Id="RDK:138" Name="y" Type="double" />
+					<FIELD Id="RDK:139" Name="z" Type="double" />
+					<FIELD Id="RDK:140" Name="width" Type="double" />
+					<FIELD Id="RDK:141" Name="height" Type="double" />
+					<FIELD Id="RDK:142" Name="depth" Type="double" />
+					<FIELD Id="RDK:143" Name="rotation" Type="double" />
+					<FIELD Id="RDK:144" Name="text" Type="string" />
+					<FIELD Id="RDK:145" Name="behaviour" Type="string" DesignTimeNotes="(BACKGROUND)&#xD;&#xA;(CONTAINER)&#xD;&#xA;(NOTE)&#xD;&#xA;(NOCOLLISIONS)&#xD;&#xA;(NOINCLUSIONS)&#xD;&#xA;(NOSELECT)&#xD;&#xA;(NOMOVE)&#xD;&#xA;(NOREMOVE)&#xD;&#xA;(NOSTRETCH)&#xD;&#xA;(NOROTATE)&#xD;&#xA;(NOEDIT)&#xD;&#xA;(COLLISIONCLASS=x,y,z)&#xD;&#xA;(ORIGIN=CENTER|TOPLEFT|TOPRIGHT|BOTTOMLEFT|BOTTOMRIGHT)&#xD;&#xA;(URL=xxx)&#xD;&#xA;(DIMSTACKABSOLUTE)" />
+					<FIELD Id="RDK:146" Name="datadump" Type="string" />
+					<FIELD Id="RDK:147" Name="path" Type="string" />
+					<FIELD Id="RDK:148" Name="ctrl1x" Type="double" />
+					<FIELD Id="RDK:149" Name="ctrl1y" Type="double" />
+					<FIELD Id="RDK:150" Name="ctrl2x" Type="double" />
+					<FIELD Id="RDK:151" Name="ctrl2y" Type="double" />
+					<FIELD Id="RDK:152" Name="shapeFromId" Type="string" />
+					<FIELD Id="RDK:153" Name="shapeFromPointIndex" Type="string" />
+					<FIELD Id="RDK:154" Name="shapeToId" Type="string" />
+					<FIELD Id="RDK:155" Name="shapeToPointIndex" Type="string" />
+					<FIELD Id="RDK:156" Name="dimStack" Type="double" />
+					<FIELD Id="RDK:157" Name="dimType" Type="string" />
+					<FIELD Id="RDK:158" Name="dimDriving" Type="boolean" />
+					<FIELD Id="RDK:159" Name="dimValue" Type="double" />
+					<FIELD Id="RDK:160" Name="color" Type="string" />
+					<FIELD Id="RDK:161" Name="colorOpacity" Type="double" />
+					<FIELD Id="RDK:162" Name="color3D" Type="string" />
+					<FIELD Id="RDK:163" Name="colorOpacity3D" Type="double" />
+					<FIELD Id="RDK:164" Name="lineWidth" Type="string" />
+					<FIELD Id="RDK:165" Name="lineColor" Type="string" />
+					<FIELD Id="RDK:166" Name="lineOpacity" Type="double" />
+					<FIELD Id="RDK:167" Name="lineColor3D" Type="string" />
+					<FIELD Id="RDK:168" Name="lineOpacity3D" Type="double" />
+					<FIELD Id="RDK:169" Name="links" Type="string[]" />
+					<FIELD Id="RDK:170" Name="group" Type="string" />
+					<FIELD Id="RDK:171" Name="layer" Type="string" />
+					<FIELD Id="RDK:172" Name="connectionPoints" Type="string" DesignTimeRemark="List of E2DShapeConnectionPointType" DesignTimeNotes="[ &#xD;&#xA;    {&quot;id&quot;: &quot;s00--cp1&quot;, &quot;shapeId&quot;: &quot;s00&quot;,&#xA; &quot;cpId&quot;: &quot;cp1&quot;, &#xD;&#xA;     &quot;x&quot;: 25, &quot;y&quot;: 37.5, &quot;z&quot;: 0, &quot;noRX&quot;: 25, &quot;noRY&quot;: 37.5, &quot;noRZ&quot;: 0,&#xD;&#xA;&#xA;     &quot;direction&quot;: 270,&#xA; &quot;linkClass&quot;: &quot;&quot;},&#xD;&#xA;    {&quot;id&quot;: &quot;s00--cp2&quot;, &quot;shapeId&quot;: &quot;r00&quot;, &quot;cpId&quot;: &quot;cp2&quot;,&#xA;&#xD;&#xA;     &quot;x&quot;: 37.5, &quot;y&quot;: 25, &quot;z&quot;: 0, &quot;noRX&quot;: 37.5, &quot;noRY&quot;: 25,&#xA; &quot;noRZ&quot;: 0,&#xD;&#xA;&#xA;     &quot;direction&quot;: 0, &quot;linkClass&quot;: &quot;&quot;},&#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:173" Name="modified" Type="boolean" />
+					<FIELD Id="RDK:174" Name="pinned" Type="boolean" />
+					<FIELD Id="RDK:175" Name="selected" Type="boolean" />
+					<FIELD Id="RDK:176" Name="includeInBOM" Type="boolean" />
+					<FIELD Id="RDK:403" Name="Livelli" Type="integer" />
+					<FIELD Id="RDK:440" Name="AltezzeLivelli" Type="integer[]" />
+					<FIELD Id="RDK:441" Name="NomeTreno" Type="string" />
+					<FIELD Id="RDK:442" Name="NumeroCampata" Type="integer" />
+				</TYPE>
+				<TYPE Id="RDK:178" Name="Editor2DShapeTypeList" SubType="list" ItemListTypeName="Editor2DShapeType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:190" Name="Editor2DShapeConnectionPointType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:179" Name="id" Type="string" />
+					<FIELD Id="RDK:180" Name="shapeId" Type="string" />
+					<FIELD Id="RDK:181" Name="cpId" Type="string" />
+					<FIELD Id="RDK:182" Name="x" Type="double" />
+					<FIELD Id="RDK:183" Name="y" Type="double" />
+					<FIELD Id="RDK:184" Name="z" Type="double" />
+					<FIELD Id="RDK:185" Name="noRX" Type="double" />
+					<FIELD Id="RDK:186" Name="noRY" Type="double" />
+					<FIELD Id="RDK:187" Name="noRZ" Type="double" />
+					<FIELD Id="RDK:188" Name="direction" Type="string" />
+					<FIELD Id="RDK:189" Name="linkClass" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:191" Name="Editor2DShapeConnectionPointTypeList" SubType="list" ItemListTypeName="Editor2DShapeConnectionPointType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:229" Name="Editor2DShapePropertyType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:192" Name="id" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:193" Name="name" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:194" Name="family" Type="string" />
+					<FIELD Id="RDK:195" Name="description" Type="string" />
+					<FIELD Id="RDK:196" Name="text" Type="string" />
+					<FIELD Id="RDK:197" Name="shapeMode" Type="integer" DesignTimeRemark="REQUIRED | 0 - Shape; 1 - Assembly; 2 - Group;" />
+					<FIELD Id="RDK:198" Name="icon" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:199" Name="iconBig" Type="string" />
+					<FIELD Id="RDK:200" Name="image" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:201" Name="srcSVG" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:202" Name="src3D" Type="string" />
+					<FIELD Id="RDK:203" Name="srcTexture3D" Type="string" />
+					<FIELD Id="RDK:204" Name="width" Type="double" />
+					<FIELD Id="RDK:205" Name="height" Type="double" />
+					<FIELD Id="RDK:206" Name="depth" Type="double" />
+					<FIELD Id="RDK:207" Name="behaviour" Type="string" DesignTimeNotes="(NOTE)(NOSELECT)(NOSTRETCH)(NOSTRETCHONVIEW)(NOHSTRETCH)(NOVSTRETCH)(NOROTATE)(NOROTATEONVIEW)(NOMOVE)(NOHMOVE)(NOVMOVE)(NOREMOVE)(NOEDIT)(NOLINKS)(LINKCLASS=)(NOCOLLISIONS)(COLLISIONCLASS=)(NOINCLUSIONS)(BACKGROUND)(CONTAINER=)(CONTAINERCLASS=)(HIDEDIMENSIONS)(HIDECOORDINATES)(HIDEROTATION)(HIDEUPDATEBUTTON)(KEEPASPECTRATIO)(ORIGIN=)" />
+					<FIELD Id="RDK:208" Name="help" Type="string" />
+					<FIELD Id="RDK:209" Name="eventClass" Type="string" />
+					<FIELD Id="RDK:210" Name="linkClass" Type="string" />
+					<FIELD Id="RDK:211" Name="collisionClass" Type="string" />
+					<FIELD Id="RDK:212" Name="containerClass" Type="string" />
+					<FIELD Id="RDK:213" Name="snapClass" Type="string" />
+					<FIELD Id="RDK:214" Name="color" Type="string" />
+					<FIELD Id="RDK:215" Name="colorOpacity" Type="double" />
+					<FIELD Id="RDK:216" Name="lineColor" Type="string" />
+					<FIELD Id="RDK:217" Name="lineColorOpacity" Type="double" />
+					<FIELD Id="RDK:218" Name="color3D" Type="string" />
+					<FIELD Id="RDK:219" Name="colorOpacity3D" Type="double" />
+					<FIELD Id="RDK:220" Name="lineColor3D" Type="string" />
+					<FIELD Id="RDK:221" Name="lineColorOpacity3D" Type="double" />
+					<FIELD Id="RDK:222" Name="custom" Type="string" DesignTimeNotes="{&#xD;&#xA;    &quot;TestV&quot;:{&#xD;&#xA;        &quot;UIType&quot;:&quot;text&quot;,&#xD;&#xA;        &quot;UIValidation&quot;:&quot;0&amp;lt;value &amp;amp;&amp;amp; value&amp;lt;10&quot;,&#xD;&#xA;        &quot;UIDefaultNoConvert&quot;:1&#xD;&#xA;    },&#xD;&#xA;    &quot;Side&quot;:{ &#xD;&#xA;        &quot;In&quot;:&quot;(ADDBEHAVIOUR=COLLISIONCLASS=1)&#xD;&#xA;(REMBEHAVIOUR=COLLISIONCLASS=2)&quot;,&#xD;&#xA;        &quot;Out&quot;:&quot;(ADDBEHAVIOUR=COLLISIONCLASS=2)(REMBEHAVIOUR=COLLISIONCLASS=1)&quot;&#xD;&#xA;    },&#xD;&#xA;    &quot;Angle&quot;:{&#xD;&#xA;        &quot;UIDefaultNoConvert&quot;:&quot;0&quot;,&#xD;&#xA;        &quot;0&quot;:&quot;(ROTATION=0)&quot;,&#xD;&#xA;        &quot;45&quot;:&quot;(ROTATION=-45)&quot;&#xD;&#xA;    }&#xD;&#xA;}" />
+					<FIELD Id="RDK:223" Name="connectionPoints" Type="string" DesignTimeNotes="[ &#xD;&#xA;    {&quot;id&quot;: &quot;cp1&quot;, &quot;x&quot;:-43, &quot;y&quot;:-43, &quot;z&quot;:0, &quot;linkClass&quot;:&quot;&quot;, &quot;direction&quot;:&quot;&quot;, &quot;event&quot;:&quot;&quot;},&#xD;&#xA;    {&quot;id&quot;: &quot;cp2&quot;, &quot;x&quot;:-43, &quot;y&quot;:-43, &quot;z&quot;:0, &quot;linkClass&quot;:&quot;&quot;, &quot;direction&quot;:&quot;&quot;, &quot;event&quot;:&quot;&quot;},&#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:224" Name="group2dShapes" Type="string" DesignTimeNotes="[&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;xxx&quot;, &quot;source&quot;: &quot;rect&quot;,&#xD;&#xA;        &quot;x&quot;:-43, &quot;y&quot;:-43, &quot;z&quot;:0, &#xD;&#xA;        &quot;width&quot;:10, &quot;height&quot;:10, &quot;depth&quot;:200, &#xD;&#xA;        &quot;rotation&quot;: 0,&#xD;&#xA;        &quot;data&quot;:&quot;&quot;, &quot;color&quot;: &quot;#ff00aa&quot;, &quot;colorOpacity&quot;:1&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;yyy&quot;, &quot;source&quot;: &quot;rect&quot;,&#xD;&#xA;        &quot;x&quot;:-43, &quot;y&quot;:43, &quot;z&quot;:0, &#xD;&#xA;        &quot;width&quot;:10, &quot;height&quot;:10, &quot;depth&quot;:200, &#xD;&#xA;        &quot;rotation&quot;: 33,&#xD;&#xA;        &quot;data&quot;:&quot;&quot;, &quot;color&quot;: &quot;#aa00ff&quot;, &quot;colorOpacity&quot;:0.5&#xD;&#xA;    },&#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:225" Name="group2dConnectors" Type="string" DesignTimeNotes="[&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;xxx&quot;, &#xD;&#xA;        &quot;x1&quot;:-43, &quot;y1&quot;:-43, &quot;x2&quot;:43, &quot;y2&quot;:43,&#xD;&#xA;        &quot;path&quot;:&quot;&quot;, &#xD;&#xA;        &quot;ctrl1x&quot;:10, &quot;ctrl1y&quot;:10, &quot;ctrl2x&quot;:20, &quot;ctrl2y&quot;: 20, &#xD;&#xA;        &quot;shapeFromId&quot;:&quot;&quot;, &quot;shapeFromPointIndex&quot;: &quot;&quot;, &#xD;&#xA;        &quot;shapeToId&quot;:&quot;&quot;, &quot;shapeToPointIndex&quot;:&quot;&quot; &#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;xxx&quot;, &#xD;&#xA;        &quot;x1&quot;:3, &quot;y1&quot;:3, &quot;x2&quot;:33, &quot;y2&quot;:33,&#xD;&#xA;        &quot;path&quot;:&quot;&quot;, &#xD;&#xA;        &quot;ctrl1x&quot;:15, &quot;ctrl1y&quot;:15, &quot;ctrl2x&quot;:51, &quot;ctrl2y&quot;: 51, &#xD;&#xA;        &quot;shapeFromId&quot;:&quot;&quot;, &quot;shapeFromPointIndex&quot;: &quot;&quot;, &#xD;&#xA;        &quot;shapeToId&quot;:&quot;&quot;, &quot;shapeToPointIndex&quot;:&quot;&quot; &#xD;&#xA;    },    &#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:226" Name="group3d" Type="string" DesignTimeNotes="[&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;xxx&quot;, &quot;source&quot;: &quot;rect&quot;,&#xD;&#xA;        &quot;x&quot;:-43, &quot;y&quot;:-43, &quot;z&quot;:0, &#xD;&#xA;        &quot;width&quot;:10, &quot;height&quot;:10, &quot;depth&quot;:200, &#xD;&#xA;        &quot;rotation&quot;: 0,&#xD;&#xA;        &quot;data&quot;:&quot;&quot;, &quot;color&quot;: &quot;#ff00aa&quot;, &quot;colorOpacity&quot;:1&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;yyy&quot;, &quot;source&quot;: &quot;rect&quot;,&#xD;&#xA;        &quot;x&quot;:-43, &quot;y&quot;:43, &quot;z&quot;:0, &#xD;&#xA;        &quot;width&quot;:10, &quot;height&quot;:10, &quot;depth&quot;:200, &#xD;&#xA;        &quot;rotation&quot;: 33,&#xD;&#xA;        &quot;data&quot;:&quot;&quot;, &quot;color&quot;: &quot;#aa00ff&quot;, &quot;colorOpacity&quot;:0.5&#xD;&#xA;    },&#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:227" Name="eventHandler" Type="string" />
+					<FIELD Id="RDK:228" Name="eventHandlers" Type="string" DesignTimeNotes="{&#xD;&#xA;    &quot;generic&quot;:{&quot;handler&quot;:&quot;genericEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;inserted&quot;:{&quot;handler&quot;:&quot;insertedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;removed&quot;:{&quot;handler&quot;:&quot;removedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;linked&quot;:{&quot;handler&quot;:&quot;linkedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;stretched&quot;:{&quot;handler&quot;:&quot;stretchedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;rotated&quot;:{&quot;handler&quot;:&quot;rotatedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;regrouped&quot;:{&quot;handler&quot;:&quot;regroupedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;doubleclick&quot;:{&quot;handler&quot;:&quot;doubleclickEventProcess.rdx&quot;&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;}" />
+				</TYPE>
+				<TYPE Id="RDK:242" Name="Editor2DChildType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:230" Name="id" Type="string" />
+					<FIELD Id="RDK:231" Name="source" Type="string" />
+					<FIELD Id="RDK:232" Name="width" Type="double" />
+					<FIELD Id="RDK:233" Name="height" Type="double" />
+					<FIELD Id="RDK:234" Name="depth" Type="double" />
+					<FIELD Id="RDK:235" Name="x" Type="double" />
+					<FIELD Id="RDK:236" Name="y" Type="double" />
+					<FIELD Id="RDK:237" Name="z" Type="double" />
+					<FIELD Id="RDK:238" Name="rotation" Type="string" />
+					<FIELD Id="RDK:239" Name="data" Type="string" />
+					<FIELD Id="RDK:240" Name="color" Type="string" />
+					<FIELD Id="RDK:241" Name="colorOpacity" Type="double" />
+				</TYPE>
+				<TYPE Id="RDK:243" Name="Editor2DChildTypeList" SubType="list" ItemListTypeName="Editor2DChildType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:258" Name="Editor2DChildConnectorType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:244" Name="source" Type="string" />
+					<FIELD Id="RDK:245" Name="x1" Type="double" />
+					<FIELD Id="RDK:246" Name="y1" Type="double" />
+					<FIELD Id="RDK:247" Name="x2" Type="double" />
+					<FIELD Id="RDK:248" Name="y2" Type="double" />
+					<FIELD Id="RDK:249" Name="path" Type="string" />
+					<FIELD Id="RDK:250" Name="ctrl1x" Type="double" />
+					<FIELD Id="RDK:251" Name="ctrl1y" Type="double" />
+					<FIELD Id="RDK:252" Name="ctrl2x" Type="double" />
+					<FIELD Id="RDK:253" Name="ctrl2y" Type="double" />
+					<FIELD Id="RDK:254" Name="shapeFromId" Type="string" />
+					<FIELD Id="RDK:255" Name="shapeFromPointIndex" Type="string" />
+					<FIELD Id="RDK:256" Name="shapeToId" Type="string" />
+					<FIELD Id="RDK:257" Name="shapeToPointIndex" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:259" Name="Editor2DChildConnectorTypeList" SubType="list" ItemListTypeName="Editor2DChildConnectorType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:277" Name="Editor2DConnectionPointType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:260" Name="id" Type="string" />
+					<FIELD Id="RDK:261" Name="x" Type="double" />
+					<FIELD Id="RDK:262" Name="y" Type="double" />
+					<FIELD Id="RDK:263" Name="z" Type="double" />
+					<FIELD Id="RDK:264" Name="xMin" Type="string" />
+					<FIELD Id="RDK:265" Name="xMax" Type="string" />
+					<FIELD Id="RDK:266" Name="xStep" Type="string" />
+					<FIELD Id="RDK:267" Name="yMin" Type="string" />
+					<FIELD Id="RDK:268" Name="yMax" Type="string" />
+					<FIELD Id="RDK:269" Name="yStep" Type="string" />
+					<FIELD Id="RDK:270" Name="zMin" Type="string" />
+					<FIELD Id="RDK:271" Name="zMax" Type="string" />
+					<FIELD Id="RDK:272" Name="zStep" Type="string" />
+					<FIELD Id="RDK:273" Name="direction" Type="double" />
+					<FIELD Id="RDK:274" Name="linkClass" Type="string" />
+					<FIELD Id="RDK:275" Name="label" Type="string" />
+					<FIELD Id="RDK:276" Name="isDimension" Type="boolean" />
+				</TYPE>
+				<TYPE Id="RDK:278" Name="Editor2DConnectionPointTypeList" SubType="list" ItemListTypeName="Editor2DConnectionPointType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:281" Name="Editor2DParameterType" SubType="structure" DesignTimeNotes="{&#xD;&#xA;&quot;name&quot;:&quot;p1&quot;,&#xD;&#xA;&quot;value&quot;:&quot;v1&quot;&#xD;&#xA;}">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:279" Name="name" Type="string" />
+					<FIELD Id="RDK:280" Name="value" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:282" Name="Editor2DParameterTypeList" SubType="list" ItemListTypeName="Editor2DParameterType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:285" Name="Editor2DEventHandlerType" SubType="structure" DesignTimeNotes="{&#xD;&#xA;&quot;handler&quot;:&quot;process.rdx&quot;,&#xD;&#xA;&quot;params&quot;:[{},{}]&#xD;&#xA;}">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:283" Name="handler" Type="string" />
+					<FIELD Id="RDK:284" Name="params" Type="Editor2DParameterTypeList" />
+				</TYPE>
+				<TYPE Id="RDK:292" Name="Editor2DEventArgumentsType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:286" Name="class" Type="string" />
+					<FIELD Id="RDK:287" Name="handler" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:288" Name="connectionPointID" Type="string" />
+					<FIELD Id="RDK:289" Name="shapeID" Type="string" />
+					<FIELD Id="RDK:290" Name="group" Type="string" />
+					<FIELD Id="RDK:291" Name="options" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:293" Name="Editor2DEventArgumentsTypeList" SubType="list" ItemListTypeName="Editor2DEventArgumentsType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:302" Name="Editor2DEventHandlersType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:294" Name="generic" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:295" Name="inserted" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:296" Name="stretched" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:297" Name="linked" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:298" Name="removed" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:299" Name="rotated" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:300" Name="regrouped" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:301" Name="doubleclick" Type="Editor2DEventHandlerType" />
+				</TYPE>
+				<TYPE Id="RDK:306" Name="Editor2DBoxType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:303" Name="width" Type="double" />
+					<FIELD Id="RDK:304" Name="height" Type="double" />
+					<FIELD Id="RDK:305" Name="depth" Type="double" />
+				</TYPE>
+				<TYPE Id="RDK:310" Name="Editor2DEventClassType" SubType="structure" DesignTimeNotes="[&#xD;&#xA;   {&quot;id&quot;:&quot;OnDoubleclick&quot;,&quot;types&quot;:[&quot;doubleclick&quot;],&quot;handler&quot;:&quot;OnDoubleclick.rdx&quot;},&#xD;&#xA;   {&quot;id&quot;:&quot;OnInserted&quot;,&quot;types&quot;:[&quot;inserted&quot;],&quot;handler&quot;:&quot;OnInserted.rdx&quot;},&#xD;&#xA;   ...&#xD;&#xA;]">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:307" Name="id" Type="string" />
+					<FIELD Id="RDK:308" Name="types" Type="string[]" />
+					<FIELD Id="RDK:309" Name="handler" Type="Editor2DEventHandlerType" />
+				</TYPE>
+				<TYPE Id="RDK:322" Name="Editor2DLinkClassType" SubType="structure" DesignTimeNotes="[&#xD;&#xA;   {&quot;id&quot;:&quot;SM3&quot;,&quot;handler&quot;:&quot;OnSM3Linked.rdx&quot;,&quot;zMin&quot;:&quot;400&quot;,&quot;zMax&quot;:&quot;4000&quot;,&quot;zStep&quot;:&quot;800&quot;},&#xD;&#xA;   ...&#xD;&#xA;]">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:311" Name="id" Type="string" />
+					<FIELD Id="RDK:312" Name="handler" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:313" Name="xMin" Type="string" />
+					<FIELD Id="RDK:314" Name="xMax" Type="string" />
+					<FIELD Id="RDK:315" Name="xStep" Type="string" />
+					<FIELD Id="RDK:316" Name="yMin" Type="string" />
+					<FIELD Id="RDK:317" Name="yMax" Type="string" />
+					<FIELD Id="RDK:318" Name="yStep" Type="string" />
+					<FIELD Id="RDK:319" Name="zMin" Type="string" />
+					<FIELD Id="RDK:320" Name="zMax" Type="string" />
+					<FIELD Id="RDK:321" Name="zStep" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:323" Name="Editor2DEventClassTypeList" SubType="list" ItemListTypeName="Editor2DEventClassType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:324" Name="Editor2DLinkClassTypeList" SubType="list" ItemListTypeName="Editor2DLinkClassType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:325" Name="Editor2DCollisionClassTypeList" SubType="list" ItemListTypeName="string">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:326" Name="Editor2DContainerClassTypeList" SubType="list" ItemListTypeName="string">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:327" Name="Editor2DSnapClassTypeList" SubType="list" ItemListTypeName="string">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+			</GROUP>
+		</GROUP>
+		<GROUP Id="RDK:0004" Name="Parameters" SubType="ParameterDefs" Expanded="True">
+			<PAR_DEF Id="RDK:361" Name="NumeroTreni" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:382" Name="CampateXTreno" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:427" Name="ProfonditàCampate" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:428" Name="LunghezzaCampate" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:430" Name="AltezzaCampate" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:409" Name="XPos" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:408" Name="YPos" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:416" Name="DistanzaTraTreni" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:435" Name="Livelli" TypeRD="integer" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:437" Name="AltezzeLivelli" TypeRD="integer[]" Direction="IN" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+			<PAR_DEF Id="RDK:346" Name="myShapeListOUT" TypeRD="Editor2DShapeTypeList" Direction="OUT" Panel="Parameters" UseDataFile="False">
+				<LABEL />
+				<DESCRIPTION />
+			</PAR_DEF>
+		</GROUP>
+		<GROUP Id="RDK:0005" Name="Global Variables" SubType="VarSet" IncludeDate="0" Expanded="True">
+			<VAR Id="RDK:33" Name="iRow" Type="integer" />
+			<VAR Id="RDK:365" Name="iCol" Type="integer" />
+			<VAR Id="RDK:380" Name="YPos" Type="integer" Suppressed="True" />
+			<VAR Id="RDK:390" Name="XPos" Type="integer" Expanded="True" Suppressed="True" />
+			<VAR Id="RDK:35" Name="CampataShapeNew" Type="Editor2DShapeType" />
+			<VAR Id="RDK:351" Name="myShapeLink" Type="Editor2DShapeType" />
+			<VAR Id="RDK:405" Name="CampataShapeIN" Type="Editor2DShapeType" Expanded="True" />
+		</GROUP>
+		<GROUP Id="RDK:0006" Name="Profiles" SubType="ProfileSet" Expanded="True" />
+		<GROUP Id="RDK:0007" Name="Functions" SubType="FunctionSet" IncludeDate="0" Expanded="True" />
+	</GROUP>
+	<GROUP Id="RDK:0008" Name="Main Group" SubType="Generic" Expanded="True" LogDisable="$C$True">
+		<GROUP Id="RDK:52" Name="InsertTreni" SubType="Generic" Expanded="True" LogDisable="$C$False">
+			<SET Id="RDK:368" VarRef="iCol">
+				<EXP><![CDATA[$C$1]]></EXP>
+				<PAR Name="AdvancedOptions" />
+			</SET>
+			<SET_STRUCT Id="RDK:392" VarRef="CampataShapeIN" ClearAll="True" ListRef="myShapeListOUT">
+				<PAR Name="source">
+					<EXP><![CDATA[$C$Campata]]></EXP>
+				</PAR>
+				<PAR Name="sourceLibrary">
+					<EXP><![CDATA[$C$ServiceLibrary]]></EXP>
+				</PAR>
+				<PAR Name="signature" />
+				<PAR Name="id">
+					<EXP><![CDATA[$=$CreateGUID()]]></EXP>
+				</PAR>
+				<PAR Name="name">
+					<EXP><![CDATA[$C$Campata]]></EXP>
+				</PAR>
+				<PAR Name="family" />
+				<PAR Name="description" />
+				<PAR Name="x">
+					<EXP><![CDATA[$=$XPos]]></EXP>
+				</PAR>
+				<PAR Name="y">
+					<EXP><![CDATA[$=$YPos]]></EXP>
+				</PAR>
+				<PAR Name="z">
+					<EXP><![CDATA[$C$0]]></EXP>
+				</PAR>
+				<PAR Name="width">
+					<EXP><![CDATA[$=$LunghezzaCampate]]></EXP>
+				</PAR>
+				<PAR Name="height">
+					<EXP><![CDATA[$=$ProfonditàCampate]]></EXP>
+				</PAR>
+				<PAR Name="depth">
+					<EXP><![CDATA[$=$AltezzaCampate]]></EXP>
+				</PAR>
+				<PAR Name="rotation" />
+				<PAR Name="text" />
+				<PAR Name="behaviour" />
+				<PAR Name="datadump" />
+				<PAR Name="path" />
+				<PAR Name="ctrl1x" />
+				<PAR Name="ctrl1y" />
+				<PAR Name="ctrl2x" />
+				<PAR Name="ctrl2y" />
+				<PAR Name="shapeFromId" />
+				<PAR Name="shapeFromPointIndex" />
+				<PAR Name="shapeToId" />
+				<PAR Name="shapeToPointIndex" />
+				<PAR Name="dimStack" />
+				<PAR Name="dimType" />
+				<PAR Name="dimDriving" />
+				<PAR Name="dimValue" />
+				<PAR Name="color" />
+				<PAR Name="colorOpacity" />
+				<PAR Name="color3D" />
+				<PAR Name="colorOpacity3D" />
+				<PAR Name="lineWidth" />
+				<PAR Name="lineColor" />
+				<PAR Name="lineOpacity" />
+				<PAR Name="lineColor3D" />
+				<PAR Name="lineOpacity3D" />
+				<PAR Name="links" />
+				<PAR Name="group" />
+				<PAR Name="layer" />
+				<PAR Name="connectionPoints" />
+				<PAR Name="modified" />
+				<PAR Name="pinned" />
+				<PAR Name="selected" />
+				<PAR Name="includeInBOM" />
+				<PAR Name="Livelli">
+					<EXP><![CDATA[$=$Livelli]]></EXP>
+				</PAR>
+				<PAR Name="AltezzeLivelli">
+					<EXP><![CDATA[$=$AltezzeLivelli]]></EXP>
+				</PAR>
+				<PAR Name="NomeTreno">
+					<EXP><![CDATA[$=$"Treno_"+IntToStr(iCol)]]></EXP>
+				</PAR>
+				<PAR Name="NumeroCampata">
+					<EXP><![CDATA[$C$1]]></EXP>
+				</PAR>
+			</SET_STRUCT>
+			<WHILELOOP Id="RDK:372" Expanded="True">
+				<VALUECONDITION Value="true">
+					<EXP><![CDATA[$=$iCol<=NumeroTreni]]></EXP>
+				</VALUECONDITION>
+				<SET Id="RDK:41" VarRef="iRow">
+					<EXP><![CDATA[$C$2]]></EXP>
+					<PAR Name="AdvancedOptions" />
+				</SET>
+				<WHILELOOP Id="RDK:49" Expanded="True">
+					<VALUECONDITION Value="true">
+						<EXP><![CDATA[$=$iRow<=CampateXTreno]]></EXP>
+					</VALUECONDITION>
+					<SET_STRUCT Id="RDK:358" VarRef="CampataShapeNew" ClearAll="True" ListRef="myShapeListOUT">
+						<PAR Name="source">
+							<EXP><![CDATA[$=$CampataShapeIN.source]]></EXP>
+						</PAR>
+						<PAR Name="sourceLibrary">
+							<EXP><![CDATA[$=$CampataShapeIN.sourceLibrary]]></EXP>
+						</PAR>
+						<PAR Name="signature" />
+						<PAR Name="id">
+							<EXP><![CDATA[$=$CreateGUID()]]></EXP>
+						</PAR>
+						<PAR Name="name">
+							<EXP><![CDATA[$=$CampataShapeIN.name]]></EXP>
+						</PAR>
+						<PAR Name="family">
+							<EXP><![CDATA[$=$CampataShapeIN.family]]></EXP>
+						</PAR>
+						<PAR Name="description">
+							<EXP><![CDATA[$=$CampataShapeIN.description]]></EXP>
+						</PAR>
+						<PAR Name="x">
+							<EXP><![CDATA[$=$XPos]]></EXP>
+						</PAR>
+						<PAR Name="y">
+							<EXP><![CDATA[$=$YPos]]></EXP>
+						</PAR>
+						<PAR Name="z">
+							<EXP><![CDATA[$=$CampataShapeIN.z]]></EXP>
+						</PAR>
+						<PAR Name="width">
+							<EXP><![CDATA[$=$CampataShapeIN.width]]></EXP>
+						</PAR>
+						<PAR Name="height">
+							<EXP><![CDATA[$=$CampataShapeIN.height]]></EXP>
+						</PAR>
+						<PAR Name="depth">
+							<EXP><![CDATA[$=$CampataShapeIN.depth]]></EXP>
+						</PAR>
+						<PAR Name="rotation" />
+						<PAR Name="text" />
+						<PAR Name="behaviour" />
+						<PAR Name="datadump" />
+						<PAR Name="path" />
+						<PAR Name="ctrl1x" />
+						<PAR Name="ctrl1y" />
+						<PAR Name="ctrl2x" />
+						<PAR Name="ctrl2y" />
+						<PAR Name="shapeFromId" />
+						<PAR Name="shapeFromPointIndex" />
+						<PAR Name="shapeToId" />
+						<PAR Name="shapeToPointIndex" />
+						<PAR Name="dimStack" />
+						<PAR Name="dimType" />
+						<PAR Name="dimDriving" />
+						<PAR Name="dimValue" />
+						<PAR Name="color" />
+						<PAR Name="colorOpacity" />
+						<PAR Name="color3D" />
+						<PAR Name="colorOpacity3D" />
+						<PAR Name="lineWidth" />
+						<PAR Name="lineColor" />
+						<PAR Name="lineOpacity" />
+						<PAR Name="lineColor3D" />
+						<PAR Name="lineOpacity3D" />
+						<PAR Name="links" />
+						<PAR Name="group" />
+						<PAR Name="layer" />
+						<PAR Name="connectionPoints" />
+						<PAR Name="modified" />
+						<PAR Name="pinned" />
+						<PAR Name="selected" />
+						<PAR Name="includeInBOM" />
+						<PAR Name="Livelli">
+							<EXP><![CDATA[$=$Livelli]]></EXP>
+						</PAR>
+						<PAR Name="AltezzeLivelli">
+							<EXP><![CDATA[$=$AltezzeLivelli]]></EXP>
+						</PAR>
+						<PAR Name="NomeTreno">
+							<EXP><![CDATA[$=$CampataShapeIN.NomeTreno]]></EXP>
+						</PAR>
+						<PAR Name="NumeroCampata">
+							<EXP><![CDATA[$=$CampataShapeIN.NumeroCampata+1]]></EXP>
+						</PAR>
+					</SET_STRUCT>
+					<SET_STRUCT Id="RDK:352" VarRef="myShapeLink" ClearAll="True" ListRef="myShapeListOUT">
+						<PAR Name="source">
+							<EXP><![CDATA[$C$link-line]]></EXP>
+						</PAR>
+						<PAR Name="sourceLibrary">
+							<EXP><![CDATA[$C$ServiceLibrary]]></EXP>
+						</PAR>
+						<PAR Name="signature" />
+						<PAR Name="id">
+							<EXP><![CDATA[$=$CreateGUID()]]></EXP>
+						</PAR>
+						<PAR Name="name" />
+						<PAR Name="family" />
+						<PAR Name="description" />
+						<PAR Name="x" />
+						<PAR Name="y" />
+						<PAR Name="z" />
+						<PAR Name="width" />
+						<PAR Name="height" />
+						<PAR Name="depth" />
+						<PAR Name="rotation" />
+						<PAR Name="text" />
+						<PAR Name="behaviour" />
+						<PAR Name="datadump" />
+						<PAR Name="path" />
+						<PAR Name="ctrl1x" />
+						<PAR Name="ctrl1y" />
+						<PAR Name="ctrl2x" />
+						<PAR Name="ctrl2y" />
+						<PAR Name="shapeFromId">
+							<EXP><![CDATA[$=$CampataShapeNew.id]]></EXP>
+						</PAR>
+						<PAR Name="shapeFromPointIndex">
+							<EXP><![CDATA[$C$cp1]]></EXP>
+						</PAR>
+						<PAR Name="shapeToId">
+							<EXP><![CDATA[$=$CampataShapeIN.id]]></EXP>
+						</PAR>
+						<PAR Name="shapeToPointIndex">
+							<EXP><![CDATA[$C$cp2]]></EXP>
+						</PAR>
+						<PAR Name="dimStack" />
+						<PAR Name="dimType" />
+						<PAR Name="dimDriving" />
+						<PAR Name="dimValue" />
+						<PAR Name="color" />
+						<PAR Name="colorOpacity" />
+						<PAR Name="color3D" />
+						<PAR Name="colorOpacity3D" />
+						<PAR Name="lineWidth" />
+						<PAR Name="lineColor" />
+						<PAR Name="lineOpacity" />
+						<PAR Name="lineColor3D" />
+						<PAR Name="lineOpacity3D" />
+						<PAR Name="links" />
+						<PAR Name="group" />
+						<PAR Name="layer" />
+						<PAR Name="connectionPoints" />
+						<PAR Name="modified" />
+						<PAR Name="pinned" />
+						<PAR Name="selected" />
+						<PAR Name="includeInBOM" />
+						<PAR Name="Livelli" />
+						<PAR Name="AltezzeLivelli" />
+						<PAR Name="NomeTreno" />
+						<PAR Name="NumeroCampata" />
+					</SET_STRUCT>
+					<SET Id="RDK:47" VarRef="CampataShapeIN">
+						<EXP><![CDATA[$=$CampataShapeNew]]></EXP>
+						<PAR Name="AdvancedOptions" />
+					</SET>
+					<SET Id="RDK:48" VarRef="iRow">
+						<EXP><![CDATA[$=$iRow+1]]></EXP>
+						<PAR Name="AdvancedOptions" />
+					</SET>
+				</WHILELOOP>
+				<SET Id="RDK:385" VarRef="YPos">
+					<EXP><![CDATA[$=$CampataShapeNew.y +ProfonditàCampate+ DistanzaTraTreni]]></EXP>
+					<PAR Name="AdvancedOptions" />
+				</SET>
+				<SET Id="RDK:398" VarRef="iCol">
+					<EXP><![CDATA[$=$iCol+1]]></EXP>
+					<PAR Name="AdvancedOptions" />
+				</SET>
+				<GROUP Id="RDK:418" Name="Group" SubType="Generic" Expanded="True">
+					<VALUECONDITION Value="true">
+						<EXP><![CDATA[$=$iCol<=NumeroTreni]]></EXP>
+					</VALUECONDITION>
+					<SET_STRUCT Id="RDK:424" VarRef="CampataShapeIN" ClearAll="True" ListRef="myShapeListOUT">
+						<PAR Name="source">
+							<EXP><![CDATA[$C$Campata]]></EXP>
+						</PAR>
+						<PAR Name="sourceLibrary">
+							<EXP><![CDATA[$C$ServiceLibrary]]></EXP>
+						</PAR>
+						<PAR Name="signature" />
+						<PAR Name="id">
+							<EXP><![CDATA[$=$CreateGUID()]]></EXP>
+						</PAR>
+						<PAR Name="name">
+							<EXP><![CDATA[$C$Campata]]></EXP>
+						</PAR>
+						<PAR Name="family" />
+						<PAR Name="description" />
+						<PAR Name="x">
+							<EXP><![CDATA[$=$XPos]]></EXP>
+						</PAR>
+						<PAR Name="y">
+							<EXP><![CDATA[$=$YPos]]></EXP>
+						</PAR>
+						<PAR Name="z">
+							<EXP><![CDATA[$C$0]]></EXP>
+						</PAR>
+						<PAR Name="width">
+							<EXP><![CDATA[$=$LunghezzaCampate]]></EXP>
+						</PAR>
+						<PAR Name="height">
+							<EXP><![CDATA[$=$ProfonditàCampate]]></EXP>
+						</PAR>
+						<PAR Name="depth">
+							<EXP><![CDATA[$=$AltezzaCampate]]></EXP>
+						</PAR>
+						<PAR Name="rotation" />
+						<PAR Name="text" />
+						<PAR Name="behaviour" />
+						<PAR Name="datadump" />
+						<PAR Name="path" />
+						<PAR Name="ctrl1x" />
+						<PAR Name="ctrl1y" />
+						<PAR Name="ctrl2x" />
+						<PAR Name="ctrl2y" />
+						<PAR Name="shapeFromId" />
+						<PAR Name="shapeFromPointIndex" />
+						<PAR Name="shapeToId" />
+						<PAR Name="shapeToPointIndex" />
+						<PAR Name="dimStack" />
+						<PAR Name="dimType" />
+						<PAR Name="dimDriving" />
+						<PAR Name="dimValue" />
+						<PAR Name="color" />
+						<PAR Name="colorOpacity" />
+						<PAR Name="color3D" />
+						<PAR Name="colorOpacity3D" />
+						<PAR Name="lineWidth" />
+						<PAR Name="lineColor" />
+						<PAR Name="lineOpacity" />
+						<PAR Name="lineColor3D" />
+						<PAR Name="lineOpacity3D" />
+						<PAR Name="links" />
+						<PAR Name="group" />
+						<PAR Name="layer" />
+						<PAR Name="connectionPoints" />
+						<PAR Name="modified" />
+						<PAR Name="pinned" />
+						<PAR Name="selected" />
+						<PAR Name="includeInBOM" />
+						<PAR Name="Livelli">
+							<EXP><![CDATA[$=$Livelli]]></EXP>
+						</PAR>
+						<PAR Name="AltezzeLivelli">
+							<EXP><![CDATA[$=$AltezzeLivelli]]></EXP>
+						</PAR>
+						<PAR Name="NomeTreno">
+							<EXP><![CDATA[$=$"Treno_"+IntToStr(iCol)]]></EXP>
+						</PAR>
+						<PAR Name="NumeroCampata">
+							<EXP><![CDATA[$C$1]]></EXP>
+						</PAR>
+					</SET_STRUCT>
+				</GROUP>
+			</WHILELOOP>
+			<GROUP Id="RDK:51" Name="Fine InsertTreni" SubType="Generic" />
+		</GROUP>
+	</GROUP>
+	<EXTERNAL_DATA>
+		<PROFILES_DATA />
+		<BOM_DATA />
+	</EXTERNAL_DATA>
+</PROCESS>

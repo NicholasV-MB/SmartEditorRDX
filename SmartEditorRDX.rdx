@@ -1,0 +1,2946 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PROCESS Id="RDK:0001" Name="SmartEditorRDX" Expanded="True">
+	<PROCESSPROPERTY CrUser="nicholas.vittor [LAPT-IT07]" CrDate="2021-04-16T09:50:01" ModUser="nicholas.vittor [LAPT-IT07]" ModDate="2021-04-19T16:10:30" LanguageVersion="2011.1.1.0" />
+	<GROUP Id="RDK:0002" Name="Declarations" SubType="Declarations" Expanded="True">
+		<GROUP Id="RDK:0003" Name="Types" SubType="TypeSet" IncludeDate="0" Expanded="True">
+			<GROUP Id="RDK:16" Name="Editor2DTypes" SubType="TypeSet" IncludeDate="132514547724571092" Expanded="True">
+				<TYPE Id="RDK:79" Name="Editor2DOptionType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:17" Name="PageUnit" Type="string" DesignTimeRemark="mm | in" DesignTimeNotes="mm | in" />
+					<FIELD Id="RDK:18" Name="PageLanguage" Type="string" DesignTimeRemark="Language key as defined in Wizard" DesignTimeNotes="mm | in" />
+					<FIELD Id="RDK:19" Name="PageNumberOfDecimal" Type="integer" />
+					<FIELD Id="RDK:20" Name="PageOrigin" Type="string" DesignTimeRemark="x,y,signX,signY,CB" />
+					<FIELD Id="RDK:21" Name="PageFontSize" Type="integer" DesignTimeRemark="Default to 16" />
+					<FIELD Id="RDK:22" Name="PageFormat" Type="string" DesignTimeRemark="ISO A5 (148.5x210) | ISO A4 (210x297) | ISO A3 (297x420) | ISO A2 (420x594) | ISO A1 (594x840) | A (8.5x11) | B (11x17) | C (17x22) | Arch A (9x12) | Arch B (12x18) | Arch C (18x24) | Legal (11x14) | (8x10) | (30x42) | (WxH)" />
+					<FIELD Id="RDK:23" Name="PageOrientation" Type="string" DesignTimeRemark="Landscape | Portrait" />
+					<FIELD Id="RDK:24" Name="PageGridSize" Type="string" DesignTimeRemark="5mm | 10mm | 25mm | 50mm | .25in | .50in | .75in | 1.0in" />
+					<FIELD Id="RDK:25" Name="PageGridRotation" Type="string" DesignTimeRemark="5 | 10 | 15 | 30 | 45 | 90" />
+					<FIELD Id="RDK:26" Name="PageScaleFactor" Type="string" DesignTimeRemark="1:1 | 1:5 | 1:10 | 1:25 | 1:50 | 1:100 | 1:1000" />
+					<FIELD Id="RDK:27" Name="PageSnapToGrid" Type="boolean" />
+					<FIELD Id="RDK:28" Name="PageSnapToObject" Type="boolean" />
+					<FIELD Id="RDK:29" Name="PageSnapToPolyline" Type="boolean" />
+					<FIELD Id="RDK:30" Name="PageSnapToShapeCenter" Type="boolean" />
+					<FIELD Id="RDK:31" Name="PageQuickPickIgnoreThreshold" Type="string" />
+					<FIELD Id="RDK:32" Name="PageShowGrid" Type="boolean" />
+					<FIELD Id="RDK:33" Name="PageShowRulers" Type="boolean" />
+					<FIELD Id="RDK:34" Name="PageShowActions" Type="boolean" />
+					<FIELD Id="RDK:35" Name="PageShowUndoRedo" Type="boolean" />
+					<FIELD Id="RDK:36" Name="PageShowTextTools" Type="boolean" />
+					<FIELD Id="RDK:37" Name="PageShowDrawTools" Type="boolean" />
+					<FIELD Id="RDK:38" Name="PageShowSmartLineTools" Type="boolean" />
+					<FIELD Id="RDK:39" Name="PageShowSmartCopyTools" Type="boolean" />
+					<FIELD Id="RDK:40" Name="PageShowConnectorTools" Type="boolean" />
+					<FIELD Id="RDK:41" Name="PageShowConnectionPointTools" Type="boolean" />
+					<FIELD Id="RDK:42" Name="PageShowGridPatternTools" Type="boolean" />
+					<FIELD Id="RDK:43" Name="PageShowZIndexTools" Type="boolean" />
+					<FIELD Id="RDK:44" Name="PageShowGroupTools" Type="boolean" />
+					<FIELD Id="RDK:45" Name="PageShowQuoteTools" Type="boolean" />
+					<FIELD Id="RDK:46" Name="PageShowLinkTools" Type="boolean" />
+					<FIELD Id="RDK:47" Name="PageShowCustomOrigin" Type="boolean" />
+					<FIELD Id="RDK:48" Name="PageShowUtils" Type="boolean" />
+					<FIELD Id="RDK:49" Name="PageShowSave" Type="boolean" />
+					<FIELD Id="RDK:50" Name="PageShowHelp" Type="boolean" />
+					<FIELD Id="RDK:51" Name="PageShowHelpPopup" Type="boolean" />
+					<FIELD Id="RDK:52" Name="PageShowPreview3D" Type="boolean" />
+					<FIELD Id="RDK:53" Name="PageShowPreview3DGround" Type="boolean" />
+					<FIELD Id="RDK:54" Name="PageShowPreview3DViewStyle" Type="string" DesignTimeRemark="TOP|FRONT|PROPSONLY" />
+					<FIELD Id="RDK:55" Name="PageShowPreview3DEnableFloor" Type="boolean" />
+					<FIELD Id="RDK:56" Name="PageShowPreview3DFloorImage" Type="string" DesignTimeRemark="Please provide relative path to texture image [dimensions must be powers of two (2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, ...)] or CSS code color (#ffffff)" />
+					<FIELD Id="RDK:57" Name="PageShowPreview3DFloorThickness" Type="double" DesignTimeRemark="Positive value to start drawing the floor from z=0 up. Negative value to start drawing the floor from z=0 down." />
+					<FIELD Id="RDK:58" Name="PageShowPreview3DEnableWalls" Type="boolean" />
+					<FIELD Id="RDK:59" Name="PageShowPreview3DWallDimensions" Type="string" />
+					<FIELD Id="RDK:60" Name="PageShowToolsOnToolbar" Type="string" DesignTimeRemark="Comma separated list of tool ids to show on the toolbar: pagedrag,text,selectgroup,poly,connector,smartline,gridpattern,smartcopy,quote,link,customorigin,preview3d,paint,snapshot,custom1,custom2,custom3,togglegrid,toggleshadows,togglewalls" />
+					<FIELD Id="RDK:61" Name="PageShowShapeProperties" Type="boolean" />
+					<FIELD Id="RDK:62" Name="PageShowQuoteUOM" Type="boolean" />
+					<FIELD Id="RDK:63" Name="PageIncludeConnectionPoints" Type="boolean" />
+					<FIELD Id="RDK:64" Name="PageCheckInclusions" Type="boolean" />
+					<FIELD Id="RDK:65" Name="PageCheckCollisions" Type="boolean" />
+					<FIELD Id="RDK:66" Name="PageCheckQuotes" Type="boolean" />
+					<FIELD Id="RDK:67" Name="PageCheckBackgroundCollisions" Type="boolean" />
+					<FIELD Id="RDK:68" Name="PageActiveBackground" Type="boolean" />
+					<FIELD Id="RDK:69" Name="PageZoomFit" Type="boolean" />
+					<FIELD Id="RDK:70" Name="PageZoomPage" Type="boolean" />
+					<FIELD Id="RDK:71" Name="ShapeEvents" Type="string" DesignTimeRemark="INSERTED,PASTED,REMOVED,ROTATED,LINKED,STRETCHED,DOUBLECLICK,REGROUPED" />
+					<FIELD Id="RDK:72" Name="ShapeLibrary" Type="string" />
+					<FIELD Id="RDK:73" Name="ShapeLibraryHideList" Type="string" DesignTimeRemark="Comma separated list of categories and shapes to hide | * to hide all" />
+					<FIELD Id="RDK:74" Name="ShapeLibraryOpenList" Type="string" DesignTimeRemark="Comma separated list of categories and shapes to open | * to hide all" />
+					<FIELD Id="RDK:75" Name="DoBackgroundCheckOnly" Type="boolean" />
+					<FIELD Id="RDK:76" Name="DoAutoSave" Type="boolean" />
+					<FIELD Id="RDK:77" Name="DoExportImage2D" Type="boolean" />
+					<FIELD Id="RDK:78" Name="DoExportImage3D" Type="boolean" />
+				</TYPE>
+				<TYPE Id="RDK:88" Name="Editor2DCategory" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:80" Name="id" Type="string" />
+					<FIELD Id="RDK:81" Name="parentId" Type="string" />
+					<FIELD Id="RDK:82" Name="name" Type="string" />
+					<FIELD Id="RDK:83" Name="description" Type="string" />
+					<FIELD Id="RDK:84" Name="icon" Type="string" />
+					<FIELD Id="RDK:85" Name="hidden" Type="boolean" />
+					<FIELD Id="RDK:86" Name="userFilter" Type="string" />
+					<FIELD Id="RDK:87" Name="styleTags" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:136" Name="Editor2DShapeType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:89" Name="source" Type="string" />
+					<FIELD Id="RDK:90" Name="sourceLibrary" Type="string" />
+					<FIELD Id="RDK:91" Name="signature" Type="string" />
+					<FIELD Id="RDK:92" Name="id" Type="string" />
+					<FIELD Id="RDK:93" Name="name" Type="string" />
+					<FIELD Id="RDK:94" Name="family" Type="string" />
+					<FIELD Id="RDK:95" Name="description" Type="string" />
+					<FIELD Id="RDK:96" Name="x" Type="double" />
+					<FIELD Id="RDK:97" Name="y" Type="double" />
+					<FIELD Id="RDK:98" Name="z" Type="double" />
+					<FIELD Id="RDK:99" Name="width" Type="double" />
+					<FIELD Id="RDK:100" Name="height" Type="double" />
+					<FIELD Id="RDK:101" Name="depth" Type="double" />
+					<FIELD Id="RDK:102" Name="rotation" Type="double" />
+					<FIELD Id="RDK:103" Name="text" Type="string" />
+					<FIELD Id="RDK:104" Name="behaviour" Type="string" DesignTimeNotes="(BACKGROUND)&#xD;&#xA;(CONTAINER)&#xD;&#xA;(NOTE)&#xD;&#xA;(NOCOLLISIONS)&#xD;&#xA;(NOINCLUSIONS)&#xD;&#xA;(NOSELECT)&#xD;&#xA;(NOMOVE)&#xD;&#xA;(NOREMOVE)&#xD;&#xA;(NOSTRETCH)&#xD;&#xA;(NOROTATE)&#xD;&#xA;(NOEDIT)&#xD;&#xA;(COLLISIONCLASS=x,y,z)&#xD;&#xA;(ORIGIN=CENTER|TOPLEFT|TOPRIGHT|BOTTOMLEFT|BOTTOMRIGHT)&#xD;&#xA;(URL=xxx)&#xD;&#xA;(DIMSTACKABSOLUTE)" />
+					<FIELD Id="RDK:105" Name="datadump" Type="string" />
+					<FIELD Id="RDK:106" Name="path" Type="string" />
+					<FIELD Id="RDK:107" Name="ctrl1x" Type="double" />
+					<FIELD Id="RDK:108" Name="ctrl1y" Type="double" />
+					<FIELD Id="RDK:109" Name="ctrl2x" Type="double" />
+					<FIELD Id="RDK:110" Name="ctrl2y" Type="double" />
+					<FIELD Id="RDK:111" Name="shapeFromId" Type="string" />
+					<FIELD Id="RDK:112" Name="shapeFromPointIndex" Type="string" />
+					<FIELD Id="RDK:113" Name="shapeToId" Type="string" />
+					<FIELD Id="RDK:114" Name="shapeToPointIndex" Type="string" />
+					<FIELD Id="RDK:115" Name="dimStack" Type="double" />
+					<FIELD Id="RDK:116" Name="dimType" Type="string" />
+					<FIELD Id="RDK:117" Name="dimDriving" Type="boolean" />
+					<FIELD Id="RDK:118" Name="dimValue" Type="double" />
+					<FIELD Id="RDK:119" Name="color" Type="string" />
+					<FIELD Id="RDK:120" Name="colorOpacity" Type="double" />
+					<FIELD Id="RDK:121" Name="color3D" Type="string" />
+					<FIELD Id="RDK:122" Name="colorOpacity3D" Type="double" />
+					<FIELD Id="RDK:123" Name="lineWidth" Type="string" />
+					<FIELD Id="RDK:124" Name="lineColor" Type="string" />
+					<FIELD Id="RDK:125" Name="lineOpacity" Type="double" />
+					<FIELD Id="RDK:126" Name="lineColor3D" Type="string" />
+					<FIELD Id="RDK:127" Name="lineOpacity3D" Type="double" />
+					<FIELD Id="RDK:128" Name="links" Type="string[]" />
+					<FIELD Id="RDK:129" Name="group" Type="string" />
+					<FIELD Id="RDK:130" Name="layer" Type="string" />
+					<FIELD Id="RDK:131" Name="connectionPoints" Type="string" DesignTimeRemark="List of E2DShapeConnectionPointType" DesignTimeNotes="[ &#xD;&#xA;    {&quot;id&quot;: &quot;s00--cp1&quot;, &quot;shapeId&quot;: &quot;s00&quot;,&#xA; &quot;cpId&quot;: &quot;cp1&quot;, &#xD;&#xA;     &quot;x&quot;: 25, &quot;y&quot;: 37.5, &quot;z&quot;: 0, &quot;noRX&quot;: 25, &quot;noRY&quot;: 37.5, &quot;noRZ&quot;: 0,&#xD;&#xA;&#xA;     &quot;direction&quot;: 270,&#xA; &quot;linkClass&quot;: &quot;&quot;},&#xD;&#xA;    {&quot;id&quot;: &quot;s00--cp2&quot;, &quot;shapeId&quot;: &quot;r00&quot;, &quot;cpId&quot;: &quot;cp2&quot;,&#xA;&#xD;&#xA;     &quot;x&quot;: 37.5, &quot;y&quot;: 25, &quot;z&quot;: 0, &quot;noRX&quot;: 37.5, &quot;noRY&quot;: 25,&#xA; &quot;noRZ&quot;: 0,&#xD;&#xA;&#xA;     &quot;direction&quot;: 0, &quot;linkClass&quot;: &quot;&quot;},&#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:132" Name="modified" Type="boolean" />
+					<FIELD Id="RDK:133" Name="pinned" Type="boolean" />
+					<FIELD Id="RDK:134" Name="selected" Type="boolean" />
+					<FIELD Id="RDK:135" Name="includeInBOM" Type="boolean" />
+					<FIELD Id="RDK:4927" Name="Livelli" Type="integer" />
+					<FIELD Id="RDK:4929" Name="AltezzeLivelli" Type="integer[]" />
+					<FIELD Id="RDK:5256" Name="NomeTreno" Type="string" />
+					<FIELD Id="RDK:5258" Name="NumeroCampata" Type="integer" />
+				</TYPE>
+				<TYPE Id="RDK:137" Name="Editor2DShapeTypeList" SubType="list" ItemListTypeName="Editor2DShapeType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:149" Name="Editor2DShapeConnectionPointType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:138" Name="id" Type="string" />
+					<FIELD Id="RDK:139" Name="shapeId" Type="string" />
+					<FIELD Id="RDK:140" Name="cpId" Type="string" />
+					<FIELD Id="RDK:141" Name="x" Type="double" />
+					<FIELD Id="RDK:142" Name="y" Type="double" />
+					<FIELD Id="RDK:143" Name="z" Type="double" />
+					<FIELD Id="RDK:144" Name="noRX" Type="double" />
+					<FIELD Id="RDK:145" Name="noRY" Type="double" />
+					<FIELD Id="RDK:146" Name="noRZ" Type="double" />
+					<FIELD Id="RDK:147" Name="direction" Type="string" />
+					<FIELD Id="RDK:148" Name="linkClass" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:150" Name="Editor2DShapeConnectionPointTypeList" SubType="list" ItemListTypeName="Editor2DShapeConnectionPointType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:188" Name="Editor2DShapePropertyType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:151" Name="id" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:152" Name="name" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:153" Name="family" Type="string" />
+					<FIELD Id="RDK:154" Name="description" Type="string" />
+					<FIELD Id="RDK:155" Name="text" Type="string" />
+					<FIELD Id="RDK:156" Name="shapeMode" Type="integer" DesignTimeRemark="REQUIRED | 0 - Shape; 1 - Assembly; 2 - Group;" />
+					<FIELD Id="RDK:157" Name="icon" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:158" Name="iconBig" Type="string" />
+					<FIELD Id="RDK:159" Name="image" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:160" Name="srcSVG" Type="string" DesignTimeRemark="REQUIRED" />
+					<FIELD Id="RDK:161" Name="src3D" Type="string" />
+					<FIELD Id="RDK:162" Name="srcTexture3D" Type="string" />
+					<FIELD Id="RDK:163" Name="width" Type="double" />
+					<FIELD Id="RDK:164" Name="height" Type="double" />
+					<FIELD Id="RDK:165" Name="depth" Type="double" />
+					<FIELD Id="RDK:166" Name="behaviour" Type="string" DesignTimeNotes="(NOTE)(NOSELECT)(NOSTRETCH)(NOSTRETCHONVIEW)(NOHSTRETCH)(NOVSTRETCH)(NOROTATE)(NOROTATEONVIEW)(NOMOVE)(NOHMOVE)(NOVMOVE)(NOREMOVE)(NOEDIT)(NOLINKS)(LINKCLASS=)(NOCOLLISIONS)(COLLISIONCLASS=)(NOINCLUSIONS)(BACKGROUND)(CONTAINER=)(CONTAINERCLASS=)(HIDEDIMENSIONS)(HIDECOORDINATES)(HIDEROTATION)(HIDEUPDATEBUTTON)(KEEPASPECTRATIO)(ORIGIN=)" />
+					<FIELD Id="RDK:167" Name="help" Type="string" />
+					<FIELD Id="RDK:168" Name="eventClass" Type="string" />
+					<FIELD Id="RDK:169" Name="linkClass" Type="string" />
+					<FIELD Id="RDK:170" Name="collisionClass" Type="string" />
+					<FIELD Id="RDK:171" Name="containerClass" Type="string" />
+					<FIELD Id="RDK:172" Name="snapClass" Type="string" />
+					<FIELD Id="RDK:173" Name="color" Type="string" />
+					<FIELD Id="RDK:174" Name="colorOpacity" Type="double" />
+					<FIELD Id="RDK:175" Name="lineColor" Type="string" />
+					<FIELD Id="RDK:176" Name="lineColorOpacity" Type="double" />
+					<FIELD Id="RDK:177" Name="color3D" Type="string" />
+					<FIELD Id="RDK:178" Name="colorOpacity3D" Type="double" />
+					<FIELD Id="RDK:179" Name="lineColor3D" Type="string" />
+					<FIELD Id="RDK:180" Name="lineColorOpacity3D" Type="double" />
+					<FIELD Id="RDK:181" Name="custom" Type="string" DesignTimeNotes="{&#xD;&#xA;    &quot;TestV&quot;:{&#xD;&#xA;        &quot;UIType&quot;:&quot;text&quot;,&#xD;&#xA;        &quot;UIValidation&quot;:&quot;0&amp;lt;value &amp;amp;&amp;amp; value&amp;lt;10&quot;,&#xD;&#xA;        &quot;UIDefaultNoConvert&quot;:1&#xD;&#xA;    },&#xD;&#xA;    &quot;Side&quot;:{ &#xD;&#xA;        &quot;In&quot;:&quot;(ADDBEHAVIOUR=COLLISIONCLASS=1)&#xD;&#xA;(REMBEHAVIOUR=COLLISIONCLASS=2)&quot;,&#xD;&#xA;        &quot;Out&quot;:&quot;(ADDBEHAVIOUR=COLLISIONCLASS=2)(REMBEHAVIOUR=COLLISIONCLASS=1)&quot;&#xD;&#xA;    },&#xD;&#xA;    &quot;Angle&quot;:{&#xD;&#xA;        &quot;UIDefaultNoConvert&quot;:&quot;0&quot;,&#xD;&#xA;        &quot;0&quot;:&quot;(ROTATION=0)&quot;,&#xD;&#xA;        &quot;45&quot;:&quot;(ROTATION=-45)&quot;&#xD;&#xA;    }&#xD;&#xA;}" />
+					<FIELD Id="RDK:182" Name="connectionPoints" Type="string" DesignTimeNotes="[ &#xD;&#xA;    {&quot;id&quot;: &quot;cp1&quot;, &quot;x&quot;:-43, &quot;y&quot;:-43, &quot;z&quot;:0, &quot;linkClass&quot;:&quot;&quot;, &quot;direction&quot;:&quot;&quot;, &quot;event&quot;:&quot;&quot;},&#xD;&#xA;    {&quot;id&quot;: &quot;cp2&quot;, &quot;x&quot;:-43, &quot;y&quot;:-43, &quot;z&quot;:0, &quot;linkClass&quot;:&quot;&quot;, &quot;direction&quot;:&quot;&quot;, &quot;event&quot;:&quot;&quot;},&#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:183" Name="group2dShapes" Type="string" DesignTimeNotes="[&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;xxx&quot;, &quot;source&quot;: &quot;rect&quot;,&#xD;&#xA;        &quot;x&quot;:-43, &quot;y&quot;:-43, &quot;z&quot;:0, &#xD;&#xA;        &quot;width&quot;:10, &quot;height&quot;:10, &quot;depth&quot;:200, &#xD;&#xA;        &quot;rotation&quot;: 0,&#xD;&#xA;        &quot;data&quot;:&quot;&quot;, &quot;color&quot;: &quot;#ff00aa&quot;, &quot;colorOpacity&quot;:1&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;yyy&quot;, &quot;source&quot;: &quot;rect&quot;,&#xD;&#xA;        &quot;x&quot;:-43, &quot;y&quot;:43, &quot;z&quot;:0, &#xD;&#xA;        &quot;width&quot;:10, &quot;height&quot;:10, &quot;depth&quot;:200, &#xD;&#xA;        &quot;rotation&quot;: 33,&#xD;&#xA;        &quot;data&quot;:&quot;&quot;, &quot;color&quot;: &quot;#aa00ff&quot;, &quot;colorOpacity&quot;:0.5&#xD;&#xA;    },&#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:184" Name="group2dConnectors" Type="string" DesignTimeNotes="[&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;xxx&quot;, &#xD;&#xA;        &quot;x1&quot;:-43, &quot;y1&quot;:-43, &quot;x2&quot;:43, &quot;y2&quot;:43,&#xD;&#xA;        &quot;path&quot;:&quot;&quot;, &#xD;&#xA;        &quot;ctrl1x&quot;:10, &quot;ctrl1y&quot;:10, &quot;ctrl2x&quot;:20, &quot;ctrl2y&quot;: 20, &#xD;&#xA;        &quot;shapeFromId&quot;:&quot;&quot;, &quot;shapeFromPointIndex&quot;: &quot;&quot;, &#xD;&#xA;        &quot;shapeToId&quot;:&quot;&quot;, &quot;shapeToPointIndex&quot;:&quot;&quot; &#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;xxx&quot;, &#xD;&#xA;        &quot;x1&quot;:3, &quot;y1&quot;:3, &quot;x2&quot;:33, &quot;y2&quot;:33,&#xD;&#xA;        &quot;path&quot;:&quot;&quot;, &#xD;&#xA;        &quot;ctrl1x&quot;:15, &quot;ctrl1y&quot;:15, &quot;ctrl2x&quot;:51, &quot;ctrl2y&quot;: 51, &#xD;&#xA;        &quot;shapeFromId&quot;:&quot;&quot;, &quot;shapeFromPointIndex&quot;: &quot;&quot;, &#xD;&#xA;        &quot;shapeToId&quot;:&quot;&quot;, &quot;shapeToPointIndex&quot;:&quot;&quot; &#xD;&#xA;    },    &#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:185" Name="group3d" Type="string" DesignTimeNotes="[&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;xxx&quot;, &quot;source&quot;: &quot;rect&quot;,&#xD;&#xA;        &quot;x&quot;:-43, &quot;y&quot;:-43, &quot;z&quot;:0, &#xD;&#xA;        &quot;width&quot;:10, &quot;height&quot;:10, &quot;depth&quot;:200, &#xD;&#xA;        &quot;rotation&quot;: 0,&#xD;&#xA;        &quot;data&quot;:&quot;&quot;, &quot;color&quot;: &quot;#ff00aa&quot;, &quot;colorOpacity&quot;:1&#xD;&#xA;    },&#xD;&#xA;    {&#xD;&#xA;        &quot;id&quot;: &quot;yyy&quot;, &quot;source&quot;: &quot;rect&quot;,&#xD;&#xA;        &quot;x&quot;:-43, &quot;y&quot;:43, &quot;z&quot;:0, &#xD;&#xA;        &quot;width&quot;:10, &quot;height&quot;:10, &quot;depth&quot;:200, &#xD;&#xA;        &quot;rotation&quot;: 33,&#xD;&#xA;        &quot;data&quot;:&quot;&quot;, &quot;color&quot;: &quot;#aa00ff&quot;, &quot;colorOpacity&quot;:0.5&#xD;&#xA;    },&#xD;&#xA;    ...&#xD;&#xA;]" />
+					<FIELD Id="RDK:186" Name="eventHandler" Type="string" />
+					<FIELD Id="RDK:187" Name="eventHandlers" Type="string" DesignTimeNotes="{&#xD;&#xA;    &quot;generic&quot;:{&quot;handler&quot;:&quot;genericEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;inserted&quot;:{&quot;handler&quot;:&quot;insertedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;removed&quot;:{&quot;handler&quot;:&quot;removedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;linked&quot;:{&quot;handler&quot;:&quot;linkedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;stretched&quot;:{&quot;handler&quot;:&quot;stretchedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;rotated&quot;:{&quot;handler&quot;:&quot;rotatedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;regrouped&quot;:{&quot;handler&quot;:&quot;regroupedEventProcess.rdx&quot;,&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;    &quot;doubleclick&quot;:{&quot;handler&quot;:&quot;doubleclickEventProcess.rdx&quot;&quot;params&quot;:[{&quot;name&quot;:&quot;p1&quot;,&quot;value&quot;:&quot;v1&quot;},{&quot;name&quot;:&quot;p2&quot;,&quot;value&quot;:&quot;v2&quot;}]},&#xD;&#xA;}" />
+				</TYPE>
+				<TYPE Id="RDK:201" Name="Editor2DChildType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:189" Name="id" Type="string" />
+					<FIELD Id="RDK:190" Name="source" Type="string" />
+					<FIELD Id="RDK:191" Name="width" Type="double" />
+					<FIELD Id="RDK:192" Name="height" Type="double" />
+					<FIELD Id="RDK:193" Name="depth" Type="double" />
+					<FIELD Id="RDK:194" Name="x" Type="double" />
+					<FIELD Id="RDK:195" Name="y" Type="double" />
+					<FIELD Id="RDK:196" Name="z" Type="double" />
+					<FIELD Id="RDK:197" Name="rotation" Type="string" />
+					<FIELD Id="RDK:198" Name="data" Type="string" />
+					<FIELD Id="RDK:199" Name="color" Type="string" />
+					<FIELD Id="RDK:200" Name="colorOpacity" Type="double" />
+				</TYPE>
+				<TYPE Id="RDK:202" Name="Editor2DChildTypeList" SubType="list" ItemListTypeName="Editor2DChildType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:217" Name="Editor2DChildConnectorType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:203" Name="source" Type="string" />
+					<FIELD Id="RDK:204" Name="x1" Type="double" />
+					<FIELD Id="RDK:205" Name="y1" Type="double" />
+					<FIELD Id="RDK:206" Name="x2" Type="double" />
+					<FIELD Id="RDK:207" Name="y2" Type="double" />
+					<FIELD Id="RDK:208" Name="path" Type="string" />
+					<FIELD Id="RDK:209" Name="ctrl1x" Type="double" />
+					<FIELD Id="RDK:210" Name="ctrl1y" Type="double" />
+					<FIELD Id="RDK:211" Name="ctrl2x" Type="double" />
+					<FIELD Id="RDK:212" Name="ctrl2y" Type="double" />
+					<FIELD Id="RDK:213" Name="shapeFromId" Type="string" />
+					<FIELD Id="RDK:214" Name="shapeFromPointIndex" Type="string" />
+					<FIELD Id="RDK:215" Name="shapeToId" Type="string" />
+					<FIELD Id="RDK:216" Name="shapeToPointIndex" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:218" Name="Editor2DChildConnectorTypeList" SubType="list" ItemListTypeName="Editor2DChildConnectorType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:236" Name="Editor2DConnectionPointType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:219" Name="id" Type="string" />
+					<FIELD Id="RDK:220" Name="x" Type="double" />
+					<FIELD Id="RDK:221" Name="y" Type="double" />
+					<FIELD Id="RDK:222" Name="z" Type="double" />
+					<FIELD Id="RDK:223" Name="xMin" Type="string" />
+					<FIELD Id="RDK:224" Name="xMax" Type="string" />
+					<FIELD Id="RDK:225" Name="xStep" Type="string" />
+					<FIELD Id="RDK:226" Name="yMin" Type="string" />
+					<FIELD Id="RDK:227" Name="yMax" Type="string" />
+					<FIELD Id="RDK:228" Name="yStep" Type="string" />
+					<FIELD Id="RDK:229" Name="zMin" Type="string" />
+					<FIELD Id="RDK:230" Name="zMax" Type="string" />
+					<FIELD Id="RDK:231" Name="zStep" Type="string" />
+					<FIELD Id="RDK:232" Name="direction" Type="double" />
+					<FIELD Id="RDK:233" Name="linkClass" Type="string" />
+					<FIELD Id="RDK:234" Name="label" Type="string" />
+					<FIELD Id="RDK:235" Name="isDimension" Type="boolean" />
+				</TYPE>
+				<TYPE Id="RDK:237" Name="Editor2DConnectionPointTypeList" SubType="list" ItemListTypeName="Editor2DConnectionPointType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:240" Name="Editor2DParameterType" SubType="structure" DesignTimeNotes="{&#xD;&#xA;&quot;name&quot;:&quot;p1&quot;,&#xD;&#xA;&quot;value&quot;:&quot;v1&quot;&#xD;&#xA;}">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:238" Name="name" Type="string" />
+					<FIELD Id="RDK:239" Name="value" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:241" Name="Editor2DParameterTypeList" SubType="list" ItemListTypeName="Editor2DParameterType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:244" Name="Editor2DEventHandlerType" SubType="structure" DesignTimeNotes="{&#xD;&#xA;&quot;handler&quot;:&quot;process.rdx&quot;,&#xD;&#xA;&quot;params&quot;:[{},{}]&#xD;&#xA;}">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:242" Name="handler" Type="string" />
+					<FIELD Id="RDK:243" Name="params" Type="Editor2DParameterTypeList" />
+				</TYPE>
+				<TYPE Id="RDK:251" Name="Editor2DEventArgumentsType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:245" Name="class" Type="string" />
+					<FIELD Id="RDK:246" Name="handler" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:247" Name="connectionPointID" Type="string" />
+					<FIELD Id="RDK:248" Name="shapeID" Type="string" />
+					<FIELD Id="RDK:249" Name="group" Type="string" />
+					<FIELD Id="RDK:250" Name="options" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:252" Name="Editor2DEventArgumentsTypeList" SubType="list" ItemListTypeName="Editor2DEventArgumentsType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:261" Name="Editor2DEventHandlersType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:253" Name="generic" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:254" Name="inserted" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:255" Name="stretched" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:256" Name="linked" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:257" Name="removed" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:258" Name="rotated" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:259" Name="regrouped" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:260" Name="doubleclick" Type="Editor2DEventHandlerType" />
+				</TYPE>
+				<TYPE Id="RDK:265" Name="Editor2DBoxType" SubType="structure">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:262" Name="width" Type="double" />
+					<FIELD Id="RDK:263" Name="height" Type="double" />
+					<FIELD Id="RDK:264" Name="depth" Type="double" />
+				</TYPE>
+				<TYPE Id="RDK:269" Name="Editor2DEventClassType" SubType="structure" DesignTimeNotes="[&#xD;&#xA;   {&quot;id&quot;:&quot;OnDoubleclick&quot;,&quot;types&quot;:[&quot;doubleclick&quot;],&quot;handler&quot;:&quot;OnDoubleclick.rdx&quot;},&#xD;&#xA;   {&quot;id&quot;:&quot;OnInserted&quot;,&quot;types&quot;:[&quot;inserted&quot;],&quot;handler&quot;:&quot;OnInserted.rdx&quot;},&#xD;&#xA;   ...&#xD;&#xA;]">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:266" Name="id" Type="string" />
+					<FIELD Id="RDK:267" Name="types" Type="string[]" />
+					<FIELD Id="RDK:268" Name="handler" Type="Editor2DEventHandlerType" />
+				</TYPE>
+				<TYPE Id="RDK:281" Name="Editor2DLinkClassType" SubType="structure" DesignTimeNotes="[&#xD;&#xA;   {&quot;id&quot;:&quot;SM3&quot;,&quot;handler&quot;:&quot;OnSM3Linked.rdx&quot;,&quot;zMin&quot;:&quot;400&quot;,&quot;zMax&quot;:&quot;4000&quot;,&quot;zStep&quot;:&quot;800&quot;},&#xD;&#xA;   ...&#xD;&#xA;]">
+					<TYPE_VALUES />
+					<FIELD Id="RDK:270" Name="id" Type="string" />
+					<FIELD Id="RDK:271" Name="handler" Type="Editor2DEventHandlerType" />
+					<FIELD Id="RDK:272" Name="xMin" Type="string" />
+					<FIELD Id="RDK:273" Name="xMax" Type="string" />
+					<FIELD Id="RDK:274" Name="xStep" Type="string" />
+					<FIELD Id="RDK:275" Name="yMin" Type="string" />
+					<FIELD Id="RDK:276" Name="yMax" Type="string" />
+					<FIELD Id="RDK:277" Name="yStep" Type="string" />
+					<FIELD Id="RDK:278" Name="zMin" Type="string" />
+					<FIELD Id="RDK:279" Name="zMax" Type="string" />
+					<FIELD Id="RDK:280" Name="zStep" Type="string" />
+				</TYPE>
+				<TYPE Id="RDK:282" Name="Editor2DEventClassTypeList" SubType="list" ItemListTypeName="Editor2DEventClassType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:283" Name="Editor2DLinkClassTypeList" SubType="list" ItemListTypeName="Editor2DLinkClassType">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:284" Name="Editor2DCollisionClassTypeList" SubType="list" ItemListTypeName="string">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:285" Name="Editor2DContainerClassTypeList" SubType="list" ItemListTypeName="string">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+				<TYPE Id="RDK:286" Name="Editor2DSnapClassTypeList" SubType="list" ItemListTypeName="string">
+					<UI_INPUT_TYPE TypeForm="Text" />
+					<UI_INPUT_VALIDATION ValidationType="none" />
+					<UI_INPUT_SUPPORT />
+					<TYPE_VALUES />
+				</TYPE>
+			</GROUP>
+			<TYPE Id="RDK:411" Name="TreniInputType" SubType="structure">
+				<TYPE_VALUES />
+				<FIELD Id="RDK:408" Name="NumeriTreni" Type="integer" />
+				<FIELD Id="RDK:409" Name="CampateXTreno" Type="integer" />
+				<FIELD Id="RDK:410" Name="DistanzaTraTreni" Type="integer" />
+				<FIELD Id="RDK:2012" Name="LunghezzaCampate" Type="integer" />
+				<FIELD Id="RDK:2009" Name="ProfonditàCampate" Type="integer" />
+				<FIELD Id="RDK:2014" Name="AltezzaCampate" Type="integer" />
+				<FIELD Id="RDK:4245" Name="NumeroLivelli" Type="integer" />
+				<FIELD Id="RDK:4247" Name="ArrayAltezzeLivelli" Type="integer[]" />
+				<FIELD Id="RDK:4280" Name="AltezzeLivelli" Type="string" />
+			</TYPE>
+			<TYPE Id="RDK:50852747" Name="CampataInputType" Expanded="True" SubType="structure">
+				<TYPE_VALUES />
+				<FIELD Id="RDK:50852741" Name="Lunghezza" Type="integer" />
+				<FIELD Id="RDK:50852742" Name="Profondità" Type="integer" />
+				<FIELD Id="RDK:50852743" Name="Altezza" Type="integer" />
+				<FIELD Id="RDK:50852744" Name="NumeroLivelli" Type="integer" />
+				<FIELD Id="RDK:50852745" Name="NomeTreno" Type="string" />
+				<FIELD Id="RDK:50852776" Name="NumeroCampata" Type="integer" />
+				<FIELD Id="RDK:50852746" Name="AltezzeLivelli" Type="string" />
+			</TYPE>
+			<TYPE Id="RDK:5319" Name="ServiceType" Expanded="True" SubType="structure" HasArrayType="True">
+				<TYPE_VALUES />
+				<FIELD Id="RDK:5300" Name="Tipo" Type="string" />
+				<FIELD Id="RDK:5301" Name="Anomalia" Type="string" />
+				<FIELD Id="RDK:5302" Name="TipoComponente" Type="string" />
+				<FIELD Id="RDK:5303" Name="Fila" Type="string" />
+				<FIELD Id="RDK:5304" Name="Numero" Type="string" />
+				<FIELD Id="RDK:5305" Name="LivDCar" Type="string" />
+				<FIELD Id="RDK:5306" Name="Intervento" Type="string" />
+				<FIELD Id="RDK:5307" Name="Dati_tecnici" Type="string" />
+				<FIELD Id="RDK:5308" Name="Colore_anomalia" Type="string" />
+				<FIELD Id="RDK:5309" Name="Colore" Type="string" />
+				<FIELD Id="RDK:5310" Name="Note" Type="string" />
+				<FIELD Id="RDK:5311" Name="Img" Type="string" />
+				<FIELD Id="RDK:5312" Name="ImgDoc" Type="string" />
+				<FIELD Id="RDK:5313" Name="Num" Type="string" />
+				<FIELD Id="RDK:5314" Name="ShapeID" Type="string" />
+				<FIELD Id="RDK:5315" Name="Scelta" Type="string" />
+				<FIELD Id="RDK:5316" Name="VertT" Type="string" />
+				<FIELD Id="RDK:5317" Name="VertL" Type="string" />
+				<FIELD Id="RDK:5318" Name="I_E" Type="string" />
+				<FIELD Id="RDK:50897716" Name="Posizione" Type="string" />
+				<FIELD Id="RDK:50898827" Name="Componente" Type="string" />
+			</TYPE>
+			<TYPE Id="RDK:50852680" Name="Campata3DType" Expanded="True" SubType="structure">
+				<TYPE_VALUES />
+				<FIELD Id="RDK:50852681" Name="Altezza" Type="integer" />
+				<FIELD Id="RDK:50852683" Name="Lunghezza" Type="integer" />
+				<FIELD Id="RDK:50852685" Name="Profondita" Type="integer" />
+				<FIELD Id="RDK:50852687" Name="Livelli" Type="integer" />
+				<FIELD Id="RDK:50852689" Name="AltezzeLivelli" Type="string" />
+				<FIELD Id="RDK:50852697" Name="Oggetto" Type="string" />
+				<FIELD Id="RDK:50852699" Name="LivelloDiCarico" Type="integer" />
+				<FIELD Id="RDK:50852701" Name="Posizione" Type="string" />
+			</TYPE>
+			<TYPE Id="RDK:50913604" Name="PointType" Expanded="True" SubType="structure">
+				<TYPE_VALUES />
+				<FIELD Id="RDK:50913606" Name="x" Type="integer" />
+				<FIELD Id="RDK:50913608" Name="y" Type="integer" />
+				<FIELD Id="RDK:50913610" Name="z" Type="integer" />
+			</TYPE>
+		</GROUP>
+		<GROUP Id="RDK:0004" Name="Parameters" SubType="ParameterDefs" Expanded="True" />
+		<GROUP Id="RDK:0005" Name="Global Variables" SubType="VarSet" IncludeDate="0">
+			<VAR Id="RDK:317" Name="myShapeList" Type="Editor2DShapeTypeList" />
+			<VAR Id="RDK:319" Name="myShape" Type="Editor2DShapeType" />
+			<VAR Id="RDK:321" Name="E2DMainOptions" Type="Editor2DOptionType" />
+			<VAR Id="RDK:323" Name="ShapeIndex" Type="integer" />
+			<VAR Id="RDK:325" Name="ViewPortData" Type="string" />
+			<VAR Id="RDK:327" Name="ProcessFolder" Type="string" />
+			<VAR Id="RDK:330" Name="ButtonPressed" Type="string" Expanded="True" DesignTimeRemark="Generated by RD" />
+			<VAR Id="RDK:5321" Name="myService" Type="ServiceType" />
+			<VAR Id="RDK:5323" Name="myServiceList" Type="ServiceType[]" />
+			<VAR Id="RDK:50848169" Name="CSSPath" Type="string">
+				<SET Id="RDK:50848168" VarRef="Me">
+					<EXP><![CDATA[$C$Modulblok\RDStyles_OFFICE.css]]></EXP>
+					<PAR Name="AdvancedOptions" />
+				</SET>
+			</VAR>
+			<VAR Id="RDK:50851980" Name="ColorGreen" Type="string">
+				<SET Id="RDK:50851979" VarRef="Me">
+					<EXP><![CDATA[$C$#0ac24a]]></EXP>
+					<PAR Name="AdvancedOptions" />
+				</SET>
+			</VAR>
+			<VAR Id="RDK:50851984" Name="ColorYellow" Type="string">
+				<SET Id="RDK:50851983" VarRef="Me">
+					<EXP><![CDATA[$C$#faf219]]></EXP>
+					<PAR Name="AdvancedOptions" />
+				</SET>
+			</VAR>
+			<VAR Id="RDK:50851986" Name="ColorRed" Type="string">
+				<SET Id="RDK:50851988" VarRef="Me">
+					<EXP><![CDATA[$C$#e6171a]]></EXP>
+					<PAR Name="AdvancedOptions" />
+				</SET>
+			</VAR>
+			<VAR Id="RDK:50852713" Name="ShowCampata3D_Data" Type="Campata3DType" Expanded="True" />
+			<VAR Id="RDK:50891429" Name="FileName" Type="string" Expanded="True" DesignTimeRemark="Generated by RD" />
+		</GROUP>
+		<GROUP Id="RDK:0006" Name="Profiles" SubType="ProfileSet" Expanded="True">
+			<PROFILE Id="RDK:412" Name="TreniInputProfile" TypeName="TreniInputType" />
+			<PROFILE Id="RDK:50852333" Name="Service_Profile" TypeName="ServiceType" Expanded="True" />
+			<PROFILE Id="RDK:50852690" Name="Campata3DProfile" TypeName="Campata3DType" Expanded="True" />
+			<PROFILE Id="RDK:50852748" Name="CampataInputProfile" TypeName="CampataInputType" Expanded="True" />
+		</GROUP>
+		<GROUP Id="RDK:0007" Name="Functions" SubType="FunctionSet" IncludeDate="0" Expanded="True">
+			<FUNCTION Id="RDK:287" Name="OnEditor2DInserted" Expanded="True" InputTypeName="Editor2DEventArgumentsTypeList" Options="(TYPEFUNCTION)">
+				<GROUP Id="RDK:372" Name="EVENT" SubType="Generic" Expanded="True">
+					<CALLFUNCTION Id="RDK:352">
+						<PAR Name="FuncName">
+							<EXP><![CDATA[$C$GetShapeIndexByID]]></EXP>
+						</PAR>
+						<PAR Name="InputExp">
+							<EXP><![CDATA[$=$Param.Input[0].shapeID]]></EXP>
+						</PAR>
+						<PAR Name="ResultRef">
+							<EXP><![CDATA[$V$ShapeIndex]]></EXP>
+						</PAR>
+						<PAR Name="Options" />
+					</CALLFUNCTION>
+					<SET Id="RDK:353" VarRef="myShape">
+						<EXP><![CDATA[$=$myShapeList[ShapeIndex]]]></EXP>
+						<PAR Name="AdvancedOptions" />
+					</SET>
+					<SELECTCASE Id="RDK:371" Expanded="True">
+						<EXP><![CDATA[$=$myShape.source]]></EXP>
+						<CASEGROUP Id="RDK:369" CaseType="0" Expanded="True">
+							<EXP><![CDATA[$C$Treni]]></EXP>
+							<GROUP Id="RDK:362" Name="LOCALS" SubType="VarSet" IncludeDate="0" Expanded="True">
+								<VAR Id="RDK:360" Name="TreniInput" Type="TreniInputType" />
+								<VAR Id="RDK:361" Name="ButtonPressedInsertTreni" Type="string" DesignTimeRemark="Generated by RD" />
+								<VAR Id="RDK:732" Name="myShapeListOUT" Type="Editor2DShapeTypeList" DesignTimeRemark="Generated by RD" />
+							</GROUP>
+							<SET Id="RDK:363" VarRef="myShapeList">
+								<EXP><![CDATA[$=$ListRemove(myShapeList, myShape)]]></EXP>
+								<PAR Name="AdvancedOptions" />
+							</SET>
+							<ACTION_CALL Id="RDK:364" Name="RDEngineering_RemoteRedirect" DesignTimeRemark="{Action Mode} {Url} {Popup Name}">
+								<PAR Name="ImgLeft" />
+								<PAR Name="ImgBottom" />
+								<PAR Name="ImgRight" />
+								<PAR Name="WebResourcePath" />
+								<PAR Name="HtmlData" />
+								<PAR Name="Options" />
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$0]]></EXP>
+								</PAR>
+								<PAR Name="RunTimeRemark" />
+								<PAR Name="HtmlFile" />
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="PopupName">
+									<EXP><![CDATA[$C$INSERT_TRENI]]></EXP>
+								</PAR>
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+								<PAR Name="JsCode" />
+								<PAR Name="ButtonImgs" />
+								<PAR Name="CssSource" />
+								<PAR Name="PopupStyle">
+									<EXP><![CDATA[$C${ width: 800, height: 600 }]]></EXP>
+								</PAR>
+								<PAR Name="Url" />
+								<PAR Name="ImgTop" />
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="Process" />
+								<PAR Name="ButtonList" />
+								<PAR Name="CSSStyle" />
+								<PAR Name="ButtonOptions" />
+								<PAR Name="RedirectMode">
+									<EXP><![CDATA[$C$5]]></EXP>
+								</PAR>
+								<PAR Name="WaitForInput">
+									<EXP><![CDATA[$C$true]]></EXP>
+								</PAR>
+								<PAR Name="ButtonAction" />
+								<PAR Name="HeaderData" />
+								<PAR Name="ButtonDefs" />
+								<PAR Name="JsResult">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+							</ACTION_CALL>
+							<SET_STRUCT Id="RDK:4930" VarRef="TreniInput" ClearAll="True">
+								<PAR Name="NumeriTreni">
+									<EXP><![CDATA[$C$10]]></EXP>
+								</PAR>
+								<PAR Name="CampateXTreno">
+									<EXP><![CDATA[$C$5]]></EXP>
+								</PAR>
+								<PAR Name="DistanzaTraTreni">
+									<EXP><![CDATA[$C$1000]]></EXP>
+								</PAR>
+								<PAR Name="LunghezzaCampate">
+									<EXP><![CDATA[$C$2000]]></EXP>
+								</PAR>
+								<PAR Name="ProfonditàCampate">
+									<EXP><![CDATA[$C$1000]]></EXP>
+								</PAR>
+								<PAR Name="AltezzaCampate">
+									<EXP><![CDATA[$C$5000]]></EXP>
+								</PAR>
+								<PAR Name="NumeroLivelli">
+									<EXP><![CDATA[$C$5]]></EXP>
+								</PAR>
+								<PAR Name="ArrayAltezzeLivelli" />
+								<PAR Name="AltezzeLivelli">
+									<EXP><![CDATA[$C$1000;2000;3000;4000;5000]]></EXP>
+								</PAR>
+							</SET_STRUCT>
+							<ACTION_CALL Id="RDK:365" Name="RDEngineering_RemoteGetInput" DesignTimeRemark="{VarName}">
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="InputVar">
+									<EXP><![CDATA[$=$TreniInput]]></EXP>
+								</PAR>
+								<PAR Name="ProfileName">
+									<EXP><![CDATA[$C$TreniInputProfile]]></EXP>
+								</PAR>
+								<PAR Name="RunTimeRemark" />
+								<PAR Name="WebResourcePath">
+									<EXP><![CDATA[$C$Modulblok]]></EXP>
+								</PAR>
+								<PAR Name="ImgTop" />
+								<PAR Name="ImgBottom" />
+								<PAR Name="ImgLeft" />
+								<PAR Name="ImgRight" />
+								<PAR Name="CSSStyle">
+									<EXP><![CDATA[$=$CSSPath]]></EXP>
+								</PAR>
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="LayoutMode">
+									<EXP><![CDATA[$C$0]]></EXP>
+								</PAR>
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$5]]></EXP>
+								</PAR>
+								<PAR Name="ButtonList" />
+								<PAR Name="ButtonImgs" />
+								<PAR Name="ButtonAction" />
+								<PAR Name="ButtonOptions" />
+								<PAR Name="ButtonDefs" />
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$ButtonPressedInsertTreni]]></EXP>
+								</PAR>
+								<PAR Name="HeaderData" />
+								<PAR Name="InputTree">
+									<EXP><![CDATA[$=$]]></EXP>
+								</PAR>
+								<PAR Name="Options">
+									<EXP><![CDATA[$C$(POPUPNAME=INSERT_TRENI)]]></EXP>
+								</PAR>
+							</ACTION_CALL>
+							<GROUP Id="RDK:368" Name="Check button" SubType="Generic" Expanded="True">
+								<VALUECONDITION Value="true">
+									<EXP><![CDATA[$=$ButtonPressedInsertTreni="OK"]]></EXP>
+								</VALUECONDITION>
+								<SET Id="RDK:4281" VarRef="TreniInput.ArrayAltezzeLivelli">
+									<EXP><![CDATA[$=$ExecOnValues(SplitStr(TreniInput.AltezzeLivelli, ";", "(TRIM)"), "SafeInt(Me)", "")]]></EXP>
+									<PAR Name="AdvancedOptions" />
+								</SET>
+								<PROCESS_CALL Id="RDK:366" Expanded="True">
+									<EXP><![CDATA[$C$InsertTreni.rdx]]></EXP>
+									<PAR Name="myShapeListOUT">
+										<EXP><![CDATA[$V$myShapeListOUT]]></EXP>
+									</PAR>
+									<PAR Name="NumeroTreni">
+										<EXP><![CDATA[$=$TreniInput.NumeriTreni]]></EXP>
+									</PAR>
+									<PAR Name="CampateXTreno">
+										<EXP><![CDATA[$=$TreniInput.CampateXTreno]]></EXP>
+									</PAR>
+									<PAR Name="XPos">
+										<EXP><![CDATA[$=$myShape.x]]></EXP>
+									</PAR>
+									<PAR Name="YPos">
+										<EXP><![CDATA[$=$myShape.y]]></EXP>
+									</PAR>
+									<PAR Name="DistanzaTraTreni">
+										<EXP><![CDATA[$=$TreniInput.DistanzaTraTreni]]></EXP>
+									</PAR>
+									<PAR Name="ProfonditàCampate">
+										<EXP><![CDATA[$=$TreniInput.ProfonditàCampate]]></EXP>
+									</PAR>
+									<PAR Name="LunghezzaCampate">
+										<EXP><![CDATA[$=$TreniInput.LunghezzaCampate]]></EXP>
+									</PAR>
+									<PAR Name="AltezzaCampate">
+										<EXP><![CDATA[$=$TreniInput.AltezzaCampate]]></EXP>
+									</PAR>
+									<PAR Name="Livelli">
+										<EXP><![CDATA[$=$TreniInput.NumeroLivelli]]></EXP>
+									</PAR>
+									<PAR Name="AltezzeLivelli">
+										<EXP><![CDATA[$=$TreniInput.ArrayAltezzeLivelli]]></EXP>
+									</PAR>
+								</PROCESS_CALL>
+								<SET Id="RDK:367" VarRef="myShapeList">
+									<EXP><![CDATA[$=$ListJoin(myShapeList, myShapeListOUT)]]></EXP>
+									<PAR Name="AdvancedOptions" />
+								</SET>
+							</GROUP>
+							<ACTION_CALL Id="RDK:1691" Name="RDEngineering_RemoteRedirect" DesignTimeRemark="{Action Mode} {Url} {Popup Name}">
+								<PAR Name="ImgLeft" />
+								<PAR Name="ImgBottom" />
+								<PAR Name="ImgRight" />
+								<PAR Name="WebResourcePath" />
+								<PAR Name="HtmlData" />
+								<PAR Name="Options" />
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$0]]></EXP>
+								</PAR>
+								<PAR Name="RunTimeRemark" />
+								<PAR Name="HtmlFile" />
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="PopupName">
+									<EXP><![CDATA[$C$INSERT_TRENI]]></EXP>
+								</PAR>
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+								<PAR Name="JsCode" />
+								<PAR Name="ButtonImgs" />
+								<PAR Name="CssSource" />
+								<PAR Name="PopupStyle" />
+								<PAR Name="Url" />
+								<PAR Name="ImgTop" />
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="Process" />
+								<PAR Name="ButtonList" />
+								<PAR Name="CSSStyle" />
+								<PAR Name="ButtonOptions" />
+								<PAR Name="RedirectMode">
+									<EXP><![CDATA[$C$7]]></EXP>
+								</PAR>
+								<PAR Name="WaitForInput">
+									<EXP><![CDATA[$C$true]]></EXP>
+								</PAR>
+								<PAR Name="ButtonAction" />
+								<PAR Name="HeaderData" />
+								<PAR Name="ButtonDefs" />
+								<PAR Name="JsResult">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+							</ACTION_CALL>
+						</CASEGROUP>
+						<CASEGROUP Id="RDK:50852723" CaseType="0" Expanded="True">
+							<EXP><![CDATA[$C$Campata]]></EXP>
+							<GROUP Id="RDK:50852756" Name="LOCALS" SubType="VarSet" IncludeDate="0" Expanded="True">
+								<VAR Id="RDK:50852758" Name="ButtonPressedInsertCampata" Type="string" DesignTimeRemark="Generated by RD" />
+								<VAR Id="RDK:50852762" Name="CampataInput" Type="CampataInputType" />
+							</GROUP>
+							<ACTION_CALL Id="RDK:50852725" Name="RDEngineering_RemoteRedirect" DesignTimeRemark="{Action Mode} {Url} {Popup Name}">
+								<PAR Name="ImgLeft" />
+								<PAR Name="ImgBottom" />
+								<PAR Name="ImgRight" />
+								<PAR Name="WebResourcePath" />
+								<PAR Name="HtmlData" />
+								<PAR Name="Options" />
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$0]]></EXP>
+								</PAR>
+								<PAR Name="RunTimeRemark" />
+								<PAR Name="HtmlFile" />
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="PopupName">
+									<EXP><![CDATA[$C$INSERT_Campata]]></EXP>
+								</PAR>
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+								<PAR Name="JsCode" />
+								<PAR Name="ButtonImgs" />
+								<PAR Name="CssSource" />
+								<PAR Name="PopupStyle">
+									<EXP><![CDATA[$C${ width: 800, height: 600 }]]></EXP>
+								</PAR>
+								<PAR Name="Url" />
+								<PAR Name="ImgTop" />
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="Process" />
+								<PAR Name="ButtonList" />
+								<PAR Name="CSSStyle" />
+								<PAR Name="ButtonOptions" />
+								<PAR Name="RedirectMode">
+									<EXP><![CDATA[$C$5]]></EXP>
+								</PAR>
+								<PAR Name="WaitForInput">
+									<EXP><![CDATA[$C$true]]></EXP>
+								</PAR>
+								<PAR Name="ButtonAction" />
+								<PAR Name="HeaderData" />
+								<PAR Name="ButtonDefs" />
+								<PAR Name="JsResult">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+							</ACTION_CALL>
+							<SET_STRUCT Id="RDK:50852773" VarRef="CampataInput" ClearAll="True">
+								<PAR Name="Lunghezza">
+									<EXP><![CDATA[$=$myShape.width]]></EXP>
+								</PAR>
+								<PAR Name="Profondità">
+									<EXP><![CDATA[$=$myShape.height]]></EXP>
+								</PAR>
+								<PAR Name="Altezza">
+									<EXP><![CDATA[$=$myShape.depth]]></EXP>
+								</PAR>
+								<PAR Name="NumeroLivelli">
+									<EXP><![CDATA[$C$4]]></EXP>
+								</PAR>
+								<PAR Name="NomeTreno">
+									<EXP><![CDATA[$C$A]]></EXP>
+								</PAR>
+								<PAR Name="NumeroCampata">
+									<EXP><![CDATA[$C$1]]></EXP>
+								</PAR>
+								<PAR Name="AltezzeLivelli">
+									<EXP><![CDATA[$C$1000;2000;3000;4000]]></EXP>
+								</PAR>
+							</SET_STRUCT>
+							<ACTION_CALL Id="RDK:50852727" Name="RDEngineering_RemoteGetInput" DesignTimeRemark="{VarName}">
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="InputVar">
+									<EXP><![CDATA[$=$CampataInput]]></EXP>
+								</PAR>
+								<PAR Name="ProfileName">
+									<EXP><![CDATA[$C$CampataInputProfile]]></EXP>
+								</PAR>
+								<PAR Name="RunTimeRemark" />
+								<PAR Name="WebResourcePath">
+									<EXP><![CDATA[$C$Modulblok]]></EXP>
+								</PAR>
+								<PAR Name="ImgTop" />
+								<PAR Name="ImgBottom" />
+								<PAR Name="ImgLeft" />
+								<PAR Name="ImgRight" />
+								<PAR Name="CSSStyle">
+									<EXP><![CDATA[$=$CSSPath]]></EXP>
+								</PAR>
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="LayoutMode">
+									<EXP><![CDATA[$C$0]]></EXP>
+								</PAR>
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$5]]></EXP>
+								</PAR>
+								<PAR Name="ButtonList" />
+								<PAR Name="ButtonImgs" />
+								<PAR Name="ButtonAction" />
+								<PAR Name="ButtonOptions" />
+								<PAR Name="ButtonDefs" />
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$ButtonPressedInsertCampata]]></EXP>
+								</PAR>
+								<PAR Name="HeaderData" />
+								<PAR Name="InputTree">
+									<EXP><![CDATA[$=$]]></EXP>
+								</PAR>
+								<PAR Name="Options">
+									<EXP><![CDATA[$C$(POPUPNAME=INSERT_Campata)]]></EXP>
+								</PAR>
+							</ACTION_CALL>
+							<GROUP Id="RDK:50852768" Name="Check button" SubType="Generic" Expanded="True">
+								<VALUECONDITION Value="true">
+									<EXP><![CDATA[$=$ButtonPressedInsertCampata="OK"]]></EXP>
+								</VALUECONDITION>
+								<SET_STRUCT Id="RDK:50852774" VarRef="myShapeList[ShapeIndex]">
+									<PAR Name="source" />
+									<PAR Name="sourceLibrary" />
+									<PAR Name="signature" />
+									<PAR Name="id" />
+									<PAR Name="name" />
+									<PAR Name="family" />
+									<PAR Name="description" />
+									<PAR Name="x" />
+									<PAR Name="y" />
+									<PAR Name="z" />
+									<PAR Name="width">
+										<EXP><![CDATA[$=$CampataInput.Lunghezza]]></EXP>
+									</PAR>
+									<PAR Name="height">
+										<EXP><![CDATA[$=$CampataInput.Profondità]]></EXP>
+									</PAR>
+									<PAR Name="depth">
+										<EXP><![CDATA[$=$CampataInput.Altezza]]></EXP>
+									</PAR>
+									<PAR Name="rotation" />
+									<PAR Name="text" />
+									<PAR Name="behaviour" />
+									<PAR Name="datadump" />
+									<PAR Name="path" />
+									<PAR Name="ctrl1x" />
+									<PAR Name="ctrl1y" />
+									<PAR Name="ctrl2x" />
+									<PAR Name="ctrl2y" />
+									<PAR Name="shapeFromId" />
+									<PAR Name="shapeFromPointIndex" />
+									<PAR Name="shapeToId" />
+									<PAR Name="shapeToPointIndex" />
+									<PAR Name="dimStack" />
+									<PAR Name="dimType" />
+									<PAR Name="dimDriving" />
+									<PAR Name="dimValue" />
+									<PAR Name="color" />
+									<PAR Name="colorOpacity" />
+									<PAR Name="color3D" />
+									<PAR Name="colorOpacity3D" />
+									<PAR Name="lineWidth" />
+									<PAR Name="lineColor" />
+									<PAR Name="lineOpacity" />
+									<PAR Name="lineColor3D" />
+									<PAR Name="lineOpacity3D" />
+									<PAR Name="links" />
+									<PAR Name="group" />
+									<PAR Name="layer" />
+									<PAR Name="connectionPoints" />
+									<PAR Name="modified" />
+									<PAR Name="pinned" />
+									<PAR Name="selected" />
+									<PAR Name="includeInBOM" />
+									<PAR Name="Livelli">
+										<EXP><![CDATA[$=$CampataInput.NumeroLivelli]]></EXP>
+									</PAR>
+									<PAR Name="AltezzeLivelli">
+										<EXP><![CDATA[$=$SplitStr(CampataInput.AltezzeLivelli, ";", "(NOEMPTY)")]]></EXP>
+									</PAR>
+									<PAR Name="NomeTreno">
+										<EXP><![CDATA[$=$CampataInput.NomeTreno]]></EXP>
+									</PAR>
+									<PAR Name="NumeroCampata">
+										<EXP><![CDATA[$=$CampataInput.NumeroCampata]]></EXP>
+									</PAR>
+								</SET_STRUCT>
+							</GROUP>
+							<ACTION_CALL Id="RDK:50852760" Name="RDEngineering_RemoteRedirect" DesignTimeRemark="{Action Mode} {Url} {Popup Name}">
+								<PAR Name="ImgLeft" />
+								<PAR Name="ImgBottom" />
+								<PAR Name="ImgRight" />
+								<PAR Name="WebResourcePath" />
+								<PAR Name="HtmlData" />
+								<PAR Name="Options" />
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$0]]></EXP>
+								</PAR>
+								<PAR Name="RunTimeRemark" />
+								<PAR Name="HtmlFile" />
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="PopupName">
+									<EXP><![CDATA[$C$INSERT_Campata]]></EXP>
+								</PAR>
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+								<PAR Name="JsCode" />
+								<PAR Name="ButtonImgs" />
+								<PAR Name="CssSource" />
+								<PAR Name="PopupStyle" />
+								<PAR Name="Url" />
+								<PAR Name="ImgTop" />
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="Process" />
+								<PAR Name="ButtonList" />
+								<PAR Name="CSSStyle" />
+								<PAR Name="ButtonOptions" />
+								<PAR Name="RedirectMode">
+									<EXP><![CDATA[$C$7]]></EXP>
+								</PAR>
+								<PAR Name="WaitForInput">
+									<EXP><![CDATA[$C$true]]></EXP>
+								</PAR>
+								<PAR Name="ButtonAction" />
+								<PAR Name="HeaderData" />
+								<PAR Name="ButtonDefs" />
+								<PAR Name="JsResult">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+							</ACTION_CALL>
+						</CASEGROUP>
+						<CASEGROUP Id="RDK:370" CaseType="1">
+							<EXP />
+						</CASEGROUP>
+					</SELECTCASE>
+				</GROUP>
+			</FUNCTION>
+			<FUNCTION Id="RDK:288" Name="OnEditor2DPasted" Expanded="True" InputTypeName="Editor2DEventArgumentsTypeList" Options="(TYPEFUNCTION)">
+				<GROUP Id="RDK:381" Name="EVENT" SubType="Generic" />
+			</FUNCTION>
+			<FUNCTION Id="RDK:289" Name="OnEditor2DRemoved" Expanded="True" InputTypeName="Editor2DEventArgumentsTypeList" Options="(TYPEFUNCTION)">
+				<GROUP Id="RDK:384" Name="EVENT" SubType="Generic" />
+			</FUNCTION>
+			<FUNCTION Id="RDK:290" Name="OnEditor2DRotated" Expanded="True" InputTypeName="Editor2DEventArgumentsTypeList" Options="(TYPEFUNCTION)">
+				<GROUP Id="RDK:389" Name="EVENT" SubType="Generic" />
+			</FUNCTION>
+			<FUNCTION Id="RDK:291" Name="OnEditor2DMoved" Expanded="True" InputTypeName="Editor2DEventArgumentsTypeList" Options="(TYPEFUNCTION)">
+				<GROUP Id="RDK:392" Name="EVENT" SubType="Generic" />
+			</FUNCTION>
+			<FUNCTION Id="RDK:292" Name="OnEditor2DStretched" Expanded="True" InputTypeName="Editor2DEventArgumentsTypeList" Options="(TYPEFUNCTION)">
+				<GROUP Id="RDK:395" Name="EVENT" SubType="Generic" />
+			</FUNCTION>
+			<FUNCTION Id="RDK:293" Name="OnEditor2DLinked" InputTypeName="Editor2DEventArgumentsTypeList" Options="(TYPEFUNCTION)" />
+			<FUNCTION Id="RDK:294" Name="OnEditor2DDoubleClick" Expanded="True" InputTypeName="Editor2DEventArgumentsTypeList" Options="(TYPEFUNCTION)">
+				<GROUP Id="RDK:398" Name="EVENT" SubType="Generic" Expanded="True">
+					<CALLFUNCTION Id="RDK:5326">
+						<PAR Name="FuncName">
+							<EXP><![CDATA[$C$GetShapeIndexByID]]></EXP>
+						</PAR>
+						<PAR Name="InputExp">
+							<EXP><![CDATA[$=$Param.Input[0].shapeID]]></EXP>
+						</PAR>
+						<PAR Name="ResultRef">
+							<EXP><![CDATA[$V$ShapeIndex]]></EXP>
+						</PAR>
+						<PAR Name="Options" />
+					</CALLFUNCTION>
+					<SET Id="RDK:5328" VarRef="myShape">
+						<EXP><![CDATA[$=$myShapeList[ShapeIndex]]]></EXP>
+						<PAR Name="AdvancedOptions" />
+					</SET>
+					<SELECTCASE Id="RDK:5331" Expanded="True">
+						<EXP><![CDATA[$=$myShape.source]]></EXP>
+						<CASEGROUP Id="RDK:5333" CaseType="0" Expanded="True">
+							<EXP><![CDATA[$C$Campata]]></EXP>
+							<GROUP Id="RDK:5335" Name="LOCALS" SubType="VarSet" IncludeDate="0" Expanded="True">
+								<VAR Id="RDK:5339" Name="iService" Type="integer" />
+								<VAR Id="RDK:50852708" Name="Campata3D" Type="Campata3DType" Expanded="True" />
+								<VAR Id="RDK:50913603" Name="Anomalia" Type="Editor2DShapeType" />
+								<VAR Id="RDK:50913614" Name="AnomaliaPoint" Type="PointType" />
+							</GROUP>
+							<SET Id="RDK:5341" VarRef="myService">
+								<EXP><![CDATA[$C$NOTHING]]></EXP>
+								<PAR Name="AdvancedOptions" />
+							</SET>
+							<SET Id="RDK:50913616" VarRef="AnomaliaPoint">
+								<EXP><![CDATA[$C$NOTHING]]></EXP>
+								<PAR Name="AdvancedOptions" />
+							</SET>
+							<GROUP Id="RDK:5349" Name="Edit mode???" SubType="Generic" Expanded="True">
+								<SET Id="RDK:5346" VarRef="iService">
+									<EXP><![CDATA[$=$IndexOfByExp(myServiceList, "Me.ShapeID=""" + myShape.id + """", 0)]]></EXP>
+									<PAR Name="AdvancedOptions" />
+								</SET>
+								<GROUP Id="RDK:5348" Name="Edit" SubType="Generic" Expanded="True">
+									<VALUECONDITION Value="true">
+										<EXP><![CDATA[$=$iService>=0]]></EXP>
+									</VALUECONDITION>
+									<SET Id="RDK:5347" VarRef="myService">
+										<EXP><![CDATA[$=$myServiceList[iService]]]></EXP>
+										<PAR Name="AdvancedOptions" />
+									</SET>
+								</GROUP>
+							</GROUP>
+							<GROUP Id="RDK:50861558" Name="Visualizzazione campata 3D" SubType="Generic" Expanded="True">
+								<ACTION_CALL Id="RDK:50852705" Name="RDEngineering_RemoteRedirect" DesignTimeRemark="{Action Mode} {Url}{Popup Name}">
+									<PAR Name="ImgLeft" />
+									<PAR Name="ImgBottom" />
+									<PAR Name="ImgRight" />
+									<PAR Name="WebResourcePath" />
+									<PAR Name="HtmlData" />
+									<PAR Name="Options">
+										<EXP><![CDATA[$C$(DRAGGABLE)]]></EXP>
+									</PAR>
+									<PAR Name="ButtonsMode">
+										<EXP><![CDATA[$C$-1]]></EXP>
+									</PAR>
+									<PAR Name="RunTimeRemark" />
+									<PAR Name="HtmlFile" />
+									<PAR Name="RDLibraryName">
+										<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+									</PAR>
+									<PAR Name="PopupName">
+										<EXP><![CDATA[$C$Campata3D]]></EXP>
+									</PAR>
+									<PAR Name="ButtonPressed">
+										<EXP><![CDATA[$V$]]></EXP>
+									</PAR>
+									<PAR Name="JsCode" />
+									<PAR Name="ButtonImgs" />
+									<PAR Name="CssSource" />
+									<PAR Name="PopupStyle">
+										<EXP><![CDATA[$C${ width: 650, height: 675 }]]></EXP>
+									</PAR>
+									<PAR Name="Url" />
+									<PAR Name="ImgTop" />
+									<PAR Name="RDActionTimeOut" />
+									<PAR Name="Process" />
+									<PAR Name="ButtonList" />
+									<PAR Name="CSSStyle" />
+									<PAR Name="ButtonOptions" />
+									<PAR Name="RedirectMode">
+										<EXP><![CDATA[$C$5]]></EXP>
+									</PAR>
+									<PAR Name="WaitForInput" />
+									<PAR Name="ButtonAction" />
+									<PAR Name="HeaderData" />
+									<PAR Name="JsResult">
+										<EXP><![CDATA[$V$]]></EXP>
+									</PAR>
+									<PAR Name="ButtonDefs" />
+								</ACTION_CALL>
+								<SET_STRUCT Id="RDK:50852709" VarRef="Campata3D" ClearAll="True">
+									<PAR Name="Altezza">
+										<EXP><![CDATA[$=$myShape.depth]]></EXP>
+									</PAR>
+									<PAR Name="Lunghezza">
+										<EXP><![CDATA[$=$myShape.width]]></EXP>
+									</PAR>
+									<PAR Name="Profondita">
+										<EXP><![CDATA[$=$myShape.height]]></EXP>
+									</PAR>
+									<PAR Name="Livelli">
+										<EXP><![CDATA[$=$myShape.Livelli]]></EXP>
+									</PAR>
+									<PAR Name="AltezzeLivelli">
+										<EXP><![CDATA[$=$ListToStr(myShape.AltezzeLivelli, ";")]]></EXP>
+									</PAR>
+									<PAR Name="Oggetto" />
+									<PAR Name="LivelloDiCarico" />
+									<PAR Name="Posizione" />
+								</SET_STRUCT>
+								<ACTION_CALL Id="RDK:50852677" Name="RDEngineering_RemoteWebForm" DesignTimeRemark="{template File}">
+									<PAR Name="RDLibraryName">
+										<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+									</PAR>
+									<PAR Name="InputVar">
+										<EXP><![CDATA[$=$Campata3D]]></EXP>
+									</PAR>
+									<PAR Name="ProfileName">
+										<EXP><![CDATA[$C$Campata3DProfile]]></EXP>
+									</PAR>
+									<PAR Name="TemplateFile">
+										<EXP><![CDATA[$=$"Templates/"+FileName]]></EXP>
+									</PAR>
+									<PAR Name="RunTimeRemark">
+										<EXP><![CDATA[$=$"Seleziona Oggetto per campata: " + myShape.NomeTreno+"-"+myShape.NumeroCampata]]></EXP>
+									</PAR>
+									<PAR Name="WebResourcePath" />
+									<PAR Name="ImgTop" />
+									<PAR Name="ImgBottom" />
+									<PAR Name="ImgLeft" />
+									<PAR Name="ImgRight" />
+									<PAR Name="CSSStyle" />
+									<PAR Name="RDActionTimeOut" />
+									<PAR Name="ButtonsMode">
+										<EXP><![CDATA[$C$2]]></EXP>
+									</PAR>
+									<PAR Name="ButtonList" />
+									<PAR Name="ButtonImgs" />
+									<PAR Name="ButtonAction" />
+									<PAR Name="ButtonOptions" />
+									<PAR Name="ButtonDefs" />
+									<PAR Name="ButtonPressed">
+										<EXP><![CDATA[$V$]]></EXP>
+									</PAR>
+									<PAR Name="TemplateConfig" />
+									<PAR Name="HeaderData" />
+									<PAR Name="InputTree">
+										<EXP><![CDATA[$=$]]></EXP>
+									</PAR>
+									<PAR Name="Options">
+										<EXP><![CDATA[$C$(POPUPNAME=Campata3D)]]></EXP>
+									</PAR>
+								</ACTION_CALL>
+								<ACTION_CALL Id="RDK:50852707" Name="RDEngineering_RemoteRedirect" DesignTimeRemark="{Action Mode} {Url}{Popup Name}">
+									<PAR Name="ImgLeft" />
+									<PAR Name="ImgBottom" />
+									<PAR Name="ImgRight" />
+									<PAR Name="WebResourcePath" />
+									<PAR Name="HtmlData" />
+									<PAR Name="Options" />
+									<PAR Name="ButtonsMode">
+										<EXP><![CDATA[$C$0]]></EXP>
+									</PAR>
+									<PAR Name="ButtonAction" />
+									<PAR Name="HtmlFile" />
+									<PAR Name="RDLibraryName">
+										<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+									</PAR>
+									<PAR Name="PopupName">
+										<EXP><![CDATA[$C$Campata3D]]></EXP>
+									</PAR>
+									<PAR Name="ButtonPressed">
+										<EXP><![CDATA[$V$]]></EXP>
+									</PAR>
+									<PAR Name="JsCode" />
+									<PAR Name="ButtonImgs" />
+									<PAR Name="CssSource" />
+									<PAR Name="PopupStyle" />
+									<PAR Name="Url" />
+									<PAR Name="ImgTop" />
+									<PAR Name="RDActionTimeOut" />
+									<PAR Name="RunTimeRemark" />
+									<PAR Name="Process" />
+									<PAR Name="ButtonList" />
+									<PAR Name="CSSStyle" />
+									<PAR Name="ButtonOptions" />
+									<PAR Name="RedirectMode">
+										<EXP><![CDATA[$C$7]]></EXP>
+									</PAR>
+									<PAR Name="WaitForInput">
+										<EXP><![CDATA[$C$true]]></EXP>
+									</PAR>
+									<PAR Name="HeaderData" />
+									<PAR Name="JsResult">
+										<EXP><![CDATA[$V$]]></EXP>
+									</PAR>
+									<PAR Name="ButtonDefs" />
+								</ACTION_CALL>
+							</GROUP>
+							<SET_STRUCT Id="RDK:50895870" VarRef="myService" ClearAll="True">
+								<PAR Name="Tipo" />
+								<PAR Name="Anomalia" />
+								<PAR Name="TipoComponente">
+									<EXP><![CDATA[$=$IIF(StrStartWith(Campata3D.Oggetto, "TRAVERSINO"), "TRALICCIATURA", FirstOf(SplitStr(Campata3D.Oggetto, "-", "(TRIM)")))]]></EXP>
+								</PAR>
+								<PAR Name="Fila">
+									<EXP><![CDATA[$=$myShape.NomeTreno]]></EXP>
+								</PAR>
+								<PAR Name="Numero">
+									<EXP><![CDATA[$=$myShape.NumeroCampata]]></EXP>
+								</PAR>
+								<PAR Name="LivDCar">
+									<EXP><![CDATA[$=$Campata3D.LivelloDiCarico]]></EXP>
+								</PAR>
+								<PAR Name="Intervento" />
+								<PAR Name="Dati_tecnici" />
+								<PAR Name="Colore_anomalia" />
+								<PAR Name="Colore" />
+								<PAR Name="Note" />
+								<PAR Name="Img" />
+								<PAR Name="ImgDoc" />
+								<PAR Name="Num" />
+								<PAR Name="ShapeID" />
+								<PAR Name="Scelta" />
+								<PAR Name="VertT" />
+								<PAR Name="VertL" />
+								<PAR Name="I_E" />
+								<PAR Name="Posizione">
+									<EXP><![CDATA[$=$Campata3D.Posizione]]></EXP>
+								</PAR>
+								<PAR Name="Componente">
+									<EXP><![CDATA[$=$Campata3D.Oggetto]]></EXP>
+								</PAR>
+							</SET_STRUCT>
+							<ACTION_CALL Id="RDK:5352" Name="RDEngineering_RemoteRedirect" DesignTimeRemark="{Action Mode} {Url}{Popup Name}">
+								<PAR Name="ImgLeft" />
+								<PAR Name="ImgBottom" />
+								<PAR Name="ImgRight" />
+								<PAR Name="WebResourcePath" />
+								<PAR Name="HtmlData" />
+								<PAR Name="Options">
+									<EXP><![CDATA[$C$(DRAGGABLE)]]></EXP>
+								</PAR>
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$0]]></EXP>
+								</PAR>
+								<PAR Name="RunTimeRemark" />
+								<PAR Name="HtmlFile" />
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="PopupName">
+									<EXP><![CDATA[$C$EDIT]]></EXP>
+								</PAR>
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+								<PAR Name="JsCode" />
+								<PAR Name="ButtonImgs" />
+								<PAR Name="CssSource" />
+								<PAR Name="PopupStyle">
+									<EXP><![CDATA[$C${ width: 650, height: 650, left: 10 }]]></EXP>
+								</PAR>
+								<PAR Name="Url" />
+								<PAR Name="ImgTop" />
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="Process" />
+								<PAR Name="ButtonList" />
+								<PAR Name="CSSStyle" />
+								<PAR Name="ButtonOptions" />
+								<PAR Name="RedirectMode">
+									<EXP><![CDATA[$C$5]]></EXP>
+								</PAR>
+								<PAR Name="WaitForInput">
+									<EXP><![CDATA[$C$true]]></EXP>
+								</PAR>
+								<PAR Name="ButtonAction" />
+								<PAR Name="HeaderData" />
+								<PAR Name="JsResult">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+								<PAR Name="ButtonDefs" />
+							</ACTION_CALL>
+							<ACTION_CALL Id="RDK:5354" Name="RDEngineering_RemoteGetInput" DesignTimeRemark="{VarName}">
+								<PAR Name="ImgBottom" />
+								<PAR Name="InputVar">
+									<EXP><![CDATA[$=$myService]]></EXP>
+								</PAR>
+								<PAR Name="ImgLeft" />
+								<PAR Name="ButtonList">
+									<EXP><![CDATA[$C$OK,Exit,SEP]]></EXP>
+								</PAR>
+								<PAR Name="RunTimeRemark">
+									<EXP><![CDATA[$=$"Note per campata: " + myShape.text]]></EXP>
+								</PAR>
+								<PAR Name="ButtonImgs">
+									<EXP><![CDATA[$C$OK_top.png,Cancel_top.png,Separatore_dx.gif]]></EXP>
+								</PAR>
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="InputTree">
+									<EXP><![CDATA[$=$]]></EXP>
+								</PAR>
+								<PAR Name="ImgRight" />
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$3]]></EXP>
+								</PAR>
+								<PAR Name="Options">
+									<EXP><![CDATA[$C$(LABELSIZE=200)(TOPBUTTONS)(POPUPNAME=EDIT)]]></EXP>
+								</PAR>
+								<PAR Name="ButtonAction">
+									<EXP><![CDATA[$C$[VALIDATE],[CANCEL],[DISABLED]]]></EXP>
+								</PAR>
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="ButtonOptions" />
+								<PAR Name="CSSStyle">
+									<EXP><![CDATA[$=$CSSPath]]></EXP>
+								</PAR>
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$ButtonPressed]]></EXP>
+								</PAR>
+								<PAR Name="ProfileName">
+									<EXP><![CDATA[$C$Service_Profile]]></EXP>
+								</PAR>
+								<PAR Name="WebResourcePath">
+									<EXP><![CDATA[$C$Modulblok]]></EXP>
+								</PAR>
+								<PAR Name="ImgTop" />
+								<PAR Name="LayoutMode">
+									<EXP><![CDATA[$C$2]]></EXP>
+								</PAR>
+								<PAR Name="HeaderData" />
+								<PAR Name="ButtonDefs" />
+							</ACTION_CALL>
+							<ACTION_CALL Id="RDK:5356" Name="RDEngineering_RemoteRedirect" DesignTimeRemark="{Action Mode} {Url}{Popup Name}">
+								<PAR Name="ImgLeft" />
+								<PAR Name="ImgBottom" />
+								<PAR Name="ImgRight" />
+								<PAR Name="WebResourcePath" />
+								<PAR Name="HtmlData" />
+								<PAR Name="Options" />
+								<PAR Name="ButtonsMode">
+									<EXP><![CDATA[$C$0]]></EXP>
+								</PAR>
+								<PAR Name="ButtonAction" />
+								<PAR Name="HtmlFile" />
+								<PAR Name="RDLibraryName">
+									<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+								</PAR>
+								<PAR Name="PopupName">
+									<EXP><![CDATA[$C$EDIT]]></EXP>
+								</PAR>
+								<PAR Name="ButtonPressed">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+								<PAR Name="JsCode" />
+								<PAR Name="ButtonImgs" />
+								<PAR Name="CssSource" />
+								<PAR Name="PopupStyle" />
+								<PAR Name="Url" />
+								<PAR Name="ImgTop" />
+								<PAR Name="RDActionTimeOut" />
+								<PAR Name="RunTimeRemark" />
+								<PAR Name="Process" />
+								<PAR Name="ButtonList" />
+								<PAR Name="CSSStyle" />
+								<PAR Name="ButtonOptions" />
+								<PAR Name="RedirectMode">
+									<EXP><![CDATA[$C$7]]></EXP>
+								</PAR>
+								<PAR Name="WaitForInput">
+									<EXP><![CDATA[$C$true]]></EXP>
+								</PAR>
+								<PAR Name="HeaderData" />
+								<PAR Name="JsResult">
+									<EXP><![CDATA[$V$]]></EXP>
+								</PAR>
+								<PAR Name="ButtonDefs" />
+							</ACTION_CALL>
+							<GROUP Id="RDK:5414" Name="Check ButtonPressed" SubType="Generic" Expanded="True">
+								<VALUECONDITION Value="true">
+									<EXP><![CDATA[$=$ButtonPressed="OK"]]></EXP>
+								</VALUECONDITION>
+								<SET Id="RDK:5388" VarRef="myService.ShapeID">
+									<EXP><![CDATA[$=$myShape.id]]></EXP>
+									<PAR Name="AdvancedOptions" />
+								</SET>
+								<SET Id="RDK:5389" VarRef="myService.Num">
+									<EXP><![CDATA[$=$myShape.text]]></EXP>
+									<PAR Name="AdvancedOptions" />
+								</SET>
+								<GROUP Id="RDK:50913611" Name="Group" SubType="Generic" Expanded="True">
+									<VALUECONDITION Value="false">
+										<EXP><![CDATA[$=$IsEmpty(myService.Posizione)]]></EXP>
+									</VALUECONDITION>
+									<SET Id="RDK:50913619" VarRef="AnomaliaPoint">
+										<EXP><![CDATA[$=$FromJSON(myService.Posizione, "")]]></EXP>
+										<PAR Name="AdvancedOptions" />
+									</SET>
+								</GROUP>
+								<GROUP Id="RDK:50927820" Name="Group" SubType="Generic" Expanded="True">
+									<VALUECONDITION Value="true">
+										<EXP><![CDATA[$=$IsEmpty(AnomaliaPoint)]]></EXP>
+									</VALUECONDITION>
+									<SET_STRUCT Id="RDK:50927827" VarRef="AnomaliaPoint" ClearAll="True">
+										<PAR Name="x">
+											<EXP><![CDATA[$=$SafeInt(Campata3D.Lunghezza/2)]]></EXP>
+										</PAR>
+										<PAR Name="y">
+											<EXP><![CDATA[$=$SafeInt(Campata3D.Altezza/2)]]></EXP>
+										</PAR>
+										<PAR Name="z">
+											<EXP><![CDATA[$=$SafeInt(Campata3D.Profondita/2)]]></EXP>
+										</PAR>
+									</SET_STRUCT>
+								</GROUP>
+								<SET_STRUCT Id="RDK:50913601" VarRef="Anomalia" ClearAll="True">
+									<PAR Name="source">
+										<EXP><![CDATA[$C$Anomalia]]></EXP>
+									</PAR>
+									<PAR Name="sourceLibrary">
+										<EXP><![CDATA[$C$ServiceLibrary]]></EXP>
+									</PAR>
+									<PAR Name="signature" />
+									<PAR Name="id">
+										<EXP><![CDATA[$=$CreateGUID()]]></EXP>
+									</PAR>
+									<PAR Name="name">
+										<EXP><![CDATA[$C$Anomalia]]></EXP>
+									</PAR>
+									<PAR Name="family" />
+									<PAR Name="description" />
+									<PAR Name="x">
+										<EXP><![CDATA[$=$myShape.x+AnomaliaPoint.x-125]]></EXP>
+									</PAR>
+									<PAR Name="y">
+										<EXP><![CDATA[$=$myShape.y+AnomaliaPoint.z-125]]></EXP>
+									</PAR>
+									<PAR Name="z">
+										<EXP><![CDATA[$=$AnomaliaPoint.y]]></EXP>
+									</PAR>
+									<PAR Name="width">
+										<EXP><![CDATA[$C$250]]></EXP>
+									</PAR>
+									<PAR Name="height">
+										<EXP><![CDATA[$C$250]]></EXP>
+									</PAR>
+									<PAR Name="depth">
+										<EXP><![CDATA[$C$250]]></EXP>
+									</PAR>
+									<PAR Name="rotation" />
+									<PAR Name="text" />
+									<PAR Name="behaviour" />
+									<PAR Name="datadump" />
+									<PAR Name="path" />
+									<PAR Name="ctrl1x" />
+									<PAR Name="ctrl1y" />
+									<PAR Name="ctrl2x" />
+									<PAR Name="ctrl2y" />
+									<PAR Name="shapeFromId" />
+									<PAR Name="shapeFromPointIndex" />
+									<PAR Name="shapeToId" />
+									<PAR Name="shapeToPointIndex" />
+									<PAR Name="dimStack" />
+									<PAR Name="dimType" />
+									<PAR Name="dimDriving" />
+									<PAR Name="dimValue" />
+									<PAR Name="color" />
+									<PAR Name="colorOpacity" />
+									<PAR Name="color3D" />
+									<PAR Name="colorOpacity3D" />
+									<PAR Name="lineWidth" />
+									<PAR Name="lineColor" />
+									<PAR Name="lineOpacity" />
+									<PAR Name="lineColor3D" />
+									<PAR Name="lineOpacity3D" />
+									<PAR Name="links" />
+									<PAR Name="group" />
+									<PAR Name="layer" />
+									<PAR Name="connectionPoints" />
+									<PAR Name="modified" />
+									<PAR Name="pinned" />
+									<PAR Name="selected" />
+									<PAR Name="includeInBOM" />
+									<PAR Name="Livelli" />
+									<PAR Name="AltezzeLivelli" />
+									<PAR Name="NomeTreno" />
+									<PAR Name="NumeroCampata" />
+								</SET_STRUCT>
+								<SELECTCASE Id="RDK:5402" Expanded="True">
+									<EXP><![CDATA[$=$myService.Colore_anomalia]]></EXP>
+									<CASEGROUP Id="RDK:5393" CaseType="0" Expanded="True">
+										<EXP><![CDATA[$C$VERDE]]></EXP>
+										<SET Id="RDK:5390" VarRef="myShapeList[ShapeIndex].lineColor">
+											<EXP><![CDATA[$=$ColorGreen]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:5391" VarRef="myShapeList[ShapeIndex].color">
+											<EXP><![CDATA[$=$ColorGreen]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:5392" VarRef="myShapeList[ShapeIndex].color3D">
+											<EXP><![CDATA[$=$ColorGreen]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:50913622" VarRef="Anomalia.color">
+											<EXP><![CDATA[$=$ColorGreen]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+									</CASEGROUP>
+									<CASEGROUP Id="RDK:5397" CaseType="0" Expanded="True">
+										<EXP><![CDATA[$C$GIALLO]]></EXP>
+										<SET Id="RDK:5394" VarRef="myShapeList[ShapeIndex].lineColor">
+											<EXP><![CDATA[$=$ColorYellow]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:5395" VarRef="myShapeList[ShapeIndex].color">
+											<EXP><![CDATA[$=$ColorYellow]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:5396" VarRef="myShapeList[ShapeIndex].color3D">
+											<EXP><![CDATA[$=$ColorYellow]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:50913624" VarRef="Anomalia.color">
+											<EXP><![CDATA[$=$ColorYellow]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+									</CASEGROUP>
+									<CASEGROUP Id="RDK:5401" CaseType="0" Expanded="True">
+										<EXP><![CDATA[$C$ROSSO]]></EXP>
+										<SET Id="RDK:5398" VarRef="myShapeList[ShapeIndex].lineColor">
+											<EXP><![CDATA[$=$ColorRed]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:5399" VarRef="myShapeList[ShapeIndex].color">
+											<EXP><![CDATA[$=$ColorRed]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:5400" VarRef="myShapeList[ShapeIndex].color3D">
+											<EXP><![CDATA[$=$ColorRed]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+										<SET Id="RDK:50913626" VarRef="Anomalia.color">
+											<EXP><![CDATA[$=$ColorRed]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+									</CASEGROUP>
+								</SELECTCASE>
+								<LIST_ADD Id="RDK:50913627" ListRef="myShapeList">
+									<PAR Name="VALUE_TO_ADD">
+										<EXP><![CDATA[$=$Anomalia]]></EXP>
+									</PAR>
+									<PAR Name="POS_TO_ADD" />
+								</LIST_ADD>
+								<GROUP Id="RDK:5407" Name="Check Image" SubType="Generic" Expanded="True">
+									<VALUECONDITION Value="true">
+										<EXP><![CDATA[$=$myService.Img<>""]]></EXP>
+									</VALUECONDITION>
+									<GROUP Id="RDK:5404" Name="Creazione cartella" SubType="Generic" Expanded="True">
+										<VALUECONDITION Value="false">
+											<EXP><![CDATA[$=$FolderExist(ProcessFolder)]]></EXP>
+										</VALUECONDITION>
+										<ACTION_CALL Id="RDK:5403" Name="RDEngineering_MakeDir" DesignTimeRemark="{FolderPath}">
+											<PAR Name="RDLibraryName">
+												<EXP><![CDATA[$C$RDEngineering_MISC]]></EXP>
+											</PAR>
+											<PAR Name="FolderPath">
+												<EXP><![CDATA[$=$ProcessFolder]]></EXP>
+											</PAR>
+											<PAR Name="ForceCreation" />
+											<PAR Name="UseRecycleBin" />
+										</ACTION_CALL>
+									</GROUP>
+									<SET Id="RDK:5405" VarRef="myService.ImgDoc">
+										<EXP><![CDATA[$=$ProcessFolder + myShape.id + "." + File2Ext(myService.Img)]]></EXP>
+										<PAR Name="AdvancedOptions" />
+									</SET>
+									<ACTION_CALL Id="RDK:5406" Name="RDEngineering_RenameFile" DesignTimeRemark="{OldFileName} --&gt; {NewFileName}">
+										<PAR Name="RDLibraryName">
+											<EXP><![CDATA[$C$RDEngineering_MISC]]></EXP>
+										</PAR>
+										<PAR Name="OldFileName">
+											<EXP><![CDATA[$=$myService.Img]]></EXP>
+										</PAR>
+										<PAR Name="NewFileName">
+											<EXP><![CDATA[$=$myService.ImgDoc]]></EXP>
+										</PAR>
+										<PAR Name="Overwrite">
+											<EXP><![CDATA[$C$True]]></EXP>
+										</PAR>
+									</ACTION_CALL>
+								</GROUP>
+								<SET Id="RDK:5408" VarRef="i" Suppressed="True">
+									<EXP><![CDATA[$=$IndexOfByExp(myServiceList, "Me.ShapeID=""" + myShape.id + """", 0)]]></EXP>
+									<PAR Name="AdvancedOptions" />
+								</SET>
+								<IFTHENELSE Id="RDK:5413" Expanded="True">
+									<VALUECONDITION Value="true">
+										<EXP><![CDATA[$=$iService<0]]></EXP>
+									</VALUECONDITION>
+									<GROUP Id="RDK:5410" SubType="Then" Expanded="True">
+										<LIST_ADD Id="RDK:5409" ListRef="myServiceList">
+											<PAR Name="VALUE_TO_ADD">
+												<EXP><![CDATA[$=$myService]]></EXP>
+											</PAR>
+											<PAR Name="POS_TO_ADD" />
+										</LIST_ADD>
+									</GROUP>
+									<GROUP Id="RDK:5412" SubType="Else" Expanded="True">
+										<SET Id="RDK:5411" VarRef="myServiceList[iService]">
+											<EXP><![CDATA[$=$myService]]></EXP>
+											<PAR Name="AdvancedOptions" />
+										</SET>
+									</GROUP>
+								</IFTHENELSE>
+							</GROUP>
+							<SET Id="RDK:50908819" VarRef="myShape">
+								<EXP><![CDATA[$C$NOTHING]]></EXP>
+								<PAR Name="AdvancedOptions" />
+							</SET>
+						</CASEGROUP>
+					</SELECTCASE>
+				</GROUP>
+			</FUNCTION>
+			<FUNCTION Id="RDK:295" Name="OnEditor2DRegrouped" InputTypeName="Editor2DShapePropertyType" Options="(TYPEFUNCTION)" />
+			<FUNCTION Id="RDK:296" Name="OnEditor2DConfigure" InputTypeName="string[]" Options="(TYPEFUNCTION)" />
+			<FUNCTION Id="RDK:297" Name="OnEditor2DValidate" InputTypeName="string[]" Options="(TYPEFUNCTION)" />
+			<FUNCTION Id="RDK:298" Name="OnEditor2DSmartCopy" InputTypeName="string[]" Options="(TYPEFUNCTION)" />
+			<FUNCTION Id="RDK:299" Name="OnEditor2DSave" Options="(TYPEFUNCTION)" />
+			<FUNCTION Id="RDK:300" Name="OnEditor2DUndo" Options="(TYPEFUNCTION)" />
+			<FUNCTION Id="RDK:301" Name="OnEditor2DRedo" Expanded="True" Options="(TYPEFUNCTION)" />
+			<FUNCTION Id="RDK:375" Name="GetShapeIndexByID" Expanded="True" InputTypeName="string" ResultTypeName="integer">
+				<SET Id="RDK:377" VarRef="Param.Result">
+					<EXP><![CDATA[$=$IndexOfByFieldValue(myShapeList, "id", Param.Input)]]></EXP>
+					<PAR Name="AdvancedOptions" />
+				</SET>
+			</FUNCTION>
+		</GROUP>
+	</GROUP>
+	<GROUP Id="RDK:0008" Name="Main Group" SubType="Generic" Expanded="True">
+		<GROUP Id="RDK:308" Name="INIT" SubType="Generic" Expanded="True">
+			<SET_STRUCT Id="RDK:315" VarRef="E2DMainOptions" ClearAll="True" DesignTimeRemark="Editor2D MAIN Options">
+				<PAR Name="PageUnit">
+					<EXP><![CDATA[$C$mm]]></EXP>
+				</PAR>
+				<PAR Name="PageLanguage">
+					<EXP><![CDATA[$C$it]]></EXP>
+				</PAR>
+				<PAR Name="PageNumberOfDecimal">
+					<EXP><![CDATA[$C$0]]></EXP>
+				</PAR>
+				<PAR Name="PageOrigin" />
+				<PAR Name="PageFontSize">
+					<EXP><![CDATA[$C$9]]></EXP>
+				</PAR>
+				<PAR Name="PageFormat">
+					<EXP><![CDATA[$C$ISO A1 (594x840)]]></EXP>
+				</PAR>
+				<PAR Name="PageOrientation">
+					<EXP><![CDATA[$C$Landscape]]></EXP>
+				</PAR>
+				<PAR Name="PageGridSize">
+					<EXP><![CDATA[$C$5mm]]></EXP>
+				</PAR>
+				<PAR Name="PageGridRotation">
+					<EXP><![CDATA[$C$5]]></EXP>
+				</PAR>
+				<PAR Name="PageScaleFactor">
+					<EXP><![CDATA[$C$1:100]]></EXP>
+				</PAR>
+				<PAR Name="PageSnapToGrid">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageSnapToObject">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageSnapToPolyline">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageSnapToShapeCenter">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageQuickPickIgnoreThreshold" />
+				<PAR Name="PageShowGrid">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageShowRulers">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowActions">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowUndoRedo">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageShowTextTools">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageShowDrawTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowSmartLineTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowSmartCopyTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowConnectorTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowConnectionPointTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowGridPatternTools">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageShowZIndexTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowGroupTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowQuoteTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowLinkTools">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowCustomOrigin" />
+				<PAR Name="PageShowUtils">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowSave">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowHelp">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageShowHelpPopup">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageShowPreview3D">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageShowPreview3DGround" />
+				<PAR Name="PageShowPreview3DViewStyle">
+					<EXP><![CDATA[$C$TOP]]></EXP>
+				</PAR>
+				<PAR Name="PageShowPreview3DEnableFloor" />
+				<PAR Name="PageShowPreview3DFloorImage" />
+				<PAR Name="PageShowPreview3DFloorThickness" />
+				<PAR Name="PageShowPreview3DEnableWalls">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowPreview3DWallDimensions">
+					<EXP><![CDATA[$C$1]]></EXP>
+				</PAR>
+				<PAR Name="PageShowToolsOnToolbar">
+					<EXP><![CDATA[$C$smartcopy,preview3d]]></EXP>
+				</PAR>
+				<PAR Name="PageShowShapeProperties">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="PageShowQuoteUOM" />
+				<PAR Name="PageIncludeConnectionPoints" />
+				<PAR Name="PageCheckInclusions">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageCheckCollisions">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageCheckQuotes">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageCheckBackgroundCollisions">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageActiveBackground">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageZoomFit">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="PageZoomPage">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="ShapeEvents">
+					<EXP><![CDATA[$C$DOUBLECLICK,INSERTED,REMOVED,LINKED,STRETCHED,PASTED]]></EXP>
+				</PAR>
+				<PAR Name="ShapeLibrary">
+					<EXP><![CDATA[$C$ServiceLibrary]]></EXP>
+				</PAR>
+				<PAR Name="ShapeLibraryHideList" />
+				<PAR Name="ShapeLibraryOpenList">
+					<EXP><![CDATA[$C$Service]]></EXP>
+				</PAR>
+				<PAR Name="DoBackgroundCheckOnly">
+					<EXP><![CDATA[$C$False]]></EXP>
+				</PAR>
+				<PAR Name="DoAutoSave" />
+				<PAR Name="DoExportImage2D" />
+				<PAR Name="DoExportImage3D" />
+			</SET_STRUCT>
+			<SET Id="RDK:329" VarRef="ProcessFolder">
+				<EXP><![CDATA[$=$ProcPath() + "TEST\" + DateToStrTimestamp(Now()) + "\"]]></EXP>
+				<PAR Name="AdvancedOptions" />
+			</SET>
+			<SET Id="RDK:50891428" VarRef="FileName">
+				<EXP><![CDATA[$C$ShowCampata3D_test.htm]]></EXP>
+				<PAR Name="AdvancedOptions" />
+			</SET>
+			<ACTION_CALL Id="RDK:50861554" Name="RDEngineering_CopyFile" DesignTimeRemark="{Source File} --&gt; {Destination File}">
+				<PAR Name="RDLibraryName">
+					<EXP><![CDATA[$C$RDEngineering_MISC]]></EXP>
+				</PAR>
+				<PAR Name="FileName">
+					<EXP><![CDATA[$=$ProcPath()+"Templates\"+FileName]]></EXP>
+				</PAR>
+				<PAR Name="NewFileName">
+					<EXP><![CDATA[$=$WebTemplatesPath() + FileName]]></EXP>
+				</PAR>
+				<PAR Name="AcceptWildcards" />
+				<PAR Name="Overwrite">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
+				<PAR Name="Options">
+					<EXP><![CDATA[$C$(NEWERFILESONLY)]]></EXP>
+				</PAR>
+			</ACTION_CALL>
+			<ACTION_CALL Id="RDK:50861556" Name="RDEngineering_CopyFolder" DesignTimeRemark="{SourcePath} --&gt; {TargetPath}">
+				<PAR Name="RDLibraryName">
+					<EXP><![CDATA[$C$RDEngineering_MISC]]></EXP>
+				</PAR>
+				<PAR Name="SourcePath">
+					<EXP><![CDATA[$=$ProcPath() + "Templates\lib"]]></EXP>
+				</PAR>
+				<PAR Name="TargetPath">
+					<EXP><![CDATA[$=$WebTemplatesPath() + "lib"]]></EXP>
+				</PAR>
+				<PAR Name="Recursive" />
+			</ACTION_CALL>
+			<GROUP Id="RDK:304" SubType="Generic" Expanded="True">
+				<ACTION_CALL Id="RDK:12" Name="RDEngineering_RemoteEditor2D">
+					<PAR Name="RDLibraryName">
+						<EXP><![CDATA[$C$RDEngineering_UI]]></EXP>
+					</PAR>
+					<PAR Name="Shapes">
+						<EXP><![CDATA[$=$myShapeList]]></EXP>
+					</PAR>
+					<PAR Name="E2DOptions">
+						<EXP><![CDATA[$=$E2DMainOptions]]></EXP>
+					</PAR>
+					<PAR Name="OutputSVG">
+						<EXP><![CDATA[$V$]]></EXP>
+					</PAR>
+					<PAR Name="ViewportData">
+						<EXP><![CDATA[$=$ViewPortData]]></EXP>
+					</PAR>
+					<PAR Name="RunTimeRemark" />
+					<PAR Name="WebResourcePath" />
+					<PAR Name="ImgTop" />
+					<PAR Name="ImgBottom" />
+					<PAR Name="ImgLeft" />
+					<PAR Name="ImgRight" />
+					<PAR Name="CSSStyle" />
+					<PAR Name="RDActionTimeOut" />
+					<PAR Name="ButtonsMode">
+						<EXP><![CDATA[$C$0]]></EXP>
+					</PAR>
+					<PAR Name="ButtonList" />
+					<PAR Name="ButtonImgs" />
+					<PAR Name="ButtonAction" />
+					<PAR Name="ButtonOptions" />
+					<PAR Name="ButtonDefs" />
+					<PAR Name="ButtonPressed">
+						<EXP><![CDATA[$V$ButtonPressed]]></EXP>
+					</PAR>
+					<PAR Name="HeaderData" />
+					<PAR Name="Options">
+						<EXP><![CDATA[$C$(REUSEINSTANCE)]]></EXP>
+					</PAR>
+				</ACTION_CALL>
+			</GROUP>
+		</GROUP>
+	</GROUP>
+	<EXTERNAL_DATA>
+		<PROFILES_DATA>
+			<RELPROFILE Id="RDK:50852691" TypeName="Campata3DType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Campata3DProfile" />
+				<PNODE NodeType="field_variant" FieldName="Altezza" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852692" TypeName="Campata3DType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Campata3DProfile" />
+				<PNODE NodeType="field_variant" FieldName="Lunghezza" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852693" TypeName="Campata3DType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Campata3DProfile" />
+				<PNODE NodeType="field_variant" FieldName="Profondita" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852694" TypeName="Campata3DType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Campata3DProfile" />
+				<PNODE NodeType="field_variant" FieldName="Livelli" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852695" TypeName="Campata3DType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Campata3DProfile" />
+				<PNODE NodeType="field_variant" FieldName="AltezzeLivelli" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852702" TypeName="Campata3DType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Campata3DProfile" />
+				<PNODE NodeType="field_variant" FieldName="LivelloDiCarico" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852703" TypeName="Campata3DType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Campata3DProfile" />
+				<PNODE NodeType="field_variant" FieldName="Posizione" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852749" TypeName="CampataInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="CampataInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="Lunghezza" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852750" TypeName="CampataInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="CampataInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="Profondità" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852751" TypeName="CampataInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="CampataInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="Altezza" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852752" TypeName="CampataInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="CampataInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="NumeroLivelli" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852754" TypeName="CampataInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="CampataInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="AltezzeLivelli" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852777" TypeName="CampataInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="CampataInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="NomeTreno" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50852778" TypeName="CampataInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="CampataInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="NumeroCampata" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844288" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Service_Profile" />
+				<PNODE NodeType="field_variant" FieldName="Fila" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(BREAK)(FORCERELOAD)(WIDTH=130)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844289" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Service_Profile" />
+				<PNODE NodeType="field_variant" FieldName="Numero" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(WIDTH=130)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844290" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Service_Profile" />
+				<PNODE NodeType="field_variant" FieldName="LivDCar" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(WIDTH=130)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845582" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="Service_Profile" />
+				<PNODE NodeType="field_variant" FieldName="Scelta" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(BREAK)(COLUMNS=2)(COLSIZE=150)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="RadioButtons" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$Cosa devi rilevare?]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845583" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Scelta" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$V]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$verticalità]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845584" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Scelta" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$anomalia]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845607" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$V]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="I_E" VariantName="Variant" />
+				<RP_INITIAL_VALUE>
+					<EXP><![CDATA[$C$E]]></EXP>
+				</RP_INITIAL_VALUE>
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(WIDTH=130)(BREAK)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$Spalla/col. interna o esterna?]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845605" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$V]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="VertT" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(WIDTH=130)(BREAK)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$Vert. Trasv. (cm)]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845606" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$V]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="VertL" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(BREAK)(FORCERELOAD)(WIDTH=130)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$Vert. Long. (cm)]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846077" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$V]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Colore_anomalia" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(COLUMNS=3)(COLSIZE=150)(BREAK)(FORCERELOAD)(WIDTH=130)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="RadioButtons" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846078" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$V]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Note" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(BREAK)(WIDTH=450)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Notes" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846079" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$V]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Img" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(BREAK)(WIDTH=450)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="FileUpload" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$Foto]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50898829" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Componente" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845592" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(WIDTH=130)(BREAK)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="DropDown" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845593" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Anomalia" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(WIDTH=130)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="DropDown" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845594" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Intervento" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(BREAK)(FORCERELOAD)(WIDTH=400)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Notes" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845595" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Dati_tecnici" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(BREAK)(WIDTH=400)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Notes" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846081" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Colore_anomalia" VariantName="Variant1" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(COLUMNS=3)(COLSIZE=150)(BREAK)(FORCERELOAD)(WIDTH=130)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="RadioButtons" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846083" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Note" VariantName="Variant1" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(BREAK)(WIDTH=450)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="Notes" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846085" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Img" VariantName="Variant1" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$(FORCERELOAD)(BREAK)(WIDTH=450)]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="FileUpload" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$Foto]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50897717" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Scelta" VariantName="Variant">
+					<EXP><![CDATA[$C$A]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Posizione" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845608" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="I_E" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="I_E" VariantName="Variant">
+					<EXP><![CDATA[$C$I]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$Interna]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50845609" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="I_E" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="I_E" VariantName="Variant">
+					<EXP><![CDATA[$C$E]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$Esterna]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844312" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Colore_anomalia" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$VERDE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorGreen + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorGreen + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844313" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Colore_anomalia" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$GIALLO]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorYellow + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorYellow + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844314" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Colore_anomalia" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$ROSSO]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorRed + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorRed + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844298" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$SPALLA]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844299" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$MONTANTE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844300" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$TRALICCIATURA]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844301" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$CORRENTE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844302" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$CONNETTORE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844303" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$ROMPITRATTA]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844304" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$TERZO CORRENTE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844305" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$COLONNA]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844306" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$MENSOLA]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844307" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$PROTEZIONE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844308" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$BASE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844309" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$PIEDE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844310" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$CONTROVENTO VERTICALE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844311" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="TipoComponente" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="TipoComponente" VariantName="Variant">
+					<EXP><![CDATA[$C$CONTROVENTO ORIZZONTALE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844294" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Anomalia" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$URTO]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844295" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Anomalia" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$ROTTURA]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844296" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Anomalia" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$TORSIONE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844297" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="field_variant" FieldName="Anomalia" VariantName="Variant" />
+				<PNODE NodeType="value_exp" FieldName="Anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$SERRAGGIO]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846086" TypeName="ServiceType">
+				<PNODE NodeType="field_variant" FieldName="Colore_anomalia" VariantName="Variant1" />
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant1">
+					<EXP><![CDATA[$C$VERDE]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorGreen + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorGreen + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846087" TypeName="ServiceType">
+				<PNODE NodeType="field_variant" FieldName="Colore_anomalia" VariantName="Variant1" />
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant1">
+					<EXP><![CDATA[$C$GIALLO]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorYellow + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorYellow + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846088" TypeName="ServiceType">
+				<PNODE NodeType="field_variant" FieldName="Colore_anomalia" VariantName="Variant1" />
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant1">
+					<EXP><![CDATA[$C$ROSSO]]></EXP>
+				</PNODE>
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorRed + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorRed + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844557" TypeName="ServiceType">
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$VERDE]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Colore" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$"(CTLSTYLE=color:" + ColorGreen + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorGreen + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="HtmlPanel" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$VERDE]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844559" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$GIALLO]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Colore" VariantName="Variant1" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorYellow + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorYellow + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="HtmlPanel" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$GIALLO]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50844561" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant">
+					<EXP><![CDATA[$C$ROSSO]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Colore" VariantName="Variant2" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED>
+					<EXP><![CDATA[$C$False]]></EXP>
+				</RP_SETFIELD_FORCED>
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorRed + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorRed + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="HtmlPanel" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$ROSSO]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846090" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant1">
+					<EXP><![CDATA[$C$VERDE]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Colore" VariantName="Variant3" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$"(CTLSTYLE=color:" + ColorGreen + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorGreen + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="HtmlPanel" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$VERDE]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846092" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant1">
+					<EXP><![CDATA[$C$GIALLO]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Colore" VariantName="Variant4" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$=$"(CTLSTYLE=color:" + ColorYellow + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorYellow + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="HtmlPanel" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$GIALLO]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:50846094" TypeName="ServiceType" Expanded="True">
+				<PNODE NodeType="value_exp" FieldName="Colore_anomalia" VariantName="Variant1">
+					<EXP><![CDATA[$C$ROSSO]]></EXP>
+				</PNODE>
+				<PNODE NodeType="field_variant" FieldName="Colore" VariantName="Variant5" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS>
+					<EXP><![CDATA[$C$"(CTLSTYLE=color:" + ColorRed + ";font-weight:bold;width:100)
+(LBLSTYLE=color:" + ColorRed + ";font-weight:bold;width:470)"]]></EXP>
+				</RP_SETOPTIONS>
+				<UI_INPUT_TYPE TypeForm="HtmlPanel" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp">
+						<EXP><![CDATA[$C$ROSSO]]></EXP>
+					</PAR>
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp" />
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:413" TypeName="TreniInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="TreniInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="NumeriTreni" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:414" TypeName="TreniInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="TreniInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="CampateXTreno" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:415" TypeName="TreniInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="TreniInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="DistanzaTraTreni" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:2015" TypeName="TreniInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="TreniInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="LunghezzaCampate" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:2016" TypeName="TreniInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="TreniInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="ProfonditàCampate" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:2017" TypeName="TreniInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="TreniInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="AltezzaCampate" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:4248" TypeName="TreniInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="TreniInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="NumeroLivelli" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT />
+			</RELPROFILE>
+			<RELPROFILE Id="RDK:4249" TypeName="TreniInputType" Expanded="True">
+				<PNODE NodeType="profile" ProfileName="TreniInputProfile" />
+				<PNODE NodeType="field_variant" FieldName="AltezzeLivelli" VariantName="Variant" />
+				<RP_INITIAL_VALUE />
+				<RP_SETFIELD_VALUE />
+				<RP_SETFIELD_FORCED />
+				<RP_SETOPTIONS />
+				<UI_INPUT_TYPE TypeForm="Text" />
+				<UI_INPUT_VALIDATION ValidationType="none" />
+				<UI_INPUT_SUPPORT>
+					<PAR Name="InputPromptExp" />
+					<PAR Name="InputImageExp" />
+					<PAR Name="InputTooltipExp">
+						<EXP><![CDATA[$C$Inserisci l'elenco delle altezze dei livelli sperati da  un ;]]></EXP>
+					</PAR>
+					<PAR Name="InputStyleExp" />
+				</UI_INPUT_SUPPORT>
+			</RELPROFILE>
+		</PROFILES_DATA>
+		<BOM_DATA />
+	</EXTERNAL_DATA>
+</PROCESS>

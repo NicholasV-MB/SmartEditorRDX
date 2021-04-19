@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="../JScript/RDWebForm.js"></script>
+		
+		<title>WebForm Template</title>
+		<style type="text/css">
+			.buttons {
+				padding: 5px;
+				width: 300px;
+				text-align: right;
+				margin-top: 10px;
+			}
+			#Canvas2D {
+				background-color: #252850;
+			}
+			#RDVAR_Posizione {
+				width:300px;
+			}
+		</style>
+		<script src="lib/three.min.js"></script>
+		<script src="lib/OrbitControls.js"></script>
+		<script src="lib/ShowCampata3D_test.js"></script>
+		<script type="text/javascript">
+			function RDCustomBeforeInit(config) {
+			   //Executed before inserting data into input controls
+			}
+			function RDCustomInit(config) {
+			   //Executed after inserting data into input controls
+			   
+			   //Run main script
+			   mainShowCampata3D();
+			}
+			function RDCustomBeforeSubmit() {
+			   //Executed before submitting to server the webform
+			   //Return false to refuse the submit, true to accept
+			   return true;
+			}
+		</script>
+
+	</head>
+	<body>
+		
+		<form method="post" action=""  >
+			<table border=0 cellpadding=5>
+				<tr>
+					<td>
+						Oggetto: <input type="text" name="RDVAR_Oggetto"  id="RDVAR_Oggetto" class="input"/>
+					</td>
+					<td>
+						Livello Di Carico: <input type="text" name="RDVAR_LivelloDiCarico" id="RDVAR_LivelloDiCarico" class="input"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						Posizione: <input type="text" name="RDVAR_Posizione" id="RDVAR_Posizione" class="input"/>
+					</td>
+				</tr>
+			</table>
+			<input type="hidden" name="RDVAR_Altezza" id="RDVAR_Altezza" class="input"/>
+			<input type="hidden" name="RDVAR_Profondita"  id="RDVAR_Profondita" class="input"/>
+			<input type="hidden" name="RDVAR_Lunghezza"  id="RDVAR_Lunghezza" class="input"/>
+			<input type="hidden" name="RDVAR_Livelli" id="RDVAR_Livelli" class="input"/>
+			<input type="hidden" name="RDVAR_AltezzeLivelli" id="RDVAR_AltezzeLivelli" class="input"/>
+		</form>
+		
+		<!-- DIV CHE CONTIENE LA PARTE 3D -->
+		<div id="Canvas3D" style="width:500px; height:500px; margin:auto;"></div>
+		
+	</body>
+</html>
