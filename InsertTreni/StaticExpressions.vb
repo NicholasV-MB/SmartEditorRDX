@@ -43,6 +43,12 @@ Module StaticExpressions
 		return AltezzaCampate
 	End Function
 
+	'OriginalExpression: '"Treno_"+IntToStr(iCol)+"-1"
+	<Extension()>
+	Public Function Eval_Static_text_K_392(ByVal Main As RDCompiledProcess) As Object
+		return "Treno_"+IntToStr(iCol)+"-1"
+	End Function
+
 	'OriginalExpression: 'Livelli
 	<Extension()>
 	Public Function Eval_Static_Livelli_K_392(ByVal Main As RDCompiledProcess) As Object
@@ -145,6 +151,12 @@ Module StaticExpressions
 	<Extension()>
 	Public Function Eval_Static_depth_K_358(ByVal Main As RDCompiledProcess) As Object
 		return CampataShapeIN.depth
+	End Function
+
+	'OriginalExpression: 'CampataShapeIN.NomeTreno+"-"+SafeStr(CampataShapeIN.NumeroCampata+1)
+	<Extension()>
+	Public Function Eval_Static_text_K_358(ByVal Main As RDCompiledProcess) As Object
+		return CampataShapeIN.NomeTreno+"-"+SafeStr(CampataShapeIN.NumeroCampata+1)
 	End Function
 
 	'OriginalExpression: 'Livelli
@@ -254,6 +266,12 @@ Module StaticExpressions
 	<Extension()>
 	Public Function Eval_Static_depth_K_424(ByVal Main As RDCompiledProcess) As Object
 		return AltezzaCampate
+	End Function
+
+	'OriginalExpression: '"Treno_"+IntToStr(iCol)+"-1"
+	<Extension()>
+	Public Function Eval_Static_text_K_424(ByVal Main As RDCompiledProcess) As Object
+		return "Treno_"+IntToStr(iCol)+"-1"
 	End Function
 
 	'OriginalExpression: 'Livelli

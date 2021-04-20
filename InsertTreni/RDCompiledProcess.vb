@@ -115,7 +115,7 @@ Public Class RDCompiledProcess
 		_CurrentNode = "RDK:368"
 		iCol = EvalConstant(iCol.GetType, "1")
 		
-		'SetStruct myShapeListOUT <-- CampataShapeIN = Campata|ServiceLibrary||CreateGUID()|Campata|||XPos|YPos|0|LunghezzaCampat... (237 chars)
+		'SetStruct myShapeListOUT <-- CampataShapeIN = Campata|ServiceLibrary||CreateGUID()|Campata|||XPos|YPos|0|LunghezzaCampat... (265 chars)
 		_CurrentNode = "RDK:392"
 		CampataShapeIN = new Editor2DShapeType
 		With CampataShapeIN
@@ -129,6 +129,7 @@ Public Class RDCompiledProcess
 			.width = EvalExpression("width_K_392")
 			.height = EvalExpression("height_K_392")
 			.depth = EvalExpression("depth_K_392")
+			.text = EvalExpression("text_K_392")
 			.Livelli = EvalExpression("Livelli_K_392")
 			.AltezzeLivelli = EvalExpression("AltezzeLivelli_K_392")
 			.NomeTreno = EvalExpression("NomeTreno_K_392")
@@ -190,7 +191,7 @@ exec_group:
 '----------------------------------------------------
 		if not _GroupExecute then return
 		
-		'SetStruct myShapeListOUT <-- CampataShapeNew = CampataShapeIN.source|CampataShapeIN.sourceLibrary||CreateGUID()|CampataS... (384 chars)
+		'SetStruct myShapeListOUT <-- CampataShapeNew = CampataShapeIN.source|CampataShapeIN.sourceLibrary||CreateGUID()|CampataS... (452 chars)
 		_CurrentNode = "RDK:358"
 		CampataShapeNew = new Editor2DShapeType
 		With CampataShapeNew
@@ -206,6 +207,7 @@ exec_group:
 			.width = EvalExpression("width_K_358")
 			.height = EvalExpression("height_K_358")
 			.depth = EvalExpression("depth_K_358")
+			.text = EvalExpression("text_K_358")
 			.Livelli = EvalExpression("Livelli_K_358")
 			.AltezzeLivelli = EvalExpression("AltezzeLivelli_K_358")
 			.NomeTreno = EvalExpression("NomeTreno_K_358")
@@ -246,7 +248,7 @@ exec_group:
 exec_group:
 '----------------------------------------------------
 		if not _GroupExecute then return
-		'SetStruct myShapeListOUT <-- CampataShapeIN = Campata|ServiceLibrary||CreateGUID()|Campata|||XPos|YPos|0|LunghezzaCampat... (237 chars)
+		'SetStruct myShapeListOUT <-- CampataShapeIN = Campata|ServiceLibrary||CreateGUID()|Campata|||XPos|YPos|0|LunghezzaCampat... (265 chars)
 		_CurrentNode = "RDK:424"
 		CampataShapeIN = new Editor2DShapeType
 		With CampataShapeIN
@@ -260,6 +262,7 @@ exec_group:
 			.width = EvalExpression("width_K_424")
 			.height = EvalExpression("height_K_424")
 			.depth = EvalExpression("depth_K_424")
+			.text = EvalExpression("text_K_424")
 			.Livelli = EvalExpression("Livelli_K_424")
 			.AltezzeLivelli = EvalExpression("AltezzeLivelli_K_424")
 			.NomeTreno = EvalExpression("NomeTreno_K_424")

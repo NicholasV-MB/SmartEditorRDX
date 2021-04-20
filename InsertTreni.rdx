@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PROCESS Id="RDK:0001" Name="InsertTreni" SystemProcess="True" Expanded="True">
-	<PROCESSPROPERTY CrUser="ruled [SRV-PLMTEST]" CrDate="2021-04-15T11:55:59" ModUser="nicholas.vittor [LAPT-IT07]" ModDate="2021-04-19T11:04:37" LanguageVersion="2011.1.1.0" />
+	<PROCESSPROPERTY CrUser="ruled [SRV-PLMTEST]" CrDate="2021-04-15T11:55:59" ModUser="nicholas.vittor [LAPT-IT07]" ModDate="2021-04-20T10:17:16" LanguageVersion="2011.1.1.0" />
 	<GROUP Id="RDK:0002" Name="Declarations" SubType="Declarations" Expanded="True">
 		<GROUP Id="RDK:0003" Name="Types" SubType="TypeSet" IncludeDate="0" Expanded="True">
 			<GROUP Id="RDK:56" Name="Editor2DTypes" SubType="TypeSet" IncludeDate="132530223426234312" Expanded="True">
@@ -470,7 +470,9 @@
 					<EXP><![CDATA[$=$AltezzaCampate]]></EXP>
 				</PAR>
 				<PAR Name="rotation" />
-				<PAR Name="text" />
+				<PAR Name="text">
+					<EXP><![CDATA[$=$"Treno_"+IntToStr(iCol)+"-1"]]></EXP>
+				</PAR>
 				<PAR Name="behaviour" />
 				<PAR Name="datadump" />
 				<PAR Name="path" />
@@ -567,7 +569,9 @@
 							<EXP><![CDATA[$=$CampataShapeIN.depth]]></EXP>
 						</PAR>
 						<PAR Name="rotation" />
-						<PAR Name="text" />
+						<PAR Name="text">
+							<EXP><![CDATA[$=$CampataShapeIN.NomeTreno+"-"+SafeStr(CampataShapeIN.NumeroCampata+1)]]></EXP>
+						</PAR>
 						<PAR Name="behaviour" />
 						<PAR Name="datadump" />
 						<PAR Name="path" />
@@ -736,7 +740,9 @@
 							<EXP><![CDATA[$=$AltezzaCampate]]></EXP>
 						</PAR>
 						<PAR Name="rotation" />
-						<PAR Name="text" />
+						<PAR Name="text">
+							<EXP><![CDATA[$=$"Treno_"+IntToStr(iCol)+"-1"]]></EXP>
+						</PAR>
 						<PAR Name="behaviour" />
 						<PAR Name="datadump" />
 						<PAR Name="path" />

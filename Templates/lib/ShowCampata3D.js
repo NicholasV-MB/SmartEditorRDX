@@ -220,6 +220,21 @@ function mainShowCampata3D(){
 		});
 	}
 	
+	// Funzione per disegnare una annotazione in corrispondenza dell'oggetto selezionato 
+	function drawAnnotation(x, y, z){
+		scene3D.remove(scene3D.getObjectByName("Annotazione"));
+		geometry = new THREE.SphereGeometry( 100, 32, 32 );
+		var material = new THREE.MeshBasicMaterial( {color: 0x00FF00, transparent:true} );
+		var sphere = new THREE.Mesh( geometry, material );
+		sphere.name = "Annotazione";
+		sphere.position.set(
+			x,
+			y, 
+			z
+		);
+		scene3D.add(sphere);
+	}
+	
 	
 	
 	// Gestione eventi mouse nel canvas 3D
@@ -254,6 +269,7 @@ function mainShowCampata3D(){
 			pos.y = Math.round(pos.y);
 			pos.z = Math.round(pos.z);
 			input_Posizione.value = JSON.stringify(pos);
+			drawAnnotation(pos.x, pos.y, pos.z);
 		}
 	} );
 	
