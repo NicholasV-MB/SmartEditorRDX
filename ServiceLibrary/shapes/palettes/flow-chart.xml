@@ -1,0 +1,21 @@
+﻿<palette><div class="paletteItem"><div><img id="note" class="shape" title="Draw a Note" shapeMode="0" src="DefaultLibrary/shapes/img/note.gif" /></div><div>Note</div></div>
+<div class="paletteItem"><div><img id="cylinder-horizontal" class="shape" title="Draw a horizontal cylinder" shapeMode="0" src="DefaultLibrary/shapes/img/cylinder-horizontal.gif" /></div><div>Cylinder-Horizontal</div></div>
+<div class="paletteItem"><div><img id="cylinder-vertical" class="shape" title="Draw a vertical cylinder" shapeMode="0" src="DefaultLibrary/shapes/img/cylinder-vertical.gif" /></div><div>Cylinder-V</div></div>
+<div class="paletteItem"><div><img id="decision" class="shape" title="Draw a decision shape" shapeMode="0" src="DefaultLibrary/shapes/img/decision.gif" /></div><div>Decision</div></div>
+<div class="paletteItem"><div><img id="predefinedProcess" class="shape" title="Draw a predefined process" shapeMode="0" src="DefaultLibrary/shapes/img/predefinedProcess.gif" /></div><div>Predefined Process</div></div>
+<div class="paletteItem"><div><img id="internalStorage" class="shape" title="Draw internal storage" shapeMode="0" src="ServiceLibrary/shapes/img/internalStorage.gif" /></div><div>Internal Storage</div></div>
+<div class="paletteItem"><div><img id="document" class="shape" title="Draw a document" shapeMode="0" src="DefaultLibrary/shapes/img/document.gif" /></div><div>Document</div></div>
+<div class="paletteItem"><div><img id="multidocument" class="shape" title="Draw a multidocument" shapeMode="0" src="DefaultLibrary/shapes/img/multidocument.gif" /></div><div>Multidocument</div></div>
+<div class="paletteItem"><div><img id="summingJunction" class="shape" title="Draw a summing junction" shapeMode="0" src="DefaultLibrary/shapes/img/summingJunction.gif" /></div><div>Summing Junction</div></div>
+<div class="paletteItem"><div><img id="process" class="shape" title="Draw a process" shapeMode="0" src="DefaultLibrary/shapes/img/rectangle.gif" /></div><div>Process</div></div>
+<div class="paletteItem"><div><img id="alternate-process" class="shape" title="Draw an alternate-process" shapeMode="0" src="DefaultLibrary/shapes/img/roundrect.gif" /></div><div>Alternate Process</div></div>
+<div class="paletteItem"><div><img id="delay" class="shape" title="Draw a delay" shapeMode="0" src="DefaultLibrary/shapes/img/delay.gif" /></div><div>Delay</div></div>
+<div class="paletteItem"><div><img id="data" class="shape" title="Draw a data shape" shapeMode="0" src="DefaultLibrary/shapes/img/parallelogram.gif" /></div><div>Data</div></div>
+<div class="paletteItem"><div><img id="preparation" class="shape" title="Draw a preparation shape" shapeMode="0" src="DefaultLibrary/shapes/img/preparation.gif" /></div><div>Preparation</div></div>
+<div class="paletteItem"><div><img id="manual-operation" class="shape" title="Draw a manual operation" shapeMode="0" src="DefaultLibrary/shapes/img/trapezium.gif" /></div><div>Manual-Operation</div></div>
+<div class="paletteItem"><div><img id="manual-input" class="shape" title="Draw a manual input" shapeMode="0" src="DefaultLibrary/shapes/img/manualInput.gif" /></div><div>Manual-Input</div></div>
+<div class="paletteItem"><div><img id="or" class="shape" title="Draw an or" shapeMode="0" src="DefaultLibrary/shapes/img/or.gif" /></div><div>Or</div></div>
+<div class="paletteItem"><div><img id="extract" class="shape" title="Draw an extract shape" shapeMode="0" src="DefaultLibrary/shapes/img/extract.gif" /></div><div>Extract</div></div>
+<div class="paletteItem"><div><img id="merge" class="shape" title="Draw a merge shape" shapeMode="0" src="DefaultLibrary/shapes/img/merge.gif" /></div><div>Merge</div></div>
+<div class="paletteItem"><div><img id="collate" class="shape" title="Draw a collate shape" shapeMode="0" src="DefaultLibrary/shapes/img/collate.gif" /></div><div>Collate</div></div>
+</palette>

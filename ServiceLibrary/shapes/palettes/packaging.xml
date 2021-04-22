@@ -1,0 +1,18 @@
+<palette>
+    <div class="paletteItem">
+        <div><img id="conveyor" class="shape" title="Draw a Conveyor" src="DefaultLibrary/shapes/img/conveyor.gif"/></div>
+        <div>Conveyor</div>
+    </div>
+    <div class="paletteItem">
+        <div><img id="formacartoni" class="shape" title="Draw a Cardboard Folder" src="DefaultLibrary/shapes/img/formacartoni.gif"/></div>
+        <div>Cardboard Folder</div>
+    </div>
+    <div class="paletteItem">
+        <div><img id="packmachine" class="shape" title="Draw a Pack Machine" src="DefaultLibrary/shapes/img/packmachine.gif"/></div>
+        <div>Pack Machine</div>
+    </div>
+    <div class="paletteItem">
+        <div><img id="rulliera" class="shape" title="Draw a Roller" src="DefaultLibrary/shapes/img/rulliera.gif"/></div>
+        <div>Roller</div>
+    </div>
+</palette>

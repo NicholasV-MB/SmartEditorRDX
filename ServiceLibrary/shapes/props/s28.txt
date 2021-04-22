@@ -1,0 +1,24 @@
+﻿{
+  "shapeMode": 2,
+  "name": "Shape28",
+  "icon": "ServiceLibrary/shapes/img/",
+  "width": 34.0157,
+  "height": 3.7795,
+  "depth": 3.7794999999999987,
+  "group2d": {
+    "shapes": [
+      {
+        "source": "rect",
+        "id": "corrente",
+        "width": 34.0157,
+        "height": 3.7795,
+        "depth": 3.7795,
+        "x": 3.7795,
+        "y": 0.0,
+        "z": 34.0157,
+        "rotation": "0",
+        "data": ""
+      }
+    ]
+  }
+}

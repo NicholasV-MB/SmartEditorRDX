@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" version="1.1">
+    <g id="line-tracker-group" transform="rotate(0)">
+        <line id="control1-line" x1="1" y1="1" x2="1" y2="1" stroke="#63afda" strokeweight=".75pt" />
+        <line id="control2-line" x1="1" y1="1" x2="1" y2="1" stroke="#63afda" strokeweight=".75pt" />
+        <g id="resize-from" transform="translate(100,50)">
+            <circle class="dummy" cx="0" cy="0" r="12" stroke-opacity="0.0" fill-opacity="0.0" />
+            <circle cx="0" cy="0" r="4" stroke="#000000" stroke-width="1px" stroke-opacity="1.0" fill-opacity="1.0" fill="#ffffff" />
+        </g>
+        <g id="resize-to" transform="translate(100,50)">
+            <circle class="dummy" cx="0" cy="0" r="12" stroke-opacity="0.0" fill-opacity="0.0" />
+            <circle cx="0" cy="0" r="4" stroke="#000000" stroke-width="1px" stroke-opacity="1.0" fill-opacity="1.0" fill="#ffffff" />
+        </g>
+        <g id="control1" transform="translate(100,50)">
+            <circle class="dummy" cx="0" cy="0" r="12" stroke-opacity="0.0" fill-opacity="0.0" />
+            <circle cx="0" cy="0" r="4" stroke="#000000" stroke-width="1px" stroke-opacity="1.0" fill-opacity="1.0" fill="#63afda" />
+        </g>
+        <g id="control2" transform="translate(100,50)">
+            <circle class="dummy" cx="0" cy="0" r="12" stroke-opacity="0.0" fill-opacity="0.0" />
+            <circle cx="0" cy="0" r="4" stroke="#000000" stroke-width="1px" stroke-opacity="1.0" fill-opacity="1.0" fill="#ffff00" />
+        </g>
+    </g>
+</svg>

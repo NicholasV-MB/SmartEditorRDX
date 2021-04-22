@@ -1,0 +1,62 @@
+﻿{
+  "shapeMode": 0,
+  "name": "Triangle",
+  "description": "Draw a triangle",
+  "icon": "ServiceLibrary/shapes/img/triangle.gif",
+  "iconBig": "ServiceLibrary/shapes/img/triangle-big.gif",
+  "srcSVG": "ServiceLibrary/shapes/svg/triangle.xml",
+  "src3D": "ServiceLibrary/shapes/obj/triangle.stl",
+  "behaviour": "(COLLISIONCLASS=1)",
+  "connectionPoints": [
+    {
+      "id": "cp1",
+      "x": 0.0,
+      "y": 500.0,
+      "z": 0.0,
+      "direction": 270.0,
+      "linkClass": ""
+    },
+    {
+      "id": "cp2",
+      "x": 500.0,
+      "y": 0.0,
+      "z": 0.0,
+      "direction": 0.0,
+      "linkClass": ""
+    },
+    {
+      "id": "cp3",
+      "x": 500.0,
+      "y": 1000.0,
+      "z": 0.0,
+      "direction": 180.0,
+      "linkClass": ""
+    },
+    {
+      "id": "cp4",
+      "x": 1000.0,
+      "y": 500.0,
+      "z": 0.0,
+      "direction": 90.0,
+      "linkClass": ""
+    }
+  ],
+  "eventClass": "OnDoubleclick",
+  "eventHandlers": {
+    "generic": {},
+    "inserted": {
+      "handler": "TriangleEventInserted.rdx"
+    },
+    "pasted": {},
+    "removed": {
+      "handler": "TriangleEventRemoved.rdx"
+    },
+    "linked": {},
+    "stretched": {
+      "handler": "TriangleEventStretched.rdx"
+    },
+    "rotated": {},
+    "regrouped": {},
+    "doubleclick": {}
+  }
+}

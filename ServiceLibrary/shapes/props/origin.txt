@@ -1,0 +1,12 @@
+{ 
+    "icon" : "DefaultLibrary/theme/images/e2d/origin50.png",
+    "name":"Origin",
+    "custom" : {
+        "Orientation" : {
+            "++":"(SVG=origin11)",
+            "+-":"(SVG=origin1-)",
+            "-+":"(SVG=origin-1)",
+            "--":"(SVG=origin--)"
+            }
+        }
+}

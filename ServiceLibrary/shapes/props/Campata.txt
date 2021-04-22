@@ -1,0 +1,66 @@
+﻿{
+  "shapeMode": 0,
+  "name": "Campata",
+  "icon": "ServiceLibrary/shapes/img/roundrect.gif",
+  "srcSVG": "ServiceLibrary/shapes/svg/Campata.xml",
+  "src3D": "ServiceLibrary/shapes/obj/Campata.stl",
+  "width": 10227.4016,
+  "height": 3779.5276,
+  "depth": 15118.1102,
+  "behaviour": "(NOHHSTRETCH)",
+  "custom": {
+    "NomeTreno": {
+      "UIType": " "
+    },
+    "NumeroCampata": {
+      "UIDefault": " "
+    },
+    "NumeroLivelli": {
+      "UIDefaultNoConvert": " "
+    },
+    "AltezzeLivelli": {
+      "UINoConvert": " "
+    }
+  },
+  "connectionPoints": [
+    {
+      "id": "cp1",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "xMin": "",
+      "xMax": "",
+      "xStep": "",
+      "yMin": "",
+      "yMax": "",
+      "yStep": "",
+      "zMin": "",
+      "zMax": "",
+      "zStep": "",
+      "direction": 270.0,
+      "label": "",
+      "isDimension": true
+    },
+    {
+      "id": "cp2",
+      "x": 1000.0,
+      "y": 0.0,
+      "z": 0.0,
+      "xMin": "",
+      "xMax": "",
+      "xStep": "",
+      "yMin": "",
+      "yMax": "",
+      "yStep": "",
+      "zMin": "",
+      "zMax": "",
+      "zStep": "",
+      "direction": 90.0,
+      "label": "",
+      "isDimension": true
+    }
+  ],
+  "eventClass": "OnDoubleclick,OnInserted",
+  "color": "#FFFFFF",
+  "lineColor": "#000000"
+}

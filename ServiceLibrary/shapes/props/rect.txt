@@ -1,0 +1,132 @@
+﻿{
+  "shapeMode": 0,
+  "name": "Rectangle",
+  "description": "Draw a rectangle",
+  "icon": "ServiceLibrary/shapes/img/rectangle.gif",
+  "iconBig": "ServiceLibrary/shapes/img/rectangle-big.gif",
+  "srcSVG": "ServiceLibrary/shapes/svg/rect.xml",
+  "src3D": "ServiceLibrary/shapes/obj/rect.stl",
+  "custom": {
+    "TestV": {
+      "UIType": "text",
+      "UIValidation": "0<value && value<10",
+      "UIDefaultNoConvert": "1"
+    },
+    "Side": {
+      "In": "(ADDBEHAVIOUR=COLLISIONCLASS=1)(REMBEHAVIOUR=HIDECOORDINATES,COLLISIONCLASS=2)",
+      "Out": "(ADDBEHAVIOUR=HIDECOORDINATES,COLLISIONCLASS=2)(REMBEHAVIOUR=COLLISIONCLASS=1)"
+    }
+  },
+  "connectionPoints": [
+    {
+      "id": "cp1",
+      "x": 0.0,
+      "y": 500.0,
+      "z": 0.0,
+      "xMin": "",
+      "xMax": "",
+      "xStep": "",
+      "yMin": "",
+      "yMax": "",
+      "yStep": "",
+      "zMin": "",
+      "zMax": "",
+      "zStep": "",
+      "direction": 270.0,
+      "linkClass": "uno",
+      "label": "cp1"
+    },
+    {
+      "id": "cp2",
+      "x": 500.0,
+      "y": 0.0,
+      "z": 0.0,
+      "direction": 0.0,
+      "linkClass": "tre",
+      "label": "cp2"
+    },
+    {
+      "id": "cp3",
+      "x": 500.0,
+      "y": 1000.0,
+      "z": 0.0,
+      "direction": 180.0,
+      "linkClass": "",
+      "label": "cp3"
+    },
+    {
+      "id": "cp4",
+      "x": 1000.0,
+      "y": 500.0,
+      "z": 0.0,
+      "direction": 90.0,
+      "linkClass": "due",
+      "label": "cp4"
+    },
+    {
+      "id": "d1",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "direction": 270.0,
+      "linkClass": "",
+      "label": "d1",
+      "isDimension": true
+    },
+    {
+      "id": "d2",
+      "x": 0.0,
+      "y": 1000.0,
+      "z": 0.0,
+      "direction": 0.0,
+      "linkClass": "",
+      "label": "d2",
+      "isDimension": true
+    },
+    {
+      "id": "d3",
+      "x": 1000.0,
+      "y": 0.0,
+      "z": 0.0,
+      "direction": 180.0,
+      "linkClass": "",
+      "label": "d3",
+      "isDimension": true
+    },
+    {
+      "id": "d4",
+      "x": 1000.0,
+      "y": 1000.0,
+      "z": 0.0,
+      "direction": 90.0,
+      "linkClass": "",
+      "label": "d4",
+      "isDimension": true
+    },
+    {
+      "id": "ccx",
+      "x": 500.0,
+      "y": 500.0,
+      "z": 0.0,
+      "xMin": "10",
+      "xMax": "90",
+      "xStep": "15",
+      "direction": 90.0,
+      "linkClass": "uno",
+      "label": "ccx"
+    },
+    {
+      "id": "ccz",
+      "x": 500.0,
+      "y": 500.0,
+      "z": 500.0,
+      "zMin": "24",
+      "zMax": "DEPTH - 24",
+      "zStep": "24",
+      "direction": 90.0,
+      "linkClass": "uno",
+      "label": "ccz"
+    }
+  ],
+  "eventClass": " OnStretched,OnInserted,OnDoubleclick"
+}

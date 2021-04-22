@@ -1,0 +1,21 @@
+{ 
+    "icon" : "DefaultLibrary/theme/images/e2d/connectionPoint50.png",
+    "name":"Connection Point",
+    "behaviour" : "(ORIGIN=CENTER)(HIDEDIMENSIONS)(NOSTRETCH)(NOZMOVE)(NOCOLLISIONS)(NOINCLUSIONS)(SHOWCONFIGUREBUTTON)",
+    "colorOpacity":0.5,
+    "custom":{
+        "cpName":{"UIType":"text", "UINoConvert":true},
+        "linkClass":{"UIType":"text", "UINoConvert":true},
+        "xMin":{"UIType":"text", "UINoConvert":true},
+        "xMax":{"UIType":"text", "UINoConvert":true},
+        "xStep":{"UIType":"text", "UINoConvert":true},
+        "yMin":{"UIType":"text", "UINoConvert":true},
+        "yMax":{"UIType":"text", "UINoConvert":true},
+        "yStep":{"UIType":"text", "UINoConvert":true},
+        "zMin":{"UIType":"text", "UINoConvert":true},
+        "zMax":{"UIType":"text", "UINoConvert":true},
+        "zStep":{"UIType":"text", "UINoConvert":true},        
+        "label":{"UIType":"text", "UINoConvert":true},
+		"isDimension":{"true":"", "false":""}
+    }
+}

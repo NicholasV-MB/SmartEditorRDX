@@ -1,0 +1,76 @@
+﻿{
+  "shapeMode": 2,
+  "name": "CampataNicholas",
+  "icon": "ServiceLibrary/shapes/img/roundrect-big.gif",
+  "width": 41.574799999999996,
+  "height": 41.574799999999996,
+  "depth": 41.574799999999996,
+  "group2d": {
+    "shapes": [
+      {
+        "source": "rect",
+        "id": "spalla1",
+        "width": 3.7795,
+        "height": 3.7795,
+        "depth": 37.7953,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "rotation": "0",
+        "data": "",
+        "color": ""
+      },
+      {
+        "source": "rect",
+        "id": "spalla2",
+        "width": 3.7795,
+        "height": 3.7795,
+        "depth": 37.7953,
+        "x": 37.7953,
+        "y": 0.0,
+        "z": 0.0,
+        "rotation": "0",
+        "data": "",
+        "color": ""
+      },
+      {
+        "source": "rect",
+        "id": "spalla3",
+        "width": 3.7795,
+        "height": 3.7795,
+        "depth": 37.7953,
+        "x": 37.7953,
+        "y": 37.7953,
+        "z": 0.0,
+        "rotation": "0",
+        "data": "",
+        "color": ""
+      },
+      {
+        "source": "rect",
+        "id": "spalla4",
+        "width": 3.7795,
+        "height": 3.7795,
+        "depth": 37.7953,
+        "x": 0.0,
+        "y": 37.7953,
+        "z": 0.0,
+        "rotation": "0",
+        "data": "",
+        "color": ""
+      },
+      {
+        "source": "rect",
+        "id": "corrente1",
+        "width": 34.0157,
+        "height": 3.7795,
+        "depth": 3.7795,
+        "x": 3.7795,
+        "y": 0.0,
+        "z": 37.7953,
+        "rotation": "0",
+        "data": ""
+      }
+    ]
+  }
+}

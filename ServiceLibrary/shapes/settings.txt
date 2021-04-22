@@ -1,0 +1,1 @@
+﻿{"categories":{"basic":{"expanded":true},"basic4":{"expanded":true},"basic3":{"expanded":true},"basic0":{"expanded":true},"flow-chart":{"expanded":false},"packaging":{"expanded":false},"Service":{"expanded":true}},"shapes":{}}

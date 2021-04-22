@@ -1,0 +1,13 @@
+{ 
+    "icon" : "DefaultLibrary/theme/images/e2d/origin50.png",
+    "name":"Custom Origin",
+    "behaviour" : "(ORIGIN=CENTER)(HIDEDIMENSIONS)(HIDEROTATION)(HIDELAYER)(NOSTRETCH)(NOROTATE)(NOZMOVE)(NOCOLLISIONS)(NOINCLUSIONS)",
+    "custom" : {
+        "Orientation" : {
+            "++":"(SVG=originCustom11)",
+            "+-":"(SVG=originCustom1-)",
+            "-+":"(SVG=originCustom-1)",
+            "--":"(SVG=originCustom--)"
+            }
+        }
+}

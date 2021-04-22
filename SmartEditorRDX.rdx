@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PROCESS Id="RDK:0001" Name="SmartEditorRDX" Expanded="True">
-	<PROCESSPROPERTY CrUser="nicholas.vittor [LAPT-IT07]" CrDate="2021-04-16T09:50:01" ModUser="nicholas.vittor [LAPT-IT07]" ModDate="2021-04-20T11:30:54" LanguageVersion="2011.1.1.0" />
+	<PROCESSPROPERTY CrUser="nicholas.vittor [LAPT-IT07]" CrDate="2021-04-16T09:50:01" ModUser="nicholas.vittor [LAPT-IT07]" ModDate="2021-04-22T14:34:03" LanguageVersion="2011.1.1.0" />
 	<GROUP Id="RDK:0002" Name="Declarations" SubType="Declarations" Expanded="True">
 		<GROUP Id="RDK:0003" Name="Types" SubType="TypeSet" IncludeDate="0" Expanded="True">
 			<GROUP Id="RDK:16" Name="Editor2DTypes" SubType="TypeSet" IncludeDate="132514547724571092" Expanded="True">
@@ -2063,6 +2063,32 @@
 					<EXP><![CDATA[$=$WebTemplatesPath() + "lib"]]></EXP>
 				</PAR>
 				<PAR Name="Recursive" />
+			</ACTION_CALL>
+			<GROUP Id="RDK:50962671" Name="Creo Folder Library" SubType="Generic" Expanded="True" ErrorProtected="True">
+				<ACTION_CALL Id="RDK:50962670" Name="RDEngineering_MakeDir" DesignTimeRemark="{FolderPath}">
+					<PAR Name="RDLibraryName">
+						<EXP><![CDATA[$C$RDEngineering_MISC]]></EXP>
+					</PAR>
+					<PAR Name="FolderPath">
+						<EXP><![CDATA[$=$WebRootPath()+"Editor2D\ServiceLibrary"]]></EXP>
+					</PAR>
+					<PAR Name="ForceCreation" />
+					<PAR Name="UseRecycleBin" />
+				</ACTION_CALL>
+			</GROUP>
+			<ACTION_CALL Id="RDK:50962669" Name="RDEngineering_CopyFolder" DesignTimeRemark="{SourcePath} --&gt; {TargetPath}">
+				<PAR Name="RDLibraryName">
+					<EXP><![CDATA[$C$RDEngineering_MISC]]></EXP>
+				</PAR>
+				<PAR Name="SourcePath">
+					<EXP><![CDATA[$=$ProcPath() + "ServiceLibrary"]]></EXP>
+				</PAR>
+				<PAR Name="TargetPath">
+					<EXP><![CDATA[$=$WebRootPath()+"Editor2D\ServiceLibrary"]]></EXP>
+				</PAR>
+				<PAR Name="Recursive">
+					<EXP><![CDATA[$C$True]]></EXP>
+				</PAR>
 			</ACTION_CALL>
 			<GROUP Id="RDK:304" SubType="Generic" Expanded="True">
 				<ACTION_CALL Id="RDK:12" Name="RDEngineering_RemoteEditor2D">

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink"  baseProfile="full" version="1.1">
+    <g transform="rotate(0)">
+        <svg position="absolute" overflow="visible" preserveAspectRatio="none" viewBox="0 0 1000 1000">
+            <path stroke="#0000ff" stroke-width="2px" stroke-linecap="round" stroke-opacity="1.0" fill="none" fill-opacity="1.0" d="M 17.249104,498.87993 L 982.7509,498.87993 M 501.12007,982.7509 L 501.12007,17.249101 M 947.05509,498.87993 C 947.05509,745.0361 747.27617,944.81498 501.12007,944.81498 C 254.96393,944.81498 55.185042,745.0361 55.185042,498.87993 C 55.185042,252.72382 254.96393,52.944924 501.12007,52.944924 C 747.27617,52.944924 947.05509,252.72382 947.05509,498.87993"/>
+            <path stroke="#0000ff" stroke-width="2px" stroke-opacity="1.0" fill="#0000ff" fill-opacity="1.0" d="M 501.98128,275.61465 L 501.98128,53.658673 C 631.03673,54.588681 745.55103,108.34269 825.29464,193.86041 C 880.08391,254.7126 945.65174,342.39693 945.89329,497.57069 L 723.93727,497.57069 L 501.98128,497.57069 L 501.98128,275.61465"/>
+            <path stroke="#0000ff" stroke-width="2px" stroke-opacity="1.0" fill="#0000ff" fill-opacity="1.0" d="M 499.10284,943.7377 C 280.83159,943.53559 59.059943,776.71384 56.54399,499.54399 L 278.50002,499.54399 L 500.45601,499.54399 L 500.45601,721.49998 L 500.45601,943.45601"/>
+        </svg>
+    </g>
+</svg>

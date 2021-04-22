@@ -1,0 +1,6 @@
+﻿{
+  "shapeMode": 0,
+  "name": "Treno",
+  "icon": "ServiceLibrary/shapes/img/cross.gif",
+  "eventClass": "OnInserted"
+}

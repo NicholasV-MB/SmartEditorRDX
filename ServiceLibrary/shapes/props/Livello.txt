@@ -1,0 +1,56 @@
+﻿{
+  "shapeMode": 2,
+  "name": "Livello",
+  "icon": "ServiceLibrary/shapes/img/",
+  "width": 15118.0143,
+  "height": 4931.5276,
+  "depth": 378.0,
+  "group2d": {
+    "shapes": [
+      {
+        "source": "Corrente",
+        "id": "c1",
+        "width": 7559.0173,
+        "height": 377.9906,
+        "depth": 377.9906,
+        "x": 7558.997,
+        "y": 4553.537,
+        "z": 0.0,
+        "rotation": "180",
+        "data": "",
+        "color": ""
+      },
+      {
+        "source": "corrente",
+        "id": "c2",
+        "width": 7559.0,
+        "height": 378.0,
+        "depth": 378.0,
+        "x": 0.0,
+        "y": 4553.5087,
+        "z": 0.0,
+        "rotation": "",
+        "data": "",
+        "color": ""
+      }
+    ],
+    "connectors": [
+      {
+        "source": "link-line",
+        "x1": 7558.997,
+        "y1": 0.0,
+        "x2": 7558.997,
+        "y2": 2493.0316,
+        "path": "",
+        "ctrl1x": -1.0,
+        "ctrl1y": -1.0,
+        "ctrl2x": -1.0,
+        "ctrl2y": -1.0,
+        "shapeFromId": "c1",
+        "shapeFromPointIndex": "cp2",
+        "shapeToId": "c2",
+        "shapeToPointIndex": "cp2"
+      }
+    ]
+  }
+}

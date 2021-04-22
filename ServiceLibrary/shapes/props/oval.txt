@@ -1,0 +1,41 @@
+﻿{
+  "shapeMode": 0,
+  "name": "Ellipse",
+  "description": "Draw an ellipse",
+  "icon": "ServiceLibrary/shapes/img/ellipse.gif",
+  "iconBig": "ServiceLibrary/shapes/img/ellipse-big.gif",
+  "srcSVG": "ServiceLibrary/shapes/svg/oval.xml",
+  "src3D": "ServiceLibrary/shapes/obj/oval.stl",
+  "behaviour": "(COLLISIONCLASS=2)(ORIGIN=CENTER)",
+  "custom": {
+    "TestF": {
+      "UIType": "text",
+      "UIFormula": "(WIDTH=value)(HEIGHT=value)",
+      "UIDefaultNoConvert": "1"
+    }
+  },
+  "connectionPoints": [
+    {
+      "id": "cp1",
+      "x": 500.0,
+      "y": 500.0,
+      "z": 0.0,
+      "direction": 0.0,
+      "linkClass": ""
+    }
+  ],
+  "eventClass": "OnDoubleclick",
+  "eventHandlers": {
+    "generic": {},
+    "inserted": {},
+    "pasted": {},
+    "removed": {},
+    "linked": {
+      "handler": "OvalEventLinked.rdx"
+    },
+    "stretched": {},
+    "rotated": {},
+    "regrouped": {},
+    "doubleclick": {}
+  }
+}

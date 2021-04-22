@@ -1,0 +1,810 @@
+:root{
+    --baseBlack: #222222;
+    --baseBorder: #aaaaaa;
+    --baseColor: #01579b;
+    --baseColorLight: #a6c4dc;
+    --baseBackColor: #ffffff;
+    --activeBackColor: #dad9d7;
+    --hoverBackColor: #ededed;
+    --errorColor: #ff0000;
+}
+body {
+    color: var(--baseColor);
+}
+input.text, select.text {
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid var(--baseColor) !important;
+}
+input.text:invalid {
+    border-bottom: 2px solid var(--errorColor) !important;
+}
+.panelBtn, .toolbarBtn {
+    background-color: var(--baseBackColor);
+    border: 1px solid transparent;
+}
+#E3DPreviewToolbar .toolbarBtn {
+    border: 1px solid var(--baseBorder);
+}
+#E3DPreviewToolbar input.text, #E3DPreviewToolbar select.text {
+    width: unset;
+}
+.jq-toast-single {}
+.jq-icon-info {}
+.jq-icon-warning {}
+.jq-icon-error {}
+.jq-icon-success {}
+.sp-container {
+    background-color: var(--baseBackColor);
+    border: 1px solid var(--baseBorder);
+}
+.sp-container .toolbarBtn {
+    margin-top: 8px;
+}
+.tree-first-level> li > .tree-node {
+    border-bottom: 1px solid var(--baseColor);
+}
+.tree-n-level, .tree-n-level-palette {
+    padding-left: 0px;
+}
+.tree-node.tree-node-over div.tree-node-icon, .tree-n-level-palette .paletteItemOver img {
+    border: 1px solid var(--hoverBackColor) !important;
+    background-color: var(--hoverBackColor);
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 1px solid var(--baseBackColor);
+    background-color: var(--baseBackColor);
+} 
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+    border: 1px solid var(--hoverBackColor);
+    background-color: var(--hoverBackColor);
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid var(--activeBackColor);
+    background-color: var(--activeBackColor);
+}
+#E2DWestContainer .ui-layout-resizer {
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    height: 6px !important;
+}
+#E2DNorthContainer, #E2DWestCenterContainer, #E2DWestSouthContainer {
+    border: 0px;
+}
+.ui-widget {
+    font-size: 1.12em;
+}
+.ui-layout-resizer {
+    background-color: var(--baseBackColor);
+}
+#btnLogo {
+    background: transparent;
+    margin-left: 0px;
+    opacity: 1;
+    border:none;
+}
+#btnInfo, #btnHelp, #btnAccept, #btnCancel, #btnSave, #btnCustom1, #btnCustom2, #btnCustom3 {
+    float:right;
+}
+#btnConfigureShape, #btnValidateShape, #btnUpdateShape, #btnDeletePolylinePoint, #btnAddPolylinePoint, #btnUpdatePolyline, #btnUpdateQuote, #btnGridPatternOk, #btnGridPatternCancel, #btnGroupOk, #btnGroupCancel, #btnReGroupOk, #btnReGroupCancel, #btnQuickPickOk {
+    float:right;
+    margin-top: 10px;
+}
+#btnGroupOk, #btnGroupCancel, #btnReGroupOk, #btnReGroupCancel {
+    margin-top: 15px;
+}
+#_gridPatternImage, #_polylineImage, #_groupImage, #_regroupImage, #_snapshotImage, #_quickPickImage, #_quickPickCPImage, #_layersImage {
+    margin: 3px;
+}
+.no-dialog-titlebar .ui-dialog-titlebar {
+    display:none;
+}
+.no-dialog-titlebar  .ui-dialog-content {
+    overflow: visible !important;
+}
+.ui-button {
+    margin-left: 8px;
+    padding-right: 1.25em;
+}
+/* 32px buttons
+button.ui-button-icon-only {
+    height: 2.8em;
+    width: 3.0em;
+}
+button.ui-button-text-only {
+    height: 2.8em;
+}
+*/
+
+#btnUndo, #btnCut, #btnZoomFit {
+    margin-left: 20px;
+}
+#btnZoomText {
+    padding: .46em 1em;
+}
+#_toolbar .ui-icon, .panel button .ui-icon, #E3DPreviewToolbar .ui-icon, .sp-container .ui-icon , #_toolbar3DDirectionalLightMove .ui-icon {
+    width: 24px;    /*32px*/
+    height: 24px;   /*32px*/
+}
+#_toolbar .ui-button-icon-only .ui-icon, .panel .ui-button-icon-only .ui-icon, #E3DPreviewToolbar .ui-button-icon-only .ui-icon, .sp-container .ui-button-icon-only .ui-icon, #_toolbar3DDirectionalLightMove .ui-button-icon-only .ui-icon {
+    top: 11%;
+    left: 15%;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+#_toolbar {
+    border: 0px;
+    padding: 6px 5px 5px 5px;
+}
+#_toolbarHelp {
+    top:45px;
+    margin-left: 33px;
+    position: absolute;
+    z-index: 100;
+}
+#_toolbarShapePropertiesImg, #_toolbarPolylinePropertiesImg, #_toolbarQuotePropertiesImg {
+    float: left;
+    margin-right: 10px;
+}
+#_toolbarCreateGridPatternImg, #_toolbarGroupImg, #_toolbarReGroupImg, #_toolbarSnapshotImg, #_toolbarLayersImg {
+    margin-bottom: 14px;
+}
+#_toolbarLayersToggles {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+#_toolbarShapePropertiesInfo {
+    margin-bottom: 20px;
+}
+#_toolbarPolylinePropertiesInfo, #_toolbarQuotePropertiesInfo {
+    margin-bottom: 32px;
+}
+#_shapeName {
+    margin-right: 20px;
+}
+
+#_toolbarShapeProperties, #_toolbarPolylineProperties, #_toolbarQuoteProperties, #_toolbarCreateGridPattern, #_toolbarGroup, #_toolbarReGroup {
+    height: 100%;
+}
+#_toolbarShapePropertiesDetails, #_toolbarPolylinePropertiesDetails, #_toolbarQuotePropertiesDetails, #_toolbarCreateGridPatternDetails, #_toolbarGroupDetails, #_toolbarReGroupDetails {
+    height: calc(100% - 100px);
+    overflow: auto;
+}
+#_toolbarReGroupDetails {
+    overflow-x: hidden;
+}
+#_toolbarSnapshotDetails {
+    text-align: center;
+}
+#_toolbarShapeProperties label, #_toolbarPolylineProperties label, #_toolbarQuoteProperties label, #_toolbarCreateGridPattern label, #_toolbarGroup label, #_toolbarReGroup label, #_toolbarInfo label, #_toolbarHelp label {
+    width:60px;
+    /*width: 35%;*/
+    display: inline-block;
+}
+#_toolbarShapeProperties input, #_toolbarPolylineProperties input, #_toolbarQuoteProperties input, #_toolbarCreateGridPattern input, #_toolbarGroup input, #_toolbarReGroup input, #_toolbarInfo input, #_toolbarHelp input {
+    width:150px;
+    /*width: 55%;*/
+    margin-left: 10px;
+}
+#_toolbarShapeProperties select, #_toolbarPolylineProperties select, #_toolbarQuoteProperties select, #_toolbarCreateGridPattern select, #_toolbarGroup select, #_toolbarReGroup select, #_toolbarInfo select, #_toolbarHelp select {
+    width:157px;
+    /*width: 55%;*/
+    margin-left: 10px;
+}
+#_toolbar3DDirectionalLightMove {
+    border: 1px solid var(--baseBorder);
+    background: var(--baseBackColor);
+    color: var(--baseColor);
+    padding: 4px;
+    position: absolute;
+    z-index: 100;
+    width: 130px;
+}
+#_toolbar3DDirectionalLightMove .ui-button {
+    margin-top: 8px;
+    float: right;
+}
+#_toolbar3DDirectionalLightMove label{
+    width:20px;
+    /*width: 35%;*/
+    display: inline-block;
+}
+#_toolbar3DDirectionalLightMove input{
+    width:90px;
+    /*width: 55%;*/
+    margin-left: 10px;
+}
+#_toolbarCreateGridPattern label {
+    width:70px;
+}
+#_toolbarGroup label{
+    width:90px;
+}
+#_toolbarReGroup label{
+    width:175px;
+}
+#_toolbarReGroup input, #_toolbarReGroup input[type='radio'], #_toolbarReGroup input[type='checkbox']{
+    width:13px;
+}
+#_shapeName {
+    margin-left: 10px;
+}
+.shapeCustomPropertyRow input {
+    margin-left: 15px !important;
+}
+.shapeCustomPropertyRow select {
+    margin-left: 15px !important;
+}
+#_toolbarQuickPick, #_toolbarQuickPickCP {
+    padding: 4px;
+    position: absolute;
+    z-index: 100;
+    width: 300px;
+}
+#_toolbarQuickPick select, #_toolbarQuickPickCP select{
+    overflow: auto;
+}
+#qpX, #qpY, #qpZ {
+    width: 279px;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+label[for='qpX'], label[for='qpY'], label[for='qpZ'] {
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+}
+#qpX, #qpY, #qpZ, label[for='qpX'], label[for='qpY'], label[for='qpZ'] {
+    display: none;
+}
+#_toolbarHelp, #_toolbarQuickPick, #_toolbarQuickPickCP {
+    border: 1px solid var(--baseBorder);
+    background: var(--baseBackColor);
+    color: var(--baseBlack);
+    font-weight: bold;
+}
+option .qpSelected {
+    font-weight: bold;
+    text-shadow: 0px 0px 0px var(--baseBlack);
+}
+#_qType {
+    margin-left: 10px;
+}
+#_qType label {
+    width: 24px;
+    height: 24px;
+}
+label[for=_pinShape], label[for=_qDriving] {
+    margin-left: 10px;
+    width: 24px !important;
+    height: 24px;
+}
+label.ui-checkboxradio-label.ui-button {
+    padding: 0.2em 0.1em 0em 0.1em;
+}
+label.ui-checkboxradio-label.ui-state-focus span.ui-icon-blank, 
+label.ui-checkboxradio-label.ui-state-hover span.ui-icon-blank,
+label.ui-checkboxradio-label:hover span.ui-icon-blank, 
+label.ui-checkboxradio-label:focus span.ui-icon-blank{
+    background-color: var(--hoverBackColor);
+}
+label.ui-checkboxradio-label.ui-state-active span.ui-icon-blank, 
+label.ui-checkboxradio-label:active span.ui-icon-blank{
+    background-color: var(--baseBackColor);
+}
+label.ui-checkboxradio-label span.ui-icon-blank {
+    background-color: var(--baseBackColor);
+}
+label.ui-checkboxradio-label span.ui-icon-check, label.ui-checkboxradio-label.ui-checkboxradio-checked span.ui-icon-blank, label.ui-checkboxradio-label:active span.ui-icon {
+    background-color: var(--activeBackColor);
+}
+label.ui-checkboxradio-label span.ui-icon-background {
+    box-shadow: none;
+    border-radius: 0;
+}
+label.layer-toggle-label.ui-checkboxradio-label span.ui-icon-background {
+    border: 1px solid;
+    border-radius: 3px;
+    margin-top: -4px;
+}
+label.layer-toggle-label.ui-checkboxradio-label span.ui-icon-check, label.layer-toggle-label.ui-checkboxradio-label.ui-checkboxradio-checked span.ui-icon-blank, label.layer-toggle-label.ui-checkboxradio-label:active span.ui-icon {
+    background-color: var(--baseBackColor);
+}
+label.layer-toggle-label.ui-state-active, label.layer-toggle-label.ui-button:active {
+    border: 1px solid var(--baseBackColor);
+    background-color: var(--baseBackColor);
+}
+label.layer-toggle-label.ui-state-hover,  label.layer-toggle-label.ui-state-focus,  label.layer-toggle-label.ui-button:hover, label.layer-toggle-label.ui-button:focus {
+    border: 1px solid var(--hoverBackColor);
+    background-color: var(--hoverBackColor);
+}
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon, .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+    background-image: none;
+    width: 16px;
+    height: 16px;
+    border:none;
+}
+.ui-icon-tools {
+    background-image: url(images/e2d/tools24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-tools32 {
+    background-image: url(images/e2d/tools32.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-shapes {
+    background-image: url(images/e2d/shapes24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-shapes32 {
+    background-image: url(images/e2d/shapes32.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-categories {
+    background-image: url(images/e2d/folder24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-configure {
+    background-image: url(images/e2d/configure24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-fnode {
+    background-image: url(images/e2d/folder24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-logo {
+    background-image: url(images/e2d/logo24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-menu {
+    background-image: url(images/e2d/menu24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-undo {
+    background-image: url(images/e2d/undo24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-redo {
+    background-image: url(images/e2d/redo24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-cut {
+    background-image: url(images/e2d/cut24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-copy {
+    background-image: url(images/e2d/copy24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-paste {
+    background-image: url(images/e2d/paste24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-delete {
+    background-image: url(images/e2d/delete24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-zoom {
+    background-image: url(images/e2d/zoom24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-zoomorig {
+    background-image: url(images/e2d/zoomorig24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-zoomfit {
+    background-image: url(images/e2d/zoomfit24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-zoompage {
+    background-image: url(images/e2d/zoompage24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-zoomout {
+    background-image: url(images/e2d/zoomminus24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-zoomin {
+    background-image: url(images/e2d/zoomplus24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-accept {
+    background-image: url(images/e2d/ok24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-cancel {
+    background-image: url(images/e2d/cancel24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-add-polyline-point {
+    background-image: url(images/e2d/line-poly-add24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-delete-polyline-point {
+    background-image: url(images/e2d/line-poly-delete24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-validate {
+    background-image: url(images/e2d/validate24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-save {
+    background-image: url(images/e2d/save24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-help {
+    background-image: url(images/e2d/help24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-back {
+    background-image: url(images/e2d/back32.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-forward {
+    background-image: url(images/e2d/forward32.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-select {
+    background-image: url(images/e2d/select24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-move {
+    background-image: url(images/e2d/hand24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-text {
+    background-image: url(images/e2d/text24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-select-group {
+    background-image: url(images/e2d/select-group24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-line-poly {
+    background-image: url(images/e2d/line-poly24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-line-smart {
+    background-image: url(images/e2d/line-smart24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-line-link {
+    background-image: url(images/e2d/line-link24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-line-link-cancel {
+    background-image: url(images/e2d/line-link-cancel24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-line-quote {
+    background-image: url(images/e2d/line-quote24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-line-quote-off {
+    background-image: url(images/e2d/line-quote-off24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-line-draw {
+    background-image: url(images/e2d/line-draw24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-ortho-draw {
+    background-image: url(images/e2d/ortho-draw24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-curve-draw {
+    background-image: url(images/e2d/curve-draw24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-grid-pattern {
+    background-image: url(images/e2d/pattern_grid24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-smart-copy {
+    background-image: url(images/e2d/smart_copy24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-custom-origin {
+    background-image: url(images/e2d/origin24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-preview-3d {
+    background-image: url(images/e2d/preview3d24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-paint {
+    background-image: url(images/e2d/palette24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-snapshot {
+    background-image: url(images/e2d/snapshot24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-screenshot-2d {
+    background-image: url(images/e2d/screenshot2d24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-screenshot-2d-page {
+    background-image: url(images/e2d/screenshot2dPage24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-screenshot-3d {
+    background-image: url(images/e2d/screenshot3d24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-3d-background-color {
+    background-image: url(images/e2d/background24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-3d-ambient-light-color {
+    background-image: url(images/e2d/ambient-light24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-3d-directional-light-color {
+    background-image: url(images/e2d/direction-light24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-3d-directional-light-move {
+    background-image: url(images/e2d/direction-light-move24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-3d-hemi-light-sky-color {
+    background-image: url(images/e2d/hemi-light-sky24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-3d-hemi-light-ground-color {
+    background-image: url(images/e2d/hemi-light-ground24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-3d-spot-light-color {
+    background-image: url(images/e2d/spot-light24.png) !important;
+    background-position: 0 0;
+}
+label[for=_qTypeHorizontal] span.ui-icon-blank, label[for=_qTypeHorizontal].ui-checkboxradio-checked span.ui-icon-blank, .ui-icon-horizontal {
+    background-image: url(images/e2d/horizontal.png) !important;
+    background-position: 0 0;
+}
+label[for=_qTypeVertical] span.ui-icon-blank, label[for=_qTypeVertical].ui-checkboxradio-checked span.ui-icon-blank, .ui-icon-vertical {
+    background-image: url(images/e2d/vertical.png) !important;
+    background-position: 0 0;
+}
+label[for=_qTypeStandard] span.ui-icon-blank, label[for=_qTypeStandard].ui-checkboxradio-checked span.ui-icon-blank, .ui-icon-diagonal {
+    background-image: url(images/e2d/diagonal.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-up {
+    background-image: url(images/e2d/up.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-down {
+    background-image: url(images/e2d/down.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-right {
+    background-image: url(images/e2d/right.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-left {
+    background-image: url(images/e2d/left.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-custom1 {
+    background-image: url(images/e2d/custom24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-custom2 {
+    background-image: url(images/e2d/custom24.png) !important;
+    background-position: 0 0;
+}
+.ui-icon-custom3 {
+    background-image: url(images/e2d/custom24.png) !important;
+    background-position: 0 0;
+}
+label[for=_qDriving] span.ui-icon-blank, .ui-icon-lock-open {
+    background-image: url(images/e2d/lock-open.png) !important;
+    background-position: 0 0;
+}
+label[for=_qDriving] span.ui-icon-check,.ui-icon-lock-closed {
+    background-image: url(images/e2d/lock.png) !important;
+    background-position: 0 0;
+}
+label[for=_pinShape] span.ui-icon-check, .ui-icon-pin {
+    background-image: url(images/e2d/pin.png) !important;
+    background-position: 0 0;
+}
+label[for=_pinShape] span.ui-icon-blank, .ui-icon-pin-off {
+    background-image: url(images/e2d/pin-off.png) !important;
+    background-position: 0 0;
+}
+.dlgHeader {
+    border-bottom: 1px solid;
+    display: block;
+    height: 40px;
+}
+.dlgHeaderBack, .dlgHeaderIcon {
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.dlgHeaderText {
+    display: inline-block;
+    height: 40px;
+}
+.dlgHeaderLabel {
+    position:relative;
+    top:10px;
+    left:10px;
+}
+.dlgToolGroup {
+    display: block;
+    height: 49px;
+}
+.btnToolsOnToolbarActive, .btnToolsOnToolbarActiveCustomOrigin, .btnToolsOnToolbarActivePaint, .btnToolsOnToolbarActiveQuoteOff {
+    background: var(--activeBackColor) !important;
+    border: 1px solid var(--activeBackColor) !important;
+    color: var(--baseBlack) !important;
+    font-weight: normal !important;
+}
+.toolItem {
+    border:transparent 1px solid !important;
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin:2px;
+}
+.toolItemSelected {
+    border: 1px solid var(--activeBackColor) !important;
+    background-color: var(--activeBackColor);
+}
+.toolItemOver {
+    border: 1px solid var(--hoverBackColor) !important;
+    background-color: var(--hoverBackColor);
+}
+.toolItemDisabled {
+    background-image: none;
+    opacity: 0.35;
+}
+#toolSelectGroup {
+    background-image: url(images/e2d/select-group32.png) !important;
+}
+#toolText {
+    background-image: url(images/e2d/text32.png) !important;
+}
+#toolPolyline {
+    background-image: url(images/e2d/line-poly32.png) !important;
+}
+#toolSmartLine{
+    background-image: url(images/e2d/line-smart32.png) !important;
+}
+#toolLine {
+    background-image: url(images/e2d/line-draw32.png) !important;
+}
+#toolLinkLine {
+    background-image: url(images/e2d/line-link32.png) !important;
+}
+#toolLinkLineCancel {
+    background-image: url(images/e2d/line-link-cancel32.png) !important;
+}
+#toolQuoteLine {
+    background-image: url(images/e2d/line-quote32.png) !important;
+}
+#toolQuoteLineOff {
+    background-image: url(images/e2d/line-quote-off32.png) !important;
+}
+#toolOrthoLine {
+    background-image: url(images/e2d/ortho-draw32.png) !important;
+}
+#toolCurveLine {
+    background-image: url(images/e2d/curve-draw32.png) !important;
+}
+#toolCut {
+    background-image: url(images/e2d/cut32.png) !important;
+}
+#toolCopy {
+    background-image: url(images/e2d/copy32.png) !important;
+}
+#toolPaste {
+    background-image: url(images/e2d/paste32.png) !important;
+}
+#toolDelete {
+    background-image: url(images/e2d/delete32.png) !important;
+}
+#toolBringForward {
+    background-image: url(images/e2d/bring-forward32.png) !important;
+}
+#toolSendBack {
+    background-image: url(images/e2d/send-backward32.png) !important;
+}
+#toolConnectionPoint {
+    background-image: url(images/e2d/connectionPoint32.png) !important;
+}
+#toolGroup {
+    background-image: url(images/e2d/group32.png) !important;
+}
+#toolUngroup {
+    background-image: url(images/e2d/ungroup32.png) !important;
+}
+#toolPaint {
+    background-image: url(images/e2d/palette32.png) !important;
+}
+#toolSnapshot {
+    background-image: url(images/e2d/snapshot32.png) !important;
+}
+#toolGridPattern {
+    background-image: url(images/e2d/grid_pattern32.png) !important;
+}
+#toolSmartCopy {
+    background-image: url(images/e2d/smart_copy32.png) !important;
+}
+#toolCustomOrigin {
+    background-image: url(images/e2d/origin32.png) !important;
+}
+#toolPreview3D {
+    background-image: url(images/e2d/preview3d32.png) !important;
+}
+#toolInfo {
+    background-image: url(images/e2d/info32.png) !important;
+}
+#toolHelp {
+    background-image: url(images/e2d/help32.png) !important;
+}
+#toolUpload {
+    background-image: url(images/e2d/upload32.png) !important;
+}
+#toolDownload {
+    background-image: url(images/e2d/download32.png) !important;
+}
+#toolRemoveBackground {
+    background-image: url(images/e2d/remove-background32.png) !important;
+}
+#toolGridToggle {
+    background-image: url(images/e2d/grid_off32.png) !important;
+}
+#toolWallsToggle {
+    background-image: url(images/e2d/wall_off32.png) !important;
+}
+#toolShadowsToggle {
+    background-image: url(images/e2d/shadow_off32.png) !important;
+}
+#toolLayers {
+    background-image: url(images/e2d/layers-triple32.png) !important;
+}
+label, span.text {
+    font-size: small;
+    font-weight: normal;
+}
+input.checkbox {    
+}
+input.text, select.text {
+    width:100%;
+    padding: .2em;
+    font-size: small;
+}
+svg text, svg .connector text {
+    font-style:normal;
+    font-weight:normal;
+    font-family:sans-serif;
+}
+.validationError{
+    background-image: url(images/e2d/validationError.png);
+    background-repeat: no-repeat;
+    background-position: 60px 2px;
+    border: 1px solid var(--errorColor);
+    outline: medium none;
+}
+#_snapshot2DPage, #_snapshot2DScreen, #_snapshot3D {}
+#_snapshotDownload {}
+.layer-hidden {
+    display: none;
+}
+.pinned {
+    stroke-dasharray: 6,1;
+}

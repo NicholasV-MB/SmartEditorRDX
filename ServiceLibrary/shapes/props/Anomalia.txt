@@ -1,0 +1,13 @@
+﻿{
+  "shapeMode": 0,
+  "name": "Anomalia",
+  "icon": "ServiceLibrary/shapes/img/summingJunction.gif",
+  "srcSVG": "ServiceLibrary/shapes/svg/Anomalia.xml",
+  "width": 250.0,
+  "height": 250.0,
+  "depth": 250.0,
+  "behaviour": "(NOSTRETCH)(NOMOVE)(ALWAYSFRONT)",
+  "eventClass": "OnDoubleclick",
+  "color": "#00FF00",
+  "lineColor": "#000000"
+}

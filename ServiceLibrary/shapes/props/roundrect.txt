@@ -1,0 +1,27 @@
+{
+    "name":"Round Rectangle",
+    "depth":200,
+    "icon":"DefaultLibrary/shapes/img/roundrect.gif",
+    "iconBig":"DefaultLibrary/shapes/img/roundrect-big.gif",
+    "srcSVG":"DefaultLibrary/shapes/svg/roundrect.xml",
+    "src3D":"DefaultLibrary/shapes/obj/roundrect.stl",
+    "custom":{
+        "Angle":{"UIDefaultNoConvert":"0",
+                 "0":"(ROTATION=0)",
+                 "45":"(ROTATION=-45)"}
+    },
+    "group3d" : [
+        {"source": "rect", "id": "rect_1", "x":-43, "y":-43, "z":0, "width":10, "height":10, "depth":200, "rotation": 0, "color": "#ff0000" },
+        {"source": "rect", "id": "rect_2", "x":-43, "y":43, "z":0, "width":10, "height":10, "depth":200, "rotation": 33, "color": "#00ff00" },
+        {"source": "rect", "id": "rect_3", "x":43, "y":-43, "z":0, "width":10, "height":10, "depth":200, "rotation": 45, "color": "#0000ff" },
+        {"source": "rect", "id": "rect_4", "x":43, "y":43, "z":0, "width":10, "height":10, "depth":200, "rotation": 66, "color": "#ffff00" },
+        {"source": "rect", "id": "rect_5", "x":0, "y":0, "z":90, "width":96, "height":96, "depth":10, "rotation": 0, "color": "#00ffff" },
+        {"source": "rect", "id": "rect_6", "x":0, "y":0, "z":190, "width":96, "height":96, "depth":10, "rotation": 0, "color": "#ff00ff" }
+    ],
+    "connectionPoints":[
+        {"id":"cp1","x":0.0,"y":500.0,"z":0.0,"direction":270,"linkClass":""},
+        {"id":"cp2","x":500.0,"y":0.0,"z":0.0,"direction":0,"linkClass":"","yMin":"10","yMax":"height - 10","yStep":"10"},
+        {"id":"cp3","x":500.0,"y":1000.0,"z":0.0,"direction":180,"linkClass":"tre","zMin":"10","zMax":"depth - 10","zStep":"10"},
+        {"id":"cp4","x":1000.0,"y":500.0,"z":0.0,"direction":90,"linkClass":""}
+    ]
+}

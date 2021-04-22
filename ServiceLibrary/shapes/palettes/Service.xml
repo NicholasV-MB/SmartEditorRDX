@@ -1,0 +1,9 @@
+﻿<palette><div class="paletteItem"><div><img id="test_asm" class="shape" title="" shapeMode="1" src="ServiceLibrary/shapes/img/or.gif" /></div><div>Test ASM</div></div>
+<div class="paletteItem"><div><img id="Campata" class="shape" title="" shapeMode="0" src="ServiceLibrary/shapes/img/roundrect.gif" /></div><div>Campata</div></div>
+<div class="paletteItem"><div><img id="Spalla" class="shape" title="" shapeMode="0" src="ServiceLibrary/shapes/img/spalla.png" /></div><div>Spalla</div></div>
+<div class="paletteItem"><div><img id="Corrente" class="shape" title="" shapeMode="0" src="ServiceLibrary/shapes/img/corrente.png" /></div><div>Corrente</div></div>
+<div class="paletteItem"><div><img id="Campata2" class="shape" title="" shapeMode="0" /></div><div>Campata2</div></div>
+<div class="paletteItem"><div><img id="Livello" class="shape" title="" shapeMode="2" /></div><div>Livello</div></div>
+<div class="paletteItem"><div><img id="Treni" class="shape" title="" shapeMode="0" src="ServiceLibrary/shapes/img/cross.gif" /></div><div>Treni</div></div>
+<div class="paletteItem"><div><img id="Anomalia" class="shape" title="" shapeMode="0" src="ServiceLibrary/shapes/img/summingJunction.gif" /></div><div>Anomalia</div></div>
+</palette>

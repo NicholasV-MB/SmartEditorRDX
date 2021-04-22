@@ -1,0 +1,7 @@
+﻿{
+  "shapeMode": 0,
+  "name": "Campata2",
+  "icon": "ServiceLibrary/shapes/img/",
+  "srcSVG": "ServiceLibrary/shapes/svg/Campata2.xml",
+  "eventClass": "OnInserted"
+}

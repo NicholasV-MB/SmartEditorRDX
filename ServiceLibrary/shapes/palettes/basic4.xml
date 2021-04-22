@@ -1,0 +1,3 @@
+﻿<palette><div class="paletteItem"><div><img id="rect" class="shape" title="Draw a rectangle" shapeMode="0" src="ServiceLibrary/shapes/img/rectangle.gif" /></div><div>Rectangle</div></div>
+<div class="paletteItem"><div><img id="roundrect" class="shape" title="Draw a rounded rectangle" shapeMode="0" src="DefaultLibrary/shapes/img/roundrect.gif" /></div><div>Round Rectangle</div></div>
+</palette>

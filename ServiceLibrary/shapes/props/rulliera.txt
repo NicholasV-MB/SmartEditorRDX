@@ -1,0 +1,15 @@
+{
+    "name":"Roller",
+    "icon":"DefaultLibrary/shapes/img/rulliera.gif",
+    "srcImg":"DefaultLibrary/shapes/img/rulliera.gif",
+    "src3D":"DefaultLibrary/shapes/obj/rect.stl",
+    "width":206,
+    "height":31,
+    "behaviour":"(NOSTRETCH)",
+    "connectionPoints":[
+        {"id":"cp1","x":0.0,"y":500.0,"z":0.0,"direction":270,"linkClass":""},
+        {"id":"cp2","x":500.0,"y":0.0,"z":0.0,"direction":0,"linkClass":""},
+        {"id":"cp3","x":500.0,"y":1000.0,"z":0.0,"direction":180,"linkClass":""},
+        {"id":"cp4","x":1000.0,"y":500.0,"z":0.0,"direction":90,"linkClass":""}
+    ]
+}
